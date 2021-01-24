@@ -1,21 +1,46 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {
+  Dimensions,
+  StatusBar,
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Text,
+  Image,
+} from "react-native";
+import * as projectColor from "./app/assets/utilities";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.parent}>
+      <StatusBar
+        backgroundColor={projectColor.lightBrown}
+        barStyle="light-content"
+      />
+      <View style={styles.navbar}>
+        <Image
+          style={styles.beerMenu}
+          source={require("./app/assets/beerMenu.png")}
+        ></Image>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  parent: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: projectColor.cream,
+  },
+  navbar: {
+    display: "flex",
+    flexDirection: "row",
+    height: Dimensions.get("screen").height * 0.1,
+    backgroundColor: projectColor.lightBrown,
+  },
+  beerMenu: {
+    height: Dimensions.get("screen").height * 0.07,
+    width: Dimensions.get("screen").height * 0.07,
+    zIndex: 2,
   },
 });

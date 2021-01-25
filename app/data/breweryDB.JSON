@@ -1,0 +1,252 @@
+[
+  {
+    "breweryName": "Abbaye de Maredsous",
+    "breweryDescription": "Durante la rivoluzione francese molte abbazie furono distrutte e saccheggiate. Fortunatamente nel XIX secolo molte di queste furono riportate al loro splendore. Questo è il caso della splendida abbazia di Maredsous. L’edificio fu progettato sulle vecchie mappe dell’abbazia cistercense di Villers-la-Ville, dall’architetto Jean Baptiste Béthune, famoso per la sua rivisitazione dello stile gotico. Dal 1963 viene concessa la produzione birraria alla brasserie Duvel Moortgat che segue tutt’ora le tradizionali regole di brassificazione monastiche.",
+    "key": 1
+  },
+  {
+    "breweryName": "Abbaye de Floreffe",
+    "breweryDescription": "La sua storia va ricercata indietro nei secoli: siamo nel 1121 quando Norberto de Gennep, fondatore dell’ordine di Prémontrés, fece costruire l’abbazia di Floreffe su richiesta dei conti di Namur. Intorno al 1250 si instaura una piccola produzione di birra che prosperò fino all’epoca della rivoluzione francese che costrinse i monaci all’abbandono e alla messa in vendita dell’abbazia. Restaurata nel 1960 la fabbrica dell’abbazia è diventata un’attrazione turistica. La produzione della gamma delle birre denominate Floreffe se ne occupa dal 1983 la brasserie Lefebvre.",
+    "key": 2
+  },
+  {
+    "breweryName": "Brasserie Artisanale la Rulles",
+    "breweryDescription": "Birrificio dalla brevissima storia, sorto nel 2000 dal genio di Gregory Verhelst, giovane ed eccentrico birraio che opera con la filosofia della semplicità. Acqua, miscele di malti, luppoli e lievito, tutto il resto lo fa la “magia della fermentazione” e del luogo. Queste le caratteristiche di una fra le migliori produzioni birrarie del panorama mondiale.",
+    "key": 3
+  },
+  {
+    "breweryName": "Brasserie de Bastogne",
+    "breweryDescription": "Dagli esperimenti cominciati nei primi anni del 2000 in pentole della capacità di 50l, Philippe Minne è arrivato alla professione di birraio nel 2008. Forte era il suo desiderio di continuare la tradizione birraria famigliare, il bisnonno era produttore di birra alla brasserie Saint-Antoine mentre il nonno produttore nella birreria De Beco. Grazie all’aiuto della moglie nel gennaio 2009 vede la luce la sua prima creazione, la Trouffette blonde, nome che deriva dal folklore locale del paese di Bastogne, dove si vede appunto “trouffette” in sella ad un cinghiale delle Ardenne.",
+    "key": 4
+  },
+  {
+    "breweryName": "Brasserie de Blaugies",
+    "breweryDescription": "Artigianalissimo birrificio che rivide la luce nel 1987, quando Marie-Noelle Pourtois e suo marito Pierre-Alex Carlier decisero di riprendere l’attività brassicola di famiglia. Tutte le ricette sono una rivisitazione delle produzioni della nonna di Marie. Per la realizzazione viene utilizzato lievito Dupont ma con un utilizzo minore di luppolo, risultano più secche e saporite con un’armonia che ricorda la campagna che avvolge la piccola fabbrica.",
+    "key": 5
+  },
+  {
+    "breweryName": "Brasserie Caracole",
+    "breweryDescription": "Simbolo della birreria, ma anche simbolo di un’intera regione, la lumaca (caracole) rappresenta la provincia di Namur in Vallonia, zona contadina dove sembra che il tempo si sia fermato a qualche secolo fa. Cosi come la produzione brassicola che avviene ancora in tini di rame riscaldati con fuoco a legna.",
+    "key": 6
+  },
+  {
+    "breweryName": "Brasserie d’ Achouffe",
+    "breweryDescription": "La brasserie d’Achouffe nasce nel 1982, fondata da due soci, Pierre Gobron e Chris Bauweraerts. Situata in una valle nel cuore delle Ardenne. La leggenda narra che gli Chouffe erano gnomi muti che abitavano le foreste delle Ardenne, i quali, scoprirono l’uso della parola bevendo l’acqua della sorgente Cedrogne. Da questa sorgente nasce l’acqua purissima che è alla base delle birre d’Achouffe. Si narra, scherzosamente, che sia sufficiente lasciare di notte le materie prime nel magazzino della birreria per poi trovarsi la birra pronta grazie al lavoro degli Chouffe.",
+    "key": 7
+  },
+  {
+    "breweryName": "Abbaye de Valdieu",
+    "breweryDescription": "Vero birrificio d’abbazia accompagnato da storia, fede e gusto delle tradizioni secolari. La produzione birraria è stata riattivata dal 1997 all’interno delle mura dell’abbazia seguendo l’antico metodo dei monaci birrai: birre ad alta fermentazione, non pastorizzate, prodotti semplici e senza aromi. Oltre alle birre l’abbazia propone visite guidate che permettono di visionare anche l’arte della produzione birraria e la degustazione di prodotti tipici locali.",
+    "key": 8
+  },
+  {
+    "breweryName": "Brasserie de l’Abbaye des Rocs",
+    "breweryDescription": "Da un piccolo villaggio ricco di vegetazione, autentico polmone verde della regione dell’Hainaut, nasce nel 1979 la produzione delle birre dell’abbaye des Rocs. Da una capacità produttiva quasi da home brouwer, circa 50 litri ogni 15 giorni ai migliaia di hl annui attuali, la caratteristica fondamentale resta la cura nella produzione utilizzando acqua di una sorgente del sottosuolo di proprietà, miscele di malti, spezie e luppolo in fiore senza aggiunta di zuccheri ed additivi.",
+    "key": 9
+  },
+  {
+    "breweryName": "Brasserie de la Senne",
+    "breweryDescription": "Giovane brasserie che sorge nei pressi di Bruxelles, Yvan De Baets e Bernard Leboucq sono i birrai di una piccola produzione che si occupa di preservare un antico metodo, senza pastorizzazione nè filtraggio, né alcun tipo di additivo, utilizzando esclusivamente materie prime di elevatà qualità che donano alle birre un gusto complesso caratterizzato da un giusto grado d’amaro, così rinfrescante che ne caratterizza i propri prodotti. Da notare sono le splendide grafiche delle sue etichette.",
+    "key": 10
+  },
+  {
+    "breweryName": "Brasserie de Cazeau: ",
+    "breweryDescription": "Nel piccolo villaggio di Cazeau, si trova questa “giovane” brasserie artigianale, rinata dalle ceneri di un’antica produzione dal nome Agache che dal 1753 e per sette generazioni si era occupata di produrre birre. Verso la fine degli anni ’90 Laurent Agache ultimo discendente della famiglia, decide di ridar vita alla tradizione familiare brassicola. Fattoria dismessa e macchinari ormai obsoleti, comportano anni di rinnovamenti. E’ il 1° maggio 2004 quando finalmente comincia la vera avventura con la messa in produzione della prima cotta.",
+    "key": 11
+  },
+  {
+    "breweryName": "Brasserie du Bocq",
+    "breweryDescription": "Birrificio di tradizione che opera dal 1858 grazie alla famiglia Belot. Situato a qualche chilometro da Dinant nella regione del Condroz, Ardenne.E’ un raro esempio di birrificio ancora a conduzione famigliare, rimasto fedele ai processi di produzione ad alta fermentazione in bottiglia. E’ possibile partecipare ad una visita guidata alle tecniche di produzione con una degustazione finale delle birre della casa.",
+    "key": 12
+  },
+  {
+    "breweryName": "Brasserie Duboisson",
+    "breweryDescription": "La brasserie Dubuisson fu fondata nel 1769 come produzione di birra riservata ai dipendenti della fattoria agricola nella quale avveniva la produzione brassicola, arriva ai giorni nostri grazie ai fratelli Amédée e Alfred che nella prima metà del novecento si concentrano unicamente nella produzione birraria, fondendo lo stile belga a quello inglese che godeva all’epoca di un crescente successo.",
+    "key": 13
+  },
+  {
+    "breweryName": "Brasserie Dupont",
+    "breweryDescription": "Produzione attiva fin dal 1844, di proprietà della famiglia Rimaux-Deridder. Dal 1920 l’agronomo Luois Dupont rileva la fattoria/birreria immersa nel verde della campagna vallona e crea la sua brasserie indipendente già famosa per la produzione di birre saison e al miele. Innovazione tecnologica ma anche rispetto per la tradizione brassicola, selezione accurata delle materie prime, tanto che parte della produzione viene etichettata come “biologica”, certificazione approvata dalla ECOCERT, società di verifica del ministero dell’Agricoltura belga.",
+    "key": 14
+  },
+  {
+    "breweryName": "Brasserie Ellezelloise",
+    "breweryDescription": "Fondata nel 1993, questa brasserie è una piccola produzione che avviene all’interno di un granaio riadattato allo scopo ma con una particolare attenzione nel preservare la ruralità del parco naturale dove si trova. Philippe Gerard proprietario e birraio forte di una lunga esperienza produttiva crea la Quintine, nome derivato da un’antica leggenda popolare che narrava di una strega, “Quintine” appunto, che volava nei cieli del villaggio. Dal 2007 l’acquisizione della birreria da parte di brasserie de Geants ha portato alla commercializzazione dei prodotti sotto l’unico nome di brasserie des Legendes.",
+    "key": 15
+  },
+  {
+    "breweryName": "Brasserie Fantome",
+    "breweryDescription": "In un modesto ma caratteristico casolare nella campagna di Soy nasce nel 1988 la brasserie Fantome. Da un’idea di Dany Pregnon con la volontà di animare turisticamente la regione in cui vive creando occasioni di ritrovo legate anche alla produzione brassicola. Definito un artista Dany produce piccoli lotti di birra, la sua produzione è oggetto di culto da tutti gli appassionati di birra artigianali anche se a volte risultano a dir poco stravaganti. Oltre ai 4 pilastri classici della produzione (acqua, malto, lievito e luppolo) Dany utilizza normalmente anche erbe aromtiche e spezie che donano alla birra una caratteristica unica e irripetibile.",
+    "key": 16
+  },
+  {
+    "breweryName": "Brasserie Friart",
+    "breweryDescription": "Per poter utilizzare la denominazione di “Birra d’Abbazia”, un birrificio deve avere l’autorizzazione da un Monastero esistente oppure il benestare all’utilizzo del nome di un’abbazia esistita in passato che produceva birra. Questo è il caso dell’Abbaye de St. Feuillien la cui birra è prodotta dalla Brasserie de Friart dal 1873. La sede è collocata nello splendido paesino di Le Roeulx e la birreria è ospitata in una caratteristica costruzione in mattoni rossi che spicca nelle grandi campagne del Hainaut.",
+    "key": 17
+  },
+  {
+    "breweryName": "Browerij Huyghe",
+    "breweryDescription": "Le prime tracce di attività brassicola nei pressi di Melle risalgono al XVI secolo, ma è con l’inizio del novecento che con la nascità della brasserie Huyghe queste birre diventano famose in tutto il mondo. Nel corso degli anni vengono prodotte molteplici birre adattate alle richieste del mercato estero; siamo nel 1989 quando viene creata la Delirium Tremens attualmente prodotto di punta della brasserie, ne consegue anche la fondazione della “Confrérie de l’éléphant Rosé” atta a sostenere la vendita di birre di qualità.",
+    "key": 18
+  },
+  {
+    "breweryName": "Brasserie Les 3 Fourquets",
+    "breweryDescription": "La brasserie si trova all’interno di una magnifica fattoria del XVIII patrimonio delle Ardenne belghe in un luogo dove il verde è interrotto unicamente da un ruscello dall’acqua fresca e pura. Si racconta che un tempo queste zone fossero frequentate da Lupi provenienti dalla Slovenia, zona che regala la miglior qualità di luppoli al mondo. Da questo aneddoto e dalla miglior tradizione birraria belga nesce la Lupulus una birra con la “B” maiuscola. Luppolo, che in latino si traduce HUMULUS LUPULUS letteralmente significa PICCOLO LUPO UMILE.",
+    "key": 19
+  },
+  {
+    "breweryName": "Brauerei Heller",
+    "breweryDescription": "La più famosa tra le birre affumicate (in tedesco “Rauchbier”) è sicuramente la Schlenkerla,  la cui taverna si trova al centro della vecchia città di Bamberga, proprio sotto la cattedrale. Per produrre il malto affumicato che ne determina i sapori, viene utilizzato del legno di faggio invecchiato almeno per 3 anni proveniente dalla Giura Franco-Sveva. L’origine del termine “Schlenkerla” deriva dal dialetto della Franconia che significa “zoppicare”, si racconta che un vecchio birraio zoppo a causa di un barile di birra cadutogli sulla gamba, fosse chiamato “Schlenkerla” e dopo qualche tempo il nomignolo passò ad indicare il nome della birra stessa.",
+    "key": 20
+  },
+  {
+    "breweryName": "Brasserie La Binchoise",
+    "breweryDescription": "Situata nelle pianure tra Hainaut Mons e Charleroi, la Brouwerij Binchoise si trova in una vecchia fabbrica nella quale è presente un’antica malteria. La maggior parte degli impianti sono stati ‘’riciclati’’ da altri stabilimenti conferendo un aspetto rustico in armonia con il resto degli interni. L’attività, iniziata nel 1989 da Françoise André Graux e Jauson, si è evoluta con successo nel corso degli anni, riuscendo ad esportare in varie parti del mondo. Tutte le birre sono di alta fermentazione non filtrate né pastorizzate.",
+    "key": 21
+  },
+  {
+    "breweryName": "Brouwerij Bosteels",
+    "breweryDescription": "In un paesino a nord di Bruxelles, nel villaggio di Buggenhout, nasce nel 1791 la brouwerij Bosteels, dall’omonimo Evarist Bosteels, capostipite della “family brewers” che tutt’ora, giunta alla settima generazione, si occupa della produzione birraria. 200 anni di storia in un suggestivo centro storico chiuso nelle mura del cortile, oltre alla famosa Kwak, dal 1997 produce anche la Triple Karmeliet, da una ricetta datata 1679, birra di un’abbazia Carmelitana di Dendermonde.",
+    "key": 22
+  },
+  {
+    "breweryName": "Brewerij de Landtsheer",
+    "breweryDescription": "Fondata alla fine del 1700 dalla famiglia De Landtsheer, tuttora proprietaria, si trova nel paese di Buggenhout, cittadina nel centro della regione belga delle Fiandre. Azienda privata ed indipendente, la Malheur brassa specialità birrarie secondo i dettami della grande tradizione fiamminga unendole alle più recenti tecniche produttive. Manu De Landtsheer, ultimo erede della birreria, ha operato negli ultimi anni una profonda ristrutturazione dell’unità produttiva che lo ha portato a poter commerciare i propri prodotti in gran parte del mondo.",
+    "key": 23
+  },
+  {
+    "breweryName": "Brouwerij Duvel-Moortgat",
+    "breweryDescription": "Produzione fondata nel 1871 da Jan-Leonard Moortgat. Dopo la prima guerra mondiale, Moortgat chiamò la sua birra Victory Ale, la birra del vincitore, per commemorare la fine della guerra. Siamo negli anni venti quando però la birra viene giudicata da un amico fiammingo del birraio come “un diavolo di birra” da lì il nome Duvel. Attualmente la Duvel-Moortgat è una delle più grandi aziende produttrici di birra in belgio e, oltre alla Duvel, si occupa di produrre le birre per l’abbazia di Maredsous; dal 2007 ha inoltre acquisito la brasserie d’Achouffe.",
+    "key": 24
+  },
+  {
+    "breweryName": "Brouwerij Van Den Bossche",
+    "breweryDescription": "Nel villaggio di St. Lieven-Esse, fra Ninove e Oudernaarde, vicino a Ghent, ancora oggi, accanto alla chiesa, come più di un secolo fa si trova la brouwerij Van den Bossche. Azienda a conduzione famigliare attualmente guidata dalla quinta generazione che sta contribuendo ad allargare la storica gamma produttiva. La birra più antica e famosa è la Buffalo, nata addirittura nel 1907 per celebrare il passaggio nel piccolo paesino del circo americano “Buffalo Bill”.",
+    "key": 25
+  },
+  {
+    "breweryName": "Brouwerij Van Honsebrouck",
+    "breweryDescription": "In una lussuosa villa settecentesca, costruita sulle rovine di un monastero abitato da monaci inglesi nel medioevo, chiamata dai cittadini locali “castello” in fiammingo “kasteel”, si trova il birrificio artigianale della famiglia Van Honsenbrouck. La famiglia produce birra ad Ingelmunster fin dal 1900 e l’acquisizione del castello è della metà egli anni ottanta. E’ il 17 settembre 2001 quando purtroppo un incendio distrugge completamente il museo-fabbrica di birra.",
+    "key": 26
+  },
+  {
+    "breweryName": "Brewerij de Dolle",
+    "breweryDescription": "Il birrificio dei “birrai matti”, sembra sia questo, quello che esclamò il consulente finanziario a cui i 3 fratelli Herteleer presentarono il progetto per l’acquisizione e la restrutturazione della brasserie Costenable nei pressi di Esen. Della produzione si occupa Kris, il più eccentrico dei 3, facilmente riconoscibile per via dei suoi particolarissimi farfallini, gli stessi che ritroviamo sul collo delle bottiglie delle sue splendide birre.",
+    "key": 27
+  },
+  {
+    "breweryName": "Brouwerij de Glazen Toren",
+    "breweryDescription": "Da una passione ad un sogno che si avvera. Dopo anni di cotte pilota e di studi presso l’istituto superiore della brasserie di Gent ottenendo il diploma come maitres-brasseurs si arriva alla data di ufficiale apertura del birrificio: 11 novembre 2004. Un birrificio dalla breve storia sempre alla ricerca di un’evoluzione sia a livello gustativo che per quanto riguarda i mezzi di produzione.",
+    "key": 28
+  },
+  {
+    "breweryName": "Brouwerij de Leyerth",
+    "breweryDescription": "Marito e moglie. Bas e Hildegard Von Ostaden che nel 2000 iniziano la loro avventura birraria. Lei mastrobirraia e lui artista fumettista. Proprio dalla passione di Bas nel disegnare fumetti viene ripresa un’antica leggenda per dare il nome alle proprie birre. Si tratta del popolo degli Ertheles un popolo scomparso che peregrinava nelle regioni della Fiandra. Le loro gesta erano supportate da una sorprendente bevanda, la Urthel appunto. “ …..Gli Erthel sono non più alti di 35/40 cm, buffi nell’aspetto, non hanno capelli ma una lunga barba e un grosso naso. Sono sempre di buon umore. Un Hertellino ama la poesia, la musica, canta e danza…..” (tratto da De Cronycker di Walter Vandendoornyck)",
+    "key": 29
+  },
+  {
+    "breweryName": "Brouwerij de Proof",
+    "breweryDescription": "Il termine fiammingo “proef” è traducibile con “prova/assaggio” ed è indicativo con la missione che la brasserie si pone. Dal 1996 il mastro birraio Dirk Naudts produce in maniera artigianale una vasta gamma di birre non filtrate né pastorizzate e rifermentate in bottiglia. Ma la vera particolarità di questa azienda è che produce moltissime altre birre dietro ordinazione di altri fabbricanti impossibilitati all’acquisto di impianti di proprietà, oltre ad essere anche un “laboratorio produttivo” per gli studenti della scuola per mastri birrai di Ghent.",
+    "key": 30
+  },
+  {
+    "breweryName": "Brouwerij Haacht",
+    "breweryDescription": "Situata nel Brabante fiammingo, la brouewerij Haacht risulta essere la più grande produzione indipendente della zona del Boortmeerbeck, luogo di grande tradizione birraria. Dal contratto stipulato con l’abbazia di Tongerlo nel 1990, la produzione compie un “salto” nel segmento della qualità tant’è che da subito gli venne riconosciuto l’attestato di “biere d’abbaye reconnue”.",
+    "key": 31
+  },
+  {
+    "breweryName": "Brouwerij Het Anker",
+    "breweryDescription": "Dai documenti ritrovati nell’archivio di Mechelen, paese nel quale si trova la sede della birreria, datati 1369 parlano già di una produzione di birra in attività; sicuramente la più antica fabbrica ancora funzionante in Belgio. L’imperatore Carlo V in un suo viaggio, assaggio la Mechelschen Bruynen probabilmente un’antenata dell’attuale Carolus Classic, gli piacque talmente che lo porto ad esclamare la frase “…la figlia del grano è superiore all’anima dell’uva…”. Dalla fine dell’ottocento di proprietà della famiglia Van Breedam fu una delle prime brasserie ad utilizzare una “moderna” macchina a vapore.",
+    "key": 32
+  },
+  {
+    "breweryName": "Brewery Brew Dog",
+    "breweryDescription": ": Giovanissima birreria scozzese fondata tra il 2006/2007 a Fraserburg, nella Aberdeenshire da una giovane coppia di appassionati birrai e già oggetto di culto da parte degli amanti di prodotti dal gusto raffinato. La birreria utilizza malti locali e i migliori luppoli provenienti da Stati Uniti, Belgio, Repubblica Ceca e Nuova Zelanda. Tutte le birre sono prive di additivi e conservanti artificiali.L’obbiettivo primario è sempre stato quello di diversificarsi da tutte le birre del resto del mondo,ottenendo prodotti dall’aroma unico con una gamma che vanta dai 0,03 ai 55 gradi alcolici.",
+    "key": 33
+  },
+  {
+    "breweryName": "Brouwerij Van Steenberge",
+    "breweryDescription": "Come molte altre birrerie a conduzione familiare presenti sul territorio Belga dal XVII secolo la Van Steenberge nasce fra le mura di una vecchia fattoria nella campagna del villaggio di Ertvelde. Le due guerre mondiali e un’economia altalenante causarono la chiusura di centinaia di birrifici. Il 1980 è l’anno della svolta, dopo la chiusura del birrificio “rivale”, la Beirens Brouwerij, venne trovato un accordo con l’Abbazia St. Bernardus di Bornem per la produzione di birra, così gli anni ottanta vedono la nascità di birre come l’attuale Gulden Draak.",
+    "key": 34
+  },
+  {
+    "breweryName": "Brouwerij Van Eecke",
+    "breweryDescription": "Storica birreria a gestione famigliare che dedica la sua produzione a birre di alta fermentazione, dalla fine della seconda guerra mondiale produce, utilizzando le antiche ricette del Monastero francese Monts Cats, le birre denominate Kapittel. Nel 1965 alla morte di Albert Van Eecke, deceduto senza eredi, la birreria passa al genero Karel Leroy che crea successivamente la Hommel Poperings e la Watou’s Wit. Attualmente sono i 2 figli di Karel che portano avanti la tradizione famigliare. Su prenotazione è possibile visitare la produzione.",
+    "key": 35
+  },
+  {
+    "breweryName": "Brouwerij the Musketeers",
+    "breweryDescription": "The Musketeers brouwerij Kristof De Roo ,Rikkert Maertens, Stefaan Soetemans e Sven Suys, 4 mastrobirrai (4 moschettieri) tutti diplomati a Ghent, decidono, nel 2000, di aprire il proprio birrificio vista la difficoltà di inserirsi nel mondo produttivo belga in quanto ogni birrificio nasconde gelosamente i propri segreti. Ad ogni loro birra associano il nome di “Troubadour” che in italiano significa“Trovatore”; personaggi che in epoca medievale andavano di paese in paese a rallegrare gli abitanti con le loro storie, così come la loro birra deve poter viaggiare e portare in giro la stessa gioia e spensieratezza.",
+    "key": 36
+  },
+  {
+    "breweryName": "Brouwerij St. Bernardus",
+    "breweryDescription": "Produzione che si trova nella regione delle Fiandre occidentali di “Le Plats Pays”, famosa per il luppolo Poperinge, Dal 1930 le birre vengono prodotte secondo ricette esclusive, le prime delle quali erano marcate St. Sixtus, sotto il controllo dell’omonima abbazia poco distante che poi decise di riprendersi la produzione con il nome di Westvleteren, una delle sei trappiste belga. L’acqua utilizzata viene da una profondità di 152 mt., secondo la leggenda, è pioggia caduta all’epoca di Giovanna d’Arco e filtrata attraverso il permeabile strato di sabbia.",
+    "key": 37
+  },
+  {
+    "breweryName": "Brouwerij de Ranke",
+    "breweryDescription": "Appassionati e cultori di ricette non tradizionali Nino Bacelle e Guido Devos, considerati veri e propri “geni brassicoli”, dal 2005 hanno deciso di creare il loro “laboratorio” birraio a Dottignies. Tecniche produttive poco ordinarie e uso del luppolo quasi ossessivo danno vita a prodotti unici, quasi sperimentali ma che portano entusiasmo nell’ambiente degli appassionati birrofili.",
+    "key": 38
+  },
+  {
+    "breweryName": "Brasserie 3 Fonteinen",
+    "breweryDescription": "3 Fonteinen è stata fondata intorno al 1887 come una caffetteria e geuzestekerij, termine con il quale si indica un locale in cui vengono venduti miscelati lambic vecchi e nuovi, acquistati da altri produttori di birra. Dal 1998 Armand e Guido De Belder hanno dotato la caffetteria di un impianto di produzione ed oltre ad utilizzare i propri lambic miscelano Boon e Girardin. Nel maggio 2009 un termostato difettoso ha causato l’esplosione di 3000 bottiglie, la restante geuze “surriscaldata” è stata trasformata in uno spirito dal nome “Armand” le cui vendite hanno permesso alla fabbrica di continuare ad operare.",
+    "key": 39
+  },
+  {
+    "breweryName": "Brouwerij Boon",
+    "breweryDescription": "Boon Brouwerij, ma anche Brasserie de Saint Roch: 2 nomi per un unico, storico birrificio, che dal 1680 produce nel paese di Lembeek, nel Brabante Fiammingo. Nel corso dei secoli varie famiglie ne furono proprietarie producendo già lambic e faro, ma è nel 1978 con l’entrata in scena di Frank Boon, noto assemblatore di geuze, con cui l’azienda grazie agli investimenti e rinnovamenti è arrivata ai giorni nostri. 117 botti da 8.000 lt, indispensabili per la produzione del lambic Boon, la vasca di fermentazione che risale al 1896, nuova sala cottura, nuovo magazzino di stoccaggio, modifiche che hanno portato la birreria a sfornare circa 14.000 hl l’anno, quantità non ancora capace di soddisfare la crescente domanda di geuze nel mondo.",
+    "key": 40
+  },
+  {
+    "breweryName": "Brewerij Girardin",
+    "breweryDescription": "Con la scomparsa di Louis Girardin nel settembre 2000, il mondo del lambic perde uno dei suoi più grandi protagonisti. L’antica tradizione è attualmente portata avanti dai figli, nella birreria-fattoria di Sint-Ulriks-Kapelle, producendo rinomati lambic per piccoli caffè della zona e assemblatori, mentre per il commercio si dedicano ad una geuze proposta in due versioni, una kriek ed una framboise. Negli ultimi tempi si è temuto che la birreria interrompesse la produzione a causa di alcune leggi comunitarie, leggi che stanno allarmando i produttori di lambic, ma almeno per ora sembra che il pericolo sia scampato.",
+    "key": 41
+  },
+  {
+    "breweryName": "Geuzerie Tilquin",
+    "breweryDescription": "Situata a Bierghes, nella valle del fiume Senne, la Geuzerie Tilquin è una giovane azienda di taglio di Geuze presente in Vallonia. Per creare le proprie miscele, vengono acquistati mosti freschi da diverse produzioni della regione del Pajottenland e messi in tini di quercia per 1,2 o 3 anni. Dai lambic ottenuti si imbottiglia per ottenere dopo sei mesi la splendida Geuze Tilquin.",
+    "key": 42
+  },
+  {
+    "breweryName": "Brouwerij Rodenbach",
+    "breweryDescription": "160 anni di splendida storia, 294 tini di rovere proveniente dalla Polonia per l’invecchiamento, una birra dal sapore unico e raffinato. Caratteristica base di questa produzione è una birra leggermente acidula dal colore rossiccio frutto del risultato di una miscela al 75% di birra “giovane”, maturata per 4/5 settimane in fusti d’acciaio e il restante 25% di birra “invecchiata”, almeno 2 anni in botte. Uno dei più grandi degustatori di birra a livello mondiale, Michael Jackson, le definì: “…le birre rinfrescanti più famose al mondo…”",
+    "key": 43
+  },
+  {
+    "breweryName": "Brasserie Cantillon",
+    "breweryDescription": "Oltre un secolo di esperienza per questo birrificio che è l’unico aperto al pubblico e ancora in attività a Bruxelles; dalla sua produzione ha addirittura creato un museo (Museo della Geuze). Caratterizzato dall’amore per la tradizione e da un prodotto unico mai riprodotto in nessun altra parte del globo, quale miglior presentazione per una delle birrerie più particolari della produzione mondiale?",
+    "key": 44
+  },
+  {
+    "breweryName": "Brasserie de l’Abbaye de Notre-Dame de Scourmont",
+    "breweryDescription": "L’abbazia di Notre-Dame de Scourmont si trova a Forges (Chimay), in Belgio, e fa parte dell’ Ordine Cistercense della Stretta Osservanza, solitamente chiamati Trappisti. Le origini risalgono al 1850 da una comunità di monaci proveninte da Westvleteren, che su iniziativa dell’abate Jourdrain, inviò 17 monaci per stabilirsi su una terra offerta in regalo dal principe di Chimay dove 12 anni più tardi cominciarono a produrre le prime birre. Protagonista importante della storia della brasserie è Padre Théodore, frate a cui va il merito della scoperta del famoso “lievito di Chimay”. L’abbazia, è autorizzata a sfoggiare il logo di “Authentic Trappist Product”, il quale garantisce la provenienza e la qualità del prodotto.",
+    "key": 45
+  },
+  {
+    "breweryName": "Brouwerij Westvleteren",
+    "breweryDescription": "Fondato nel 1838 fra le mura dell’abbazia di St. Sixtus il birrificio Westvleteren resta l’unico, fra i birrifici trappisti, dove tutto il processo produttivo è seguito dai monaci; 5 in produzione e 5 all’imbottigliamento. Come per tutti gli altri birrifici trappisti, la birra viene venduta esclusivamente per il sostentamento dell’abbazia e opere di beneficenza.",
+    "key": 46
+  },
+  {
+    "breweryName": "Brouwerij der Trappistenabdij de Achelse Kluis",
+    "breweryDescription": "L’abbazia cistercense di San Benedetto ad Achel è l’ultima, in ordine di tempo che entra a far parte delle produttrici di birra trappista. Sorge a 20 km da Eindhoven al confine con i Paesi Bassi, nei pressi del torrente Tongelreep. Durante la seconda guerra mondiale, a seguito di un bombardamento, ha rischiato di venir definitivamente smantellata.Infatti i bollitori di rame vennero venduti dall’occupazione tedesca. Dal 1998 sotto la supervisione di padre Thomas dell’abbazia di Westmalle è ripresa l’attività brassicola.",
+    "key": 47
+  },
+  {
+    "breweryName": "Brouwerij de Koningshoeven",
+    "breweryDescription": "Monastero olandese che si fregia del logo trappista che si trova a pochi chilometri dal belgio,  nei pressi di Tilburg nell’Abbazia di Onze Lieve Vrouw di Koningshoeven. L’inaugurazione del monastero risale al 1884 e in breve tempo oltre ad una ricca comunità monastica si instaura una piccola produzione birraria.Dopo anni tormentati in cui il birrificio fatica a mantenere il logo ‘’authentic trappist product’’e dopo averlo addirittura perso, finalmente nel 2005, che con una comunità monastica costante di circa 20 frati, la birreria riottiene il marchio e ricomincia la vera produzione di prodotti ispirati alle antiche tradizioni.",
+    "key": 48
+  },
+  {
+    "breweryName": "Brasserie de l’Abbaye Notre-Dame D’Orval",
+    "breweryDescription": "Immersa in un ambiente “magico e spirituale” Notre-Dame d’Orval è una delle abbazie cistercensi più significative del Belgio. In questo luogo vive ancora oggi una comunità monastica e ciò che più colpisce è il silenzio nella quale è avvolta. La fontana, la mitica leggenda della valle d’oro, il giardino ricco di piante medicinali, les Communs Abraham edificio nel quale vengono illustrati i segreti della produzione brassicola trappista da cui il risultato della splendida Orval,vengono considerati tappa fondamentale del turista birraio.",
+    "key": 49
+  },
+  {
+    "breweryName": "Brasserie de Rochefort",
+    "breweryDescription": "Birrificio dalla tradione pluricentenaria, si hanno notizie della produzione di birra già dal 1595. Nel monastero risiedono ancora 15 monaci che detengono gelosamente nascosto il processo produttivo, infatti il birrificio non è aperto al pubblico.",
+    "key": 50
+  }
+]

@@ -1,0 +1,1443 @@
+[
+  {
+    "beerName": "Maredsous 6",
+    "breweryName": "Abbaye de Maredsous",
+    "alcoholDegree": 6,
+    "appearence": "blonde",
+    "beerDescription": "Birra di un bel colore ambrato brillante con schiuma fine e persistente, molto accentuata la sensibilità olfattiva con note abboccate di malto, frutta e un leggero tannico. Birra dal corpo abbastanza robusto e strutturato. Ha delicate note amare e ben equilibrate nel sottofondo.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 1
+  },
+  {
+    "beerName": "Maredsous 8",
+    "breweryName": "Abbaye de Maredsous",
+    "alcoholDegree": 8,
+    "appearence": "brown",
+    "beerDescription": "Dal colore marrone scuro, con riflessi rubino ed una schiuma beige chiara, fine e compatta. Ha davvero un bel naso ricco e complesso, con frutta sotto spirito,secca (datteri, prugne), liquirizia, alcool ed una delicata speziatura generata dai lieviti utilizzati. In bocca risaltano i malti tostati, il caramello e la frutta sotto spirito. Ha un finale secco, che vira leggermente verso l’amaro con note erbacee, di tostatura e di nuovo di frutta secca.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 2
+  },
+  {
+    "beerName": "Maredsous 10",
+    "breweryName": "Abbaye de Maredsous",
+    "alcoholDegree": 10,
+    "appearence": "blonde",
+    "beerDescription": "Di colore dorato intenso limpido ha schiuma bianca e cremosa, al naso spicca un fresco profumo floreale leggermente speziato e fruttato; emergono note di grano, malto e infine caramello. Al palato la tendenza è maltata anche se risulta marcata la nota alcolica. Dal finale delicatamente amarognolo, erbaceo con un po’ di astringenza ma decisamente lungo.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 3
+  },
+  {
+    "beerName": "Floreffe Triple",
+    "breweryName": "Abbaye de Floreffe",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda color oro limpido, dalla schiuma fine, cremosa, abbondante e persistente. A livello olfattivo si apre un ricco bouquet dal profumo floreale mentre al palato le varietà di luppolo selezionate le conferiscono un gusto dolce-amaro. Gusto secco e asciutto ma che lascia la bocca completamente morbida. Finale secco e dissetante.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 4
+  },
+  {
+    "beerName": "Floreffe Meilleure",
+    "breweryName": "Abbaye de Floreffe",
+    "alcoholDegree": 8,
+    "appearence": "brown",
+    "beerDescription": "Birra color mogano scuro dalla schiuma compatta e persistente. Aromi di frutta candita e caramello determinati dalla tostatura dei malti. A livello gustativo uno spiccato carattere frizzante, aromatico e fragrante con un netto sapore di liquirizia lascia la bocca asciutta e pulita. Corpo robusto e alcol conferiscono una sensazione di calore al palato.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 5
+  },
+  {
+    "beerName": "La Rulles Blonde",
+    "breweryName": "Brasserie Artisanale la Rulles",
+    "alcoholDegree": 7,
+    "appearence": "blonde",
+    "beerDescription": "Birra chiara e leggermente velata con una schiuma densa e spumosa. Profumi intensi si sprigionano al naso, un ampio bouquet floreale che si alterna al biscottato dei malti. Al palato sorprende l’equilibrio dell’amaro con la dolcezza dei malti. Di facile bevibilità sorprende la bocca ad ogni sorsata lasciando un finale piacevolmente amaro.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 6
+  },
+  {
+    "beerName": "La Rulles Triple",
+    "breweryName": "Brasserie Artisanale la Rulles",
+    "alcoholDegree": 8.4,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore dorato, leggermente velata con schiuma fine, cremosa e di buona persistenza. A naso forti sentori fruttati e di spezie; al palato note di lievito, miele e limone che incontrano un finale asciutto di albicocca seguito dall’amaro e una lieve citricità. Retrogusto morbido e dolce con accenni di tè.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 7
+  },
+  {
+    "beerName": "La Rulles Estivale",
+    "breweryName": "Brasserie Artisanale la Rulles",
+    "alcoholDegree": 5.2,
+    "appearence": "blonde",
+    "beerDescription": "Birra in stile Saison con un carattere particolarmente amaro. Di colore biondo dorato con una leggera velatura, si presenta con una schiuma bianca abbondante e persistente. Sentori erbacei ed agrumati sono gli elementi che spiccano a livello olfattivo in questa birra. Corpo leggero, e ad un primo impatto un gusto dolce e fruttato seguito subito da un finale secco e amaro con un tocco erbaceo molto rinfrescante.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 8
+  },
+  {
+    "beerName": "La Rulles Brune",
+    "breweryName": "Brasserie Artisanale la Rulles",
+    "alcoholDegree": 6.5,
+    "appearence": "brown",
+    "beerDescription": "Birra dal color tonaca di frate con una bella schiuma pannosa color cappuccino. A livello olfattivo un profumo caldo ed avvolgente con note tostate, cioccolato e un tocco di frutta secca. Corpo rotondo e snello con un gusto leggermente tostato che lascia una scia caffettosa e percezione di carruba.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 9
+  },
+  {
+    "beerName": "Bastogne Pale Ale",
+    "breweryName": "Brasserie de Bastogne",
+    "alcoholDegree": 6,
+    "appearence": "blonde",
+    "beerDescription": "Birra di colore giallo paglierino con schiuma bianca, i sentori olfattivi sprigionano spezie,scorza di limone e l’inconfondibile lievito di ORVAL, con il quale è prodotta. Al palato si avvertono note di pompelmo,erba tagliata e luppolo amaro. Birra morbida ed avvolgente con un finale dissetante e piacevolmente amaro.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 10
+  },
+  {
+    "beerName": "Bastogne Trouffette \nBelle d’Ete",
+    "breweryName": "Brasserie de Bastogne",
+    "alcoholDegree": 6,
+    "appearence": "blonde",
+    "beerDescription": "Birra di colore giallo paglierino si presenta con un bel cappello di schiuma bianca. L’aroma è molto fruttato e si notano senza problemi scorza d’arancia e coriandolo; in bocca ha un attacco piacevolmente luppolato con sentori fruttati di agrumi e di fiori. Il finale è molto equilibrato e lascia in bocca una sensazione fresca e secca.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 11
+  },
+  {
+    "beerName": "Darbyste",
+    "breweryName": "Brasserie de Blaugies",
+    "alcoholDegree": 5.8,
+    "appearence": "amber",
+    "beerDescription": "Birra dal bel colore dorato, che come tutte le produzioni della brasserie si presenta con una bella velatura a causa della non filtratura. Schiuma ricca e persistente. Al naso escono i profumi dei fichi con cui è brassata, i sentori di lievito, frutta fresca e leggere note legnose. Il gusto risulta ricco, all’inizio vellutato per poi evolversi in sfumature agrumate e un finale asciutto di luppolo.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 12
+  },
+  {
+    "beerName": "Saison d’Epeutre",
+    "breweryName": "Brasserie de Blaugies",
+    "alcoholDegree": 6,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore biondo velato, caratterizzata da un aroma fresco e pungente, note di pepe, agrumi e lievito. Corpo molto beverino con una frizzantezza molto pronunciata. Al gusto mantiene una sensazione di asciuttezza senza mai diventare astringente grazie al perfetto bilanciamento con le note maltate in sottofondo. Finale di breve persistenza ma che lascia la bocca completamente pulita.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 13
+  },
+  {
+    "beerName": "La Vermentoise",
+    "breweryName": "Brasserie de Blaugies",
+    "alcoholDegree": 6,
+    "appearence": "amber",
+    "beerDescription": "Nata dalla collaborazione del birrificio Blaugies e del birrificio americano Hill Farmstead di Greensboro-Vermont con l’idea di produrre una birra in stile “saison” con un tocco di luppolo americano. Di colore arancio pallido, opaco, presenta una abbondante schiuma un pò grossolana di ottima persistenza. Aroma pulito di frutta gialla, fiori e paglia. In bocca risulta di una bevibilità eccezionale grazie ad un corpo leggero con una giusta dose di bollicine; sapori di pane e frutta predominano, con un finale secco e lievemente amaro.",
+    "bottle33Price": null,
+    "bottle75Price": 14,
+    "key": 14
+  },
+  {
+    "beerName": "La Moneuse",
+    "breweryName": "Brasserie de Blaugies",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda con la caratteristica velatura blaugies caratterizzata da una imponente carbonazione, che spesso causa la fuoriuscita di schiuma al momento della stappatura. Schiuma fine e persistente che sprigiona sentori speziati ben percepibili. A livello olfattivo risulta fresca ed asciutta, con un profumo che ricorda l’erba appena tagliata. Nonostante l’alcolicità il corpo risulta esile e beverino e in bocca spiccano da subito note di fieno, luppolo, pane e una punta di miele. Finale secco ed asciutto, veramente dissetante.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 15
+  },
+  {
+    "beerName": "Troublette",
+    "breweryName": "Brasserie Caracole",
+    "alcoholDegree": 5.1,
+    "appearence": "blonde",
+    "beerDescription": "Leggera e dissetante di colore giallo nebbioso con schiuma bianca, sprigiona sentori freschi e piacevoli che vanno dal cereale, alle spezie, ai fruttati con note perlopiù agrumate e citriche date dall’ utilizzo della scorza di limone. In bocca si percepisce la leggerezza del frumento che lega molto bene con la sensazione citrica e di frutti tropicali.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 16
+  },
+  {
+    "beerName": "Caracole",
+    "breweryName": "Brasserie Caracole",
+    "alcoholDegree": 7.5,
+    "appearence": "amber",
+    "beerDescription": "Una solida strong ale di colore ambrato, velato, con un cappello di schiuma persistente, bianco e cremoso. Il naso è dolce, zucchero a velo, glassa, arancio candito, pesca gialla, caramello e lieviti. Dal corpo medio e mediamente carbonata, al palato ha una consistenza leggermente \"sciropposa\" ma non stucchevole; il gusto richiama fortemente l'aroma con la predominanza dolce, candita, e frutta sotto spirito.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 17
+  },
+  {
+    "beerName": "Saxo",
+    "breweryName": "Brasserie Caracole",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore chiaro e dalla schiuma soffice con un mix di profumi fini ed eleganti che abbracciano le aree del floreale e del fruttato con note speziate di chiodo di garofano, pepe e zenzero. In bocca è dolce e lievemente acidula, con note di malto iniziali che lasciano poi il passo allo speziato ed alle note citriche del luppolo.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 18
+  },
+  {
+    "beerName": "Nostradamus",
+    "breweryName": "Brasserie Caracole",
+    "alcoholDegree": 9.5,
+    "appearence": "brown",
+    "beerDescription": "Dal colore bruno carico e una schiuma mediamente copiosa e molto persistente. Al naso si evince subito il dolce della frutta fresca, in particolare sono evidenti i toni dell'uva sultanina e della frutta sotto spirito, arricchiti da una percezione alcolica. Il gusto è davvero di gran carattere; ricco e intenso, con toni di frutta secca e zucchero caramellato, il tutto contornato da calde note liquorose.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 19
+  },
+  {
+    "beerName": "La Chouffe",
+    "breweryName": "Brasserie d’ Achouffe",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda caratterizzata da una schiuma molto cremosa e abbondante, il colore, un arancione dorato velato, è molto elegante e impenetrabile. Il profumo è molto complesso e speziato con note piacevoli e floreali in principio, seguite da sentori di buccia d’arancia, caramello e coriandolo. In bocca è molto forte e decisa con una splendida sensazione di calore morbido e avvolgente.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 20
+  },
+  {
+    "beerName": "La Chouffe Houblon",
+    "breweryName": "Brasserie d’ Achouffe",
+    "alcoholDegree": 9,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda non filtrata né pastorizzata, rifermentata in bottiglia, per la quale sono stati impiegati luppoli che conferiscono l’amarezza di fondo; l’aroma è delicato con note floreali agrumate. Il corpo è amaro, secco e asciutto. La sensazione finale è di una birra amara, asciutta e rinfrescante che soddisfa sia il naso che il palato.",
+    "bottle33Price": null,
+    "bottle75Price": 15,
+    "key": 21
+  },
+  {
+    "beerName": "McChouffe",
+    "breweryName": "Brasserie d’ Achouffe",
+    "alcoholDegree": 8,
+    "appearence": "brown",
+    "beerDescription": "La Mc Chouffe si presenta con un inconfondibile colore rosso scuro ed una splendida schiuma compatta. Dai profumi intensi di frutta e malto tostato. Gusto ricco, corposo ma con una morbidezza data dal particolare tipo di miele aggiunto in fase di produzione. Calda, morbida ed avvolgente piace generalmente ai veri conoscitori ma incuriosice anche palati alle prime armi.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 22
+  },
+  {
+    "beerName": "Valdieu Triple",
+    "breweryName": "Abbaye de Valdieu",
+    "alcoholDegree": 9,
+    "appearence": "blonde",
+    "beerDescription": "Di colore dorato con spuma bianca e compatta, si apre al naso con profumi fruttati e abboccati di mele cotogne, cereali e una vena speziata. Al palato è dolce e fruttata con un pizzico di amaro. Il finale è lungo e persistente, lascia la bocca asciutta e dona una notevole sensazione di morbidezza.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 23
+  },
+  {
+    "beerName": "Valdieu Gran Cru",
+    "breweryName": "Abbaye de Valdieu",
+    "alcoholDegree": 10.5,
+    "appearence": "brown",
+    "beerDescription": "La GranCru si presenta di un bel colore bruno violaceo tendente al nero con una schiuma bianca panna molto persistente. L’aroma è complesso con caldi toni etilici di porto e sentori fruttati di prugna, con un gusto ricco che varia dai frutti di bosco,caramello,melassa e mou che portano tutti in un finale sensazionale di asciutto e speziato.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 24
+  },
+  {
+    "beerName": "Abbaye Des Rocs",
+    "breweryName": "Brasserie de l’Abbaye des Rocs",
+    "alcoholDegree": 9,
+    "appearence": "brown",
+    "beerDescription": "Birra dal colore rosso cupo, viene brassata con sette tipi di malto. Il suo aroma ricorda quello di un vino rosso, caldo e avvolgente con un finale fruttato. E’ una birra estremamente profonda, matura e mistica.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 25
+  },
+  {
+    "beerName": "Montagnarde",
+    "breweryName": "Brasserie de l’Abbaye des Rocs",
+    "alcoholDegree": 8,
+    "appearence": "amber",
+    "beerDescription": "Birra dal gusto e dalla gradazione alcolica robusta. Profumo ricco dal bouquet fruttato e speziato. Gusto marcato tra l’amarognolo e il caramello, esente da zucchero, questa birra di puro malto gioca fra tutte le sue sfumature dolciastre per arrotondare il finale leggermente amaro.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 26
+  },
+  {
+    "beerName": "Taras Boulba",
+    "breweryName": "Brasserie de la Senne",
+    "alcoholDegree": 4.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda, leggermente opalescente, dalla schiuma bianca e di media persistenza. Il naso risulta freschissimo, decisamente erbaceo e luppolato con un profumo secco e luppolato diffuso. Il corpo si fa apprezzare per la sua grande bevibilità aiutato anche da una carbonazione molto lieve. Il gusto è quello classico di una bionda luppolata, non è una lager ma bensì una splendida belgian ale dal carattere amaricante.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 27
+  },
+  {
+    "beerName": "Zinnebir",
+    "breweryName": "Brasserie de la Senne",
+    "alcoholDegree": 6,
+    "appearence": "blonde",
+    "beerDescription": "“Sorella” della Taras Boulba può considerarsi come la sua evoluzione. Colore biondo deciso dalla schiuma bianca e molto fragrante di media persistenza. Dal corpo leggermente più pronunciato e una sensazione di amaro più persistente. Birra abbastanza beverina e con un retrogusto secco e molto deciso. Perfetta per chi ama gusti luppolati anche se non estremi.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 28
+  },
+  {
+    "beerName": "Jambe de Bois",
+    "breweryName": "Brasserie de la Senne",
+    "alcoholDegree": 8.5,
+    "appearence": "amber",
+    "beerDescription": "Birra dal colore biondo rame con una bella schiuma fine e bianca. Corposa e potente al naso evoca banana e una sottile miscela di varietà di luppolo aromatico. Al palato domina il malto e una bella sensazione di calore, il tutto supportato da un finale amaro persistente ma allo stesso tempo delicato.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 29
+  },
+  {
+    "beerName": "Tournay Triple",
+    "breweryName": "Brasserie de Cazeau",
+    "alcoholDegree": 9.2,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore biondo carico con schiuma corposa e persistente. Al naso risaltano gli aromi agrumati erbacei e balsamici. I Luppoli Cascade e Nelson sauvin donano a questa birra aromi unici.",
+    "bottle33Price": null,
+    "bottle75Price": 15,
+    "key": 30
+  },
+  {
+    "beerName": "Tournay Noir",
+    "breweryName": "Brasserie de Cazeau",
+    "alcoholDegree": 7.6,
+    "appearence": "black",
+    "beerDescription": "Birra dal colore scuro, quasi come una stout, dalla schiuma fine e marroncina, cremosa e mediamente persistente. Nonostante una gradazione alcolica media, è una birra “tosta” con evidenti note tostate sia nell’aroma che nel gusto, un carattere ed una personalità ben marcate.",
+    "bottle33Price": null,
+    "bottle75Price": 15,
+    "key": 31
+  },
+  {
+    "beerName": "Saison de Cazeau",
+    "breweryName": "Brasserie de Cazeau",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "Questa “saison” viene prodotta con l’utilizzo di fiori di sambuco raccolti nelle vicinanze della brasserie. Birra dal colore giallo pallido e velato, con una schiuma abbondante fine e di lunga persistenza. Naso lievemente citrico sopraffatto da un bel profumo di fiori, in bocca è veloce e fresca con una buona carbonazione, Il gusto è amarognolo e deciso, con i fiori di sambuco in netto rilievo e note agrumate ed erbacee che lasciano perfettamente pulito il palato a fine bevuta.",
+    "bottle33Price": null,
+    "bottle75Price": 15,
+    "key": 32
+  },
+  {
+    "beerName": "Blanche de Namur",
+    "breweryName": "Brasserie du Bocq",
+    "alcoholDegree": 4.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore biondo torbido e dalla schiuma bianca spumosa di lunga persistenza. A naso riscontriamo un mix di sentori che variano dal limone, pera, buccia d’arancia ai più complessi pepe, coriandolo. Di corpo medio con un palato fresco e cremoso mai stucchevole per finire molto lunga e asciutta.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 33
+  },
+  {
+    "beerName": "Triple Moine",
+    "breweryName": "Brasserie du Bocq",
+    "alcoholDegree": 7.3,
+    "appearence": "blonde",
+    "beerDescription": "Di colore giallo chiaro leggermente opaco, ha schiuma bianca leggermente frizzante di lunga persistenza, nell’olfatto percepiamo una grande quantita di agrumi piacevoli e rinfrescanti. In bocca ritroviamo leggere note agrumate con una nota di miele e lievito nel finale lungo e mai stucchevole.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 34
+  },
+  {
+    "beerName": "Gauloise Blonde",
+    "breweryName": "Brasserie du Bocq",
+    "alcoholDegree": 6.3,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore giallo paglierino con riflessi ambrati, si presenta con un bel cappello di schiuma bianca modestamente persistente, in bocca ha un aroma dolce e fruttato con leggerissime note di pepe. Gusto amabile e leggermente secco.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 35
+  },
+  {
+    "beerName": "Gauloise Brune",
+    "breweryName": "Brasserie du Bocq",
+    "alcoholDegree": 8.1,
+    "appearence": "brown",
+    "beerDescription": "Birra dal bel colore tonaca di frate con riflessi rubino. Forma un discreto cappello di schiuma beige, fine, non molto persistente. L'aroma dolce, riconduce alla frutta candita, caramello e note tostate. Al gusto è dolce con calde sensazioni di malto, note di lievito e di frutta (prugne, uvetta). Finale alcolico con un lungo retrogusto sempre dolce ma non eccessivo.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 36
+  },
+  {
+    "beerName": "Bush Ambree",
+    "breweryName": "Brasserie Duboisson",
+    "alcoholDegree": 12,
+    "appearence": "amber",
+    "beerDescription": "Birra di colore dorato con riflessi ambra, dalla schiuma bianca con bolle finissime e molto persistente. Al naso si percepice un profumo di malto caramellato e zucchero candito. Di corpo medio in bocca risulta calda e avvolgente, anche grazie alla sua alcoolicità per poi lasciare nel retrogusto un secco caramellato.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 37
+  },
+  {
+    "beerName": "Saison Biologique",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 5.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda velata con schiuma bianca e cremosa, un aroma fresco e inebriante con note di fieno, paglia ed erba. Gusto agrumato e speziato, quasi a ricordare il pane, delicato ma allo stesso tempo deciso ed un retrogusto di erba, fieno, frutta ed erbe aromatiche. Gli ingredienti sono tutti rigorosamente di coltivazione biologica.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 38
+  },
+
+  {
+    "beerName": "Saison Dupont",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 6.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra di color arancio pallido, velato, con un generoso cappello di schiuma compatta, fine e cremosa, molto persistente. Al primo impatto arrivano i sentori di scorza di limone e freschezza, e nel finale seguono note più fruttate e dolci di pesca, di polpa d'arancio. Termina con una virata amara ed erbacea, secca, che lascia il palato pulito.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 39
+  },
+  {
+    "beerName": "Bier du Miel",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore giallo dorato con una schiuma bianca e molto spessa, i sentori olfattivi sono floreali e mielati, quest’ultimi derivano dall’utilizzo di miele di castagno biologico lasciato in fermentazione. Corposa dal gusto dolce che tramuta in quasi piccante con note speziate ed un finale delicatamente amaro di luppolo.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 40
+  },
+  {
+    "beerName": "Moinette Biologique",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 7.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore dorato leggermente opalescente dalla schiuma bianca persistente che si dissipa lentamente. Si presenta al naso con sentori di scorza d’arancia, erba, fieno e note floreali per poi ritrovarle nel palato con l’aggiunta di note biscottate e di cantina. Dal finale frizzante e luppolato, come per la sorella “saison biologique” vengono utilizzate solo materie rigorosamente biologiche.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 41
+  },
+  {
+    "beerName": "Moinette Blonde",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 8.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore biondo brillante con un cappello di schiuma pannosa molto ampia, naso dolce e ricco di frutta sotto spirito, zucchero, canditi e leggera speziatura donata dai lieviti. Corpo robusto e frizzante, ricco di note luppolate e frutta bianca matura con un leggero tocco di miele nel finale",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 42
+  },
+  {
+    "beerName": "Moinette Brune",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 8.5,
+    "appearence": "brown",
+    "beerDescription": "Birra dal colore rame scuro, opaco, con cappello mediamente persistente di schiuma ocra, fine e cremosa. L'aroma rivela sentori di toffee, frutta secca, una delicata tostatura di malto ed un leggero sentore di cantina. Le stesse sensazioni si ritrovano in bocca, con la componente etilica che però è sorprendentemente in evidenza. Il gusto è dominato da malto e da toffee, con un'amaro terroso,leggermente rustico. Chiude con una virata amara dove convivono note terrose e tostate.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 43
+  },
+  {
+    "beerName": "Cervesia",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 8.5,
+    "appearence": "amber",
+    "beerDescription": "Rifatta su una ricetta gallica questa birra si presenta di un colore biondo ambrato con schiuma bianca compatta molto persistente, sentori olfattivi molto particolari di spezie,frutta matura e malto. Al palato si presenta con un ingresso amaro erbaceo e maltato quasi a ricordare un craker. Finale secco e amarognolo.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 44
+  },
+  {
+    "beerName": "Bier de Beloil",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 8.5,
+    "appearence": "amber",
+    "beerDescription": "Colore ambrato molto ben costruito, con schiuma morbida e cremosa, al naso spiccano profumi di lievito e spezie piccanti con una leggera nota di biscotto tostato per bilanciare. Corpo medio con note di caramello, zucchero di canna, lievito, pane e spezie nel finale.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 45
+  },
+  {
+    "beerName": "Bons Voeux",
+    "breweryName": "Brasserie Dupont",
+    "alcoholDegree": 9.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore dorato leggermente velato con un cappello di schiuma cremosa e persistente, il naso è splendidamente raffinato, con sentori di luppolo, lievito speziato, frutta matura e un leggero rustico. Grande armonia nel palato di spezie e frutta in un insieme nettamente luppolato, asciutto, ma non esageratamente astringente.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 46
+  },
+  {
+    "beerName": "Hercule Stout",
+    "breweryName": "Brasserie Ellezelloise",
+    "alcoholDegree": 9,
+    "appearence": "black",
+    "beerDescription": "Di colore nero con schiuma fine e abbastanza persistente, al naso sprigiona sentori di caffé, insieme a note ricche di cioccolato, frutta secca e malto tostato. Corpo rotondo e molto beverino, morbido con note al gusto di uva passa, melassa, oltre a quelle classiche di una stout. Ha un finale morbido, equilibrato e discretamente lungo.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 47
+  },
+  {
+    "beerName": "Fantome",
+    "breweryName": "Brasserie Fantome",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Dal bel colore oro leggermente velato, con una testa di schiuma morbida e cremosa. A naso sorprende per l’evoluzione che ha. Nel mutare della temperatura riscontriamo un bouquet di frutta matura e un rustico che si modifica di bottiglia in bottiglia. Berla asciuga il palato: inizia molto frizzante, con l’asciutto del luppolo e l’amaro pungente del lievito, continua morbida e con sapore di zucchero candito e malto non tostato, finisce asciutta e astringente.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 48
+  },
+  {
+    "beerName": "Fantome Chocolate",
+    "breweryName": "Brasserie Fantome",
+    "alcoholDegree": 8,
+    "appearence": "amber",
+    "beerDescription": "Dal colore vago sul giallo arancio un po’ nebbioso con schiuma bianca poco persistente, ha un naso raffinato dove percepiamo per lo più note di agrumi e fieno per poi sentire solo nel finale una leggera nota di cacao. Al palato ritroviamo le note agrumate con un aggiunta di spezie per poi arrivare nel finale e riscontrare il cacao.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 49
+  },
+  {
+    "beerName": "Magic Ghost",
+    "breweryName": "Brasserie Fantome",
+    "alcoholDegree": 8,
+    "appearence": "green",
+    "beerDescription": "Dal colore “ectoplasmatico” verde che varia da bottiglia a bottiglia, da un verde brillante ad uno oliva e velato, schiuma bianca con riflessi verdognoli fine e di lunga persistenza. Nella sua stravaganza Dany non dichiara mai le spezie utilizzate quindi resta a noi con il nostro patrimonio di sensazioni decifrare gli ingredienti. Camomilla? Limone o lime? A naso forse una sfumatura di lampone e una delicata speziatura. In bocca, sentori di malto con dell’agrumato bilanciato da una lieve nota citrica. Finisce fresca e pulita con un interrogativo: cosa sto bevendo?",
+    "bottle33Price": null,
+    "bottle75Price": 15,
+    "key": 50
+  },
+  {
+    "beerName": "St. Feuillien Blonde",
+    "breweryName": "Brasserie Friart",
+    "alcoholDegree": 7.5,
+    "appearence": "blonde",
+    "beerDescription": "Di colore dorato carico con una lieve velatura, dalla schiuma abbondante e persistente. A livello olfattivo profumi decisi di lievito, sfumature speziate e luppolo; Al palato offre una sostanziale dolcezza equilibrata da una estrema frizzantezza e un amaro finale con note maltate e agrumate.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 51
+  },
+  {
+    "beerName": "St. Feuillien Triple",
+    "breweryName": "Brasserie Friart",
+    "alcoholDegree": 8.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore oro pallido e velato con una schiuma fine, abbondante e molto persistente. Al naso si apre con un meraviglioso bouquet che sfuma in note erbacee e floreali. In bocca una frizzantezza accentuata, con un corpo morbido ed elegante dalle note aspre ed erbacee. Finale amaro, lungo ed estremamente gradevole.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 52
+  },
+  {
+    "beerName": "St. Feuillien Brune",
+    "breweryName": "Brasserie Friart",
+    "alcoholDegree": 7.5,
+    "appearence": "brown",
+    "beerDescription": "Birra dal colore tonaca di frate, dalla schiuma bianca, ampia e persistente. A livello olfattivo sentore di spezie predominante, corpo estremamente delicato ed equilibrato per essere una “brune”. In bocca un gusto leggermentespeziato che lascia trasparire una sensazione fruttata con un retrogusto secco e deciso.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 53
+  },
+  {
+    "beerName": "La Guillotine",
+    "breweryName": "Browerij Huyghe",
+    "alcoholDegree": 9.3,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore dorato con importante cappello di schiuma bianca. Profumo molto fruttato, dominato dai sentori di albicocca ma vengono percepiti anche uvetta, canditi ed anice. Al gusto, un ottimo contrasto fra dolce e speziato, sfumature tra frutta, lievito e pepe che sorprendono piacevolmente il palato.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 54
+  },
+  {
+    "beerName": "Delirium Tremens",
+    "breweryName": "Browerij Huyghe",
+    "alcoholDegree": 9,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore biondo dorato carico, con una schiuma fine e molto abbondante. A naso risulta molto intensa, continuando con un corpo deciso e pieno, sostenuto dalla forte componente alcolica. Finale speziato, lungo e persistente denotato dalle tracce di coriandolo e buccia d’arancia utilizzati nella produzione.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 55
+  },
+  {
+    "beerName": "Delirium Nocturnum",
+    "breweryName": "Browerij Huyghe",
+    "alcoholDegree": 9,
+    "appearence": "brown",
+    "beerDescription": "Versione scura della Delirium tremens è una birra di alta gradazione rifermentata con tre tipi di lievito. Dalla schiuma fine e persistente risulta con un aroma leggermente luppolato e un retrogusto alcolico bilanciato con note calde e vellutate.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 56
+  },
+  {
+    "beerName": "Floris Apple",
+    "breweryName": "Browerij Huyghe",
+    "alcoholDegree": 3.5,
+    "appearence": "blonde",
+    "beerDescription": "Si presenta di un colore giallo nebuloso con schiuma bianca di media persistenza, A livello gustativo richiama il succo di mela zuccherato. Intensità olfattiva molto elevata e aromatizzata.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 57
+  },
+  {
+    "beerName": "Floris Kriek",
+    "breweryName": "Browerij Huyghe",
+    "alcoholDegree": 3.5,
+    "appearence": "red",
+    "beerDescription": "Color rosso, leggermente velato per questa birra, si presenta con schiuma rosa molto compatta che aderisce alla parete del bicchiere. Ha un aroma di ciliegie selvatiche con note di noci, date dai noccioli delle ciliegie.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 58
+  },
+  {
+    "beerName": "Floris Fraise",
+    "breweryName": "Browerij Huyghe",
+    "alcoholDegree": 3.5,
+    "appearence": "red",
+    "beerDescription": "Birra dall'aroma molto profumato e al gusto di fragola; il sapore è zuccherino, ma il gusto di frutta rimane equilibrato e non prevale sulla birra.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 59
+  },
+  {
+    "beerName": "Lupulus Triple",
+    "breweryName": "Brasserie Les 3 Fourquets",
+    "alcoholDegree": 8.5,
+    "appearence": "blonde",
+    "beerDescription": "Classica birra fra le Golden Ale Belga, dalla robusta alcolicità ben mascherata da un corpo rotondo ed equilibrato. Dalla schiuma ricca e cremosa con speziatura accentuata. A naso si distinguono coriandolo, buccia d’arancia insieme ad una lieve profumo di luppolo. A livello gustativo, forte presenza di luppolo, con una lieve astringenza e un’eccezionale rotondità e bevibilità. Birra fresca e appagante da bere giovane.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 60
+  },
+  {
+    "beerName": "Lupulus Brune",
+    "breweryName": "Brasserie Les 3 Fourquets",
+    "alcoholDegree": 8.5,
+    "appearence": "brown",
+    "beerDescription": "Birra dal colore tonaca di frate, leggermente velata con una schiuma a grana fine color nocciola. A livello olfattivo sprigiona aromi di malto caramellato e frutti rossi, richiamando la fragranza del lievito utilizzato; in bocca risulta corposa e ben strutturata, resa particolare anche grazie all’utilizzo dello zucchero di canna scuro, note di caramello, cioccolato e frutti rossi. Dal gusto morbido e vellutato con un finale leggermente luppolato in equilibrio perfetto con i sentori iniziali.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 61
+  },
+  {
+    "beerName": "Lupulus Organicus",
+    "breweryName": "Brasserie Les 3 Fourquets",
+    "alcoholDegree": 8.5,
+    "appearence": "blonde",
+    "beerDescription": "Blonde Triple fatta unicamente con materie prime di origine biologica. L’idea è stata quella di riprodurre nel modo più esatto la Lupulus Triple dalla quale si differenzia per l’utilizzo di luppoli di origine tedesca anziché sloveni e per l’impiego di zucchero di canna biologico al posto del saccarosio. Nasce così una birra che assomiglia alla sorella ma con gusto più rotondo e delicatamente dolce",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 62
+  },
+  {
+    "beerName": "Schlenkerla Weizen",
+    "breweryName": "Brauerei Heller",
+    "alcoholDegree": 5.2,
+    "appearence": "black",
+    "beerDescription": "In questa Rauchbier il sapore di affumicato è lieve, più tenue, a causa del frumento maltato, presente in misura del 50% del cereale, che non è affumicato. La rifermentazione in bottiglia rende il colore della Schlenkerla Rauchbier Weizen naturalmente torbido. Eleganti le note fruttate di banana e i toni caldi di cioccolato. I lieviti di alta fermentazione rendono questa birra più incisiva e complessa rispetto agli altri prodotti della Schlenkerla.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 63
+  },
+  {
+    "beerName": "Schlenkerla Marzen",
+    "breweryName": "Brauerei Heller",
+    "alcoholDegree": 5.1,
+    "appearence": "black",
+    "beerDescription": "La Schlenkerla Rauchbier Märzen è stata ribattezzata curiosamente ‘Speck liquido’, in quanto sia a livello olfattivo sia a quello gustativo ricorda molto i sentori del più tipico salume affumicato. Aroma e gusto vanno di pari passo in quanto questo sentore di affumicato ipnotizza, cristallizza e inibisce altri aromi e gusti. Tutto questo rende la Schlenkerla Rauchbier Märzen una birra stupendamente squilibrata che però regala sensazioni di indimenticabile piacere a chi ama i toni caldi dell’affumicato.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 64
+  },
+  {
+    "beerName": "Biere des Ours",
+    "breweryName": "Brasserie La Binchoise",
+    "alcoholDegree": 8.5,
+    "appearence": "blonde",
+    "beerDescription": "Di colore giallo dorato leggermente velato con una schiuma bianca, fine e persistente. Al naso si percepiscono note delicate e dolci di miele millefiori,lievito, spezie dolci, frutta gialla ed erbe aromatiche. In bocca mostra una notevole morbidezza, un gusto che ricorda note floreali e di miele,aromi di malto,lievito ben bilanciati da un finale secco e luppolato.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 65
+  },
+  {
+    "beerName": "Kwak",
+    "breweryName": "Brouwerij Bosteels",
+    "alcoholDegree": 8,
+    "appearence": "amber",
+    "beerDescription": "Birra ad alta fermentazione dal colore ambrato, schiuma fine e persistente dovuto anche al particolare bicchiere in cui viene servita, detto “bicchiere del cocchiere”. All’olfatto prevale il malto dai toni caldi in cui spiccano il caramello e un leggero affumicato insieme al profumo di spezie e frutta. Il gusto si rivela assai complesso, orientato al dolce con un corpo decisamente strutturato.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 66
+  },
+  {
+    "beerName": "Triple Karmeliet",
+    "breweryName": "Brouwerij Bosteels",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda dal colore dorato e dalla schiuma ricca e persistente. A livello olfattivo si presenta molto raffinata e completa con sentori di vaniglia ed aromi di limone. In bocca non solo la leggerezza e la freschezza del frumento, ma anche la cremosità dell’avena assieme ad uno speziato di limone e “dry” del chinino. Queste caratteristiche derivano non solo dai tre cereali utilizzati ma anche dalla particolarità del luppolo e del lievito.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 67
+  },
+  {
+    "beerName": "Malheur 12",
+    "breweryName": "Brewerij de Landtsheer",
+    "alcoholDegree": 12,
+    "appearence": "brown",
+    "beerDescription": "Dal colore marrone scuro quasi impenetrabile con schiuma abbondante e cremosa di colore beige, ha sentori olfattivi di frutta candita,zucchero di canna,malto e spezie. In bocca risulta morbida come una torta imbevuta nel rhum con toni di cioccolato,caramello e miele.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 68
+  },
+  {
+    "beerName": "Duvel",
+    "breweryName": "Brouwerij Duvel-Moortgat",
+    "alcoholDegree": 8.5,
+    "appearence": "blonde",
+    "beerDescription": "Versa di un colore giallo paglierino velato con una massiccia schiuma bianca molto persistente, i sentori olfattivi sono un bouqut di fiori con il tipico tocco amarognolo del luppolo inglese e l’inconfondibile freschezza del luppolo saaz. Al primo sorso si resta sorpresi di fronte ad una frizzantezza insolita; man mano che ci si abitua, però, è il gusto fruttato, a farsi strada: agrumi canditi, uva e mele cotte sono solo alcune delle sfumature.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 69
+  },
+  {
+    "beerName": "Buffalo Stout",
+    "breweryName": "Brouwerij Van Den Bossche",
+    "alcoholDegree": 9,
+    "appearence": "black",
+    "beerDescription": "Birra dalla schiuma densa, abbondante e cremosa, dal colore scuro e molto pronunciato. Al naso si apre con un’ottima combinazione di sentori derivanti dal malto tostato e dal luppolo in buon equilibrio fra di loro. Il corpo risulta snello e rotondo, con un finale lungo, equilibrato e decisamente piacevole.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 70
+  },
+  {
+    "beerName": "Kasteel Triple",
+    "breweryName": "Brouwerij Van Honsebrouck",
+    "alcoholDegree": 11,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore chiaro/ambrato, dall’elevato grado alcolico con una schiuma ricca e durevole. Profumi floreali, malto, spezie e miele. Corpo rotondo e ben strutturato, a livello gustativo risulta dolce e pastosa, piacevole in bocca ma anche con una frizzantezza vivace. Retrogusto amarognolo prolungato, con accenni di frutta secca e di porto.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 71
+  },
+  {
+    "beerName": "Kasteel Brune",
+    "breweryName": "Brouwerij Van Honsebrouck",
+    "alcoholDegree": 11,
+    "appearence": "brown",
+    "beerDescription": "Birra scura dalla schiuma densa e persistente color nocciola. A livello olfattivo profumi di cereali maltati mentre in bocca un intenso gusto di malto con un corpo molto deciso e morbido fruttato con note di porto. Finale persistente con sentori di frutta secca.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 72
+  },
+  {
+    "beerName": "Cuvee du Chateau",
+    "breweryName": "Brouwerij Van Honsebrouck",
+    "alcoholDegree": 11,
+    "appearence": "brown",
+    "beerDescription": "Immaginate di prendere una kasteel brune e dimenticarla nelle cantine del castello di Van Honsebrouck per 10 anni…Questo è il risultato, una kasteel brune che si modifica piacevolmente nel tempo.",
+    "bottle33Price": null,
+    "bottle75Price": 18,
+    "key": 73
+  },
+  {
+    "beerName": "Arabier",
+    "breweryName": "Brewerij de Dolle",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal bel colore dorato molto carico, schiuma fine e molto abbondante che viene leggermente ingrigita dal lievito nella versatura. Aroma e gusto predominante: luppolo! A naso luppolo floreale ed erbaceo, secco e molto amaro e persistente. Al palato oltre al completo amaro dato dal luppolo si inserisce un sentore speziato e piccante dovuto ai lieviti. Finale aggressivo e spiccato di amaro nel retro del palato e in fondo alla lingua.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 74
+  },
+  {
+    "beerName": "Oerbier",
+    "breweryName": "Brewerij de Dolle",
+    "alcoholDegree": 9,
+    "appearence": "brown",
+    "beerDescription": "Birra dal colore marrone scuro, con riflessi rame chiaro, dalla schiuma fine e molto persistente. Presenta aromi erbosi e fruttati intensi, al palato risulta morbida e cremosa, con qualità vinose e dolci su di un insieme complesso di gusti, con un lungo finale in cui la dolcezza è controbilanciata dalle note di liquirizia.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 75
+  },
+  {
+    "beerName": "Dulle Teve",
+    "breweryName": "Brewerij de Dolle",
+    "alcoholDegree": 10,
+    "appearence": "blonde",
+    "beerDescription": "Birra di colore dorato carico, leggermente velata ed opalescente dalla schiuma abbondante cremosa e persistente. Aroma e gusto si evolvono durante l’assaggio, il profumo spiccato di luppolo viene bilanciato dai malti mentre il corpo risulta strutturato ma sorprendentemente beverina nonostante l’alta gradazione alcolica. A livello gustativo comincia pastosa con sentori di caramello, poi si evolve con note di frutta matura astringente che ripulisce completamente il palato. Finale lungo, dolce e complesso.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 76
+  },
+  {
+    "beerName": "Extra export Stout",
+    "breweryName": "Brewerij de Dolle",
+    "alcoholDegree": 9,
+    "appearence": "black",
+    "beerDescription": "Birra dal colore nero molto marcato, schiuma fine che svanisce rapidamente. Aroma complesso, con note tostate ed affumicate, caffè, uva passa e frutti canditi. Palato morbido, quasi dolce ad un primo impatto, si avvertono sentori di liquore, poi un accenno di sentori vinosi e frutta rossa matura. Complessa e piacevole, non una stout ma più di una stout.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 77
+  },
+  {
+    "beerName": "Saison d’Erpe Mere",
+    "breweryName": "Brouwerij de Glazen Toren",
+    "alcoholDegree": 6.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra biondo dorata, leggermente velata dalla schiuma molto abbondante, cremosa e molto persistente. A livello olfattivo risulta asciutta e frizzante, ricca di note luppolate e fiori, finale ricco di malto e un tocco di aspro. Il corpo è molto leggero e beverino e al palato offre una gradevole sensazione di agrumi bilanciata dal luppolo che torna prepotentemente nel finale.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 78
+  },
+  {
+    "beerName": "Jan de Lichte",
+    "breweryName": "Brouwerij de Glazen Toren",
+    "alcoholDegree": 7.5,
+    "appearence": "blonde",
+    "beerDescription": "Particolare esempio di blanche belga prodotta atipicamente con lo stesso metodo utilizzato per una dubbel. Dal colore biondo brillante e velato, caratterizzato da una schiuma fine e poco persistente. Ricca di aromi citrici e speziati che lasciano una piacevole sensazione di pulizia. Corpo facile e snello con note speziate date dal coriandolo, e dalla buccia d’arancia amara. Finale forte, persistente e speziato.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 79
+  },
+  {
+    "beerName": "Ondineke",
+    "breweryName": "Brouwerij de Glazen Toren",
+    "alcoholDegree": 8.3,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda e leggermente velata in quanto non filtrata, dalla schiuma abbondante e persistente. Al naso ha un inizio fruttato, con una nota fuggente di caramello. A livello gustativo alterna note maltate ad altre secche ed astringenti con un pronunciato finale amaro.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 80
+  },
+  {
+    "beerName": "Urthel Hop It",
+    "breweryName": "Brouwerij de Leyerth",
+    "alcoholDegree": 9.5,
+    "appearence": "blonde",
+    "beerDescription": "Una speciale ed eccezionale birra da 9,5%, con un amaro molto marcato e un finale fresco e raffinato. Ispirata alla tradizione birraia Americana ma con l’utilizzo di varietà differenti di luppoli europei. Schiuma bianca, fine e persistante.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 81
+  },
+  {
+    "beerName": "Urthel Samaranth",
+    "breweryName": "Brouwerij de Leyerth",
+    "alcoholDegree": 11.5,
+    "appearence": "brown",
+    "beerDescription": "Dal colore marrone velato con schiuma fitta che dissipa velocemente, ha un aroma dolce dominato dai malti e dal caramello con sentori di prugna e uvetta. Ingresso in bocca pieno ma comunque morbido e vellutato con le stesse note gustative riscontrate nel naso ad eccezione dell’alcol che è ben mascherato.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 82
+  },
+  {
+    "beerName": "Bloemenbier",
+    "breweryName": "Brouwerij de Proof",
+    "alcoholDegree": 7,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda ad alta fermentazione brassata nella cittadina belga di Lochristi, famosa per la coltivazione di fiori; dal gusto delicato e dall’aroma profumato arricchito dalla presenza di piante e fiori. Caratteristico è anche l’involucro in carta setata bianca con motivi di tulipani color arancio.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 83
+  },
+  {
+    "beerName": "La Roche Russian \nImperial Stout",
+    "breweryName": "Brouwerij de Proof",
+    "alcoholDegree": 14,
+    "appearence": "black",
+    "beerDescription": "Birra di colore scuro, rifermentata in bottiglia e dalla discreta schiuma color nocciola. Dai sentori olfattivi pronunciati di cereali ed erbe aromatiche. Al gusto è subito dolce ed estremamente corposa, retrogusto amaro che dà inizio ad un continuo piacevole bilanciamento tra dolce e amaro. Per amanti delle stout di alto grado alcolico è una birra considerata da meditazione.",
+    "bottle33Price": 10,
+    "bottle75Price": null,
+    "key": 84
+  },
+  {
+    "beerName": "La Roche Imperial \nStout Grappa Wood",
+    "breweryName": "Brouwerij de Proof",
+    "alcoholDegree": 14,
+    "appearence": "black",
+    "beerDescription": "Questa birra dall’elevato grado alcolico di color marrone opalescente, si presenta con una schiuma praticamente assente di colore beige. A livello olfattivo ricorda la grappa e la frutta sotto spirito. Gusto dolce intenso e morbido con sentori di caffè, cioccolato, legno e frutta secca nel finale. Birra da gustare molto lentamente.",
+    "bottle33Price": 10,
+    "bottle75Price": null,
+    "key": 85
+  },
+  {
+    "beerName": "Charles V Rouge",
+    "breweryName": "Brouwerij Haacht",
+    "alcoholDegree": 8.5,
+    "appearence": "brown",
+    "beerDescription": "Birra di colore ambrato dai riflessi ramati con una schiuma fine ed abbondante; a livello olfattivo un predominante aroma di frutta secca. Il corpo risulta mediamente strutturato ed al palato si ripresentano nuovamente le note di frutta secca e mandorle tostate con un finale luppolato che si avverte anche nel retrogusto.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 86
+  },
+  {
+    "beerName": "Gouden Carlous Hopsinjoor",
+    "breweryName": "Brouwerij Het Anker",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Di un bel colore biondo velato con una testa di schiuma fresca e croccante, si presenta al naso fresca e ricca di luppolo insieme a note floreali e un tappeto di malto. Il corpo è rotondo, di frizzantezza media, non eccessiva, che permette al luppolo di “allargarsi” omogeneamente su tutto il palato senza azzerarlo. La corsa è buona, elegante e progressiva, con una sensazione finale di calore diffuso e di amaro affiorante su entrambi i lati della lingua.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 87
+  },
+  {
+    "beerName": "Gouden Carlous Classic",
+    "breweryName": "Brouwerij Het Anker",
+    "alcoholDegree": 8.5,
+    "appearence": "brown",
+    "beerDescription": "Versa di colore ambrato carico con riflessi marroni, con schiuma bianca cremosa persistente ha un naso che si fa subito apprezzare per ricchezza e completezza aromatiche, sentori di spezie, caramello, malto e toffee. Di corpo robusto che si fa apprezzare nel gustarla con note di frutta matura, coriandolo, caramella mou e una sensazione nel finale molto appagante.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 88
+  },
+  {
+    "beerName": "Gouden Carlous Triple",
+    "breweryName": "Brouwerij Het Anker",
+    "alcoholDegree": 9,
+    "appearence": "blonde",
+    "beerDescription": "Si presenta gialla aranciata, vistosamente effervescente e sormontata da una spuma bianca fine, compatta, rigogliosa e persistente. L’aroma, sorprendentemente tenue, è dolce e fiorito, quasi mielato, con una decisa nota alcolica e un pizzico di lievito grezzo. In bocca sentiamo il corpo morbido, pieno ma non pesante, estremamente vellutato, l’alcol ritrova la giusta discrezione e ci lascia percepire note di vaniglia, camomilla e un netto sentore di spezie; noce moscata, chiodi di garofano, paprika, anice stellato e pepe.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 89
+  },
+  {
+    "beerName": "Gouden Carlous \nVan de Keiser Red",
+    "breweryName": "Brouwerij Het Anker",
+    "alcoholDegree": 10,
+    "appearence": "blonde",
+    "beerDescription": "Dal colore biondo carico velato con un cappello di schiuma bianca compatta. Ha un bouquet aromatico di frutta candita, miele, malto e spezie che al primo assaggio mutano rapidamente in note di ciliegia, vaniglia, frutta e spezie con un leggero retrogusto amarognolo che non guasta. Finisce tranquilla e in perfetta sintonia con la equilibratezza generale di questo prodotto di alta gamma.",
+    "bottle33Price": null,
+    "bottle75Price": 15,
+    "key": 90
+  },
+  {
+    "beerName": "Gouden Carlous Cuvee \nVan de Keiser",
+    "breweryName": "Brouwerij Het Anker",
+    "alcoholDegree": 11.5,
+    "appearence": "brown",
+    "beerDescription": "Bella testa di schiuma bianca, cremosa e persistente, su questa birra color borgogna molto brillante, l'aroma è quasi quello di un brandy, dolce ma non stucchevole, ripulito e ricco, con note speziate di cannella, pepe e altre spezie, malto caramellato e una leggera nota tostata nel finale. Abboccata senza essere sciropposa, delicatamente frizzante, il palato è in grado di apprezzarne la ricchezza e la varietà, che si rivela speziato e confortevole, con note di biscotto, zucchero candito e polvere di cioccolato.",
+    "bottle33Price": null,
+    "bottle75Price": 15,
+    "key": 91
+  },
+  {
+    "beerName": "Punk Ipa",
+    "breweryName": "Brewery Brew Dog",
+    "alcoholDegree": 5.6,
+    "appearence": "amber",
+    "beerDescription": "E’sicuramente l’espressione migliore del luppolo, sia aromatico, che amaro. Dal colore paglierino e con schiuma frizzante bianca. Al naso le sensazioni sono fresche e balsamiche, citriche ,in particolare di limone cedro ed in generale di frutti tropicali. In bocca è secca ed un po’ astringente, dall’equilibrio gustativo orientato sull’amaro che la rende piacevolmente dissetante.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 92
+  },
+  {
+    "beerName": "Vagabond Glutein Free",
+    "breweryName": "Brewery Brew Dog",
+    "alcoholDegree": 4.5,
+    "appearence": "amber",
+    "beerDescription": "Pale Ale Gluten free dal colore dorato carico. Una bella schiuma fine e attraenti note agrumate, fruttate e leggermente speziate. In bocca è scorrevole con un ottimo bilanciamento cereale e note agrumate e resinose, con un piacevole amaro.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 93
+  },
+  {
+    "beerName": "Gulden Draak",
+    "breweryName": "Brouwerij Van Steenberge",
+    "alcoholDegree": 10.5,
+    "appearence": "brown",
+    "beerDescription": "Birra forte ad alta fermentazione dal colore scuro che viene fatta rifermentare in bottiglia. Sia dal punto di visto olfattivo che quello gustativo una birra dolce, calda ma che cede il passo ad un retrogusto finale amarognolo denotato da un accenno di luppolo. Da gustare lentamente.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 94
+  },
+  {
+    "beerName": "Hommelbier",
+    "breweryName": "Brouwerij Van Eecke",
+    "alcoholDegree": 7.5,
+    "appearence": "blonde",
+    "beerDescription": "Dal colore giallo dorato con schiuma bianca, abbondante e cremosa. Ha sentori olfattivi eleganti di luppolo fresco, fiori di camomilla, miele e note fruttate di arancia e albicocca. Al palato è frizzante con un gusto pieno caratterizzato dal miele che lascia subito il posto al dominante amaro del luppolo, con finale lungo e amaro dalle note speziate.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 95
+  },
+  {
+    "beerName": "Het Kapittel Prior",
+    "breweryName": "Brouwerij Van Eecke",
+    "alcoholDegree": 9,
+    "appearence": "brown",
+    "beerDescription": "Versa di un colore tonaca di frate con riflessi rossastri e un cappello di schiuma beige compatta e persistente. Al naso percepiamo sentori di banana matura, frutta secca (noci e datteri) e una vivace sensazione liquorosa. Al palato si fanno sentire le note di tostato, caramello e fruttato (nuovamente banana matura e frutta secca) e percezioni di liquirizia e cioccolato.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 96
+  },
+  {
+    "beerName": "Het Kapittel Prior",
+    "breweryName": "Brouwerij Van Eecke",
+    "alcoholDegree": 10,
+    "appearence": "blonde",
+    "beerDescription": "Di colore arancio dorato e una testa di schiuma bianca molto consistente. Il primo impatto che si ha portando il calice al naso è sicuramente quello di una birra con un volume alcolico molto elevato, con le note dell’alcol a fare da padrone per poi, solo in un secondo momento, avvertire note speziate e fruttate. In bocca risulta morbida,avvolgente con sentori di malto. nel finale riusciamo a percepire una sensazione floreale.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 97
+  },
+  {
+    "beerName": "Troubadour Obscura",
+    "breweryName": "Brouwerij the Musketeers",
+    "alcoholDegree": 8.5,
+    "appearence": "black",
+    "beerDescription": "Birra dal colore tipico delle stout irlandesi ma con un naso molto più ricco: malto tostato, frutta rossa, caffè e un accenno di cioccolato. Il corpo risulta rotondo, frizzante, e abbastanza asciutto; rifermentata in bottiglia, risulta in bocca morbida e cremosa, non pastosa, con un retrogusto complesso, liquirizia, caffè tostato e un leggero amaro di luppolo, con un finale asciutto e appagante al palato.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 98
+  },
+  {
+    "beerName": "St. Bernardus Abt 12",
+    "breweryName": "Brouwerij St. Bernardus",
+    "alcoholDegree": 10,
+    "appearence": "brown",
+    "beerDescription": "Birra dal colore ambrato mogano, con una schiuma molto abbondante ma di breve persistenza. Profumi intensi, dominati da alcool e caramello, in bocca si presenta con note di banana, susina e frutta secca che sommati danno un risultato complessivamente molto dolce. Finale luppolato e leggermente affumicato, una birra complessa da bere in momenti di completo relax",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 99
+  },
+  {
+    "beerName": "Saison de Dottignes",
+    "breweryName": "Brouwerij de Ranke",
+    "alcoholDegree": 5.5,
+    "appearence": "blonde",
+    "beerDescription": "Nel bicchiere è di un bel colore dorato, velato, con un cappello di schiuma bianca, fine e cremosa, molto persistente. Al naso avvertiamo sentori di miele e frutta gialla e una leggera pepatura che la rende molto vivace alle narici. In bocca risulta dolce, con note di miele e di malto leggermente tostato, seguito da un deciso amaro erbaceo che permane anche nel retrogusto.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 100
+  },
+  {
+    "beerName": "XX Bitter",
+    "breweryName": "Brouwerij de Ranke",
+    "alcoholDegree": 6.2,
+    "appearence": "blonde",
+    "beerDescription": "Si presenta di colore giallo chiaro, formando un generoso cappello di schiuma bianca, fine, compatta e molto persistente, con un aroma luppolato (Gold e Hallertau), fresco con netti sentori floreali ed erbacei, speziati e leggermente agrumati. In bocca arriva morbida, con un gusto ovviamente amaro, ben luppolato che viene sorretto da un corpo di malto leggermente caramellato e speziato. Finale molto secco che ripulisce il palato, seguito da un lungo retrogusto amaro.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 101
+  },
+  {
+    "beerName": "Guldenberg",
+    "breweryName": "Brouwerij de Ranke",
+    "alcoholDegree": 8.5,
+    "appearence": "blonde",
+    "beerDescription": "Dal colore oro carico leggermente velato con una testa di schiuma bianca copiosa, questa birra si presenta al naso con sentori di frutta (pompelmo, limone) chiodi di garofano, malto e un grande senso di freschezza. In bocca abbiamo un’ondata di sapori che cambiano rapidamente, un maltato tostato molto equilibrato note di pera, mela e una punta di limone; un insieme elegante che lascia la bocca pulita pur persistendo sul palato.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 102
+  },
+  {
+    "beerName": "Noir de Dottignes",
+    "breweryName": "Brouwerij de Ranke",
+    "alcoholDegree": 9,
+    "appearence": "brown",
+    "beerDescription": "Questa birra si presenta di colore rosso rubino con riflessi ramati e uno splendido cappello di schiuma cremosa di lunga persistenza. Aroma elegante con un leggero speziato e sentori di frutta rossa accompagnati da un luppolo fresco e fragrante. I forti gusti di torrefazione si integrano perfettamente con un amaricante prorompente. Dal finale elegante ed equilibrato che scivola via con estrema pulizia ma senza scomparire.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 103
+  },
+  {
+    "beerName": "Cuvee de Ranke",
+    "breweryName": "Brouwerij de Ranke",
+    "alcoholDegree": 7,
+    "appearence": "blonde",
+    "beerDescription": "La base utilizzata per questa intrigante birra è la guldenberg, con un 25% di geuze girardin e lievito rodenbach. si presenta di un bel colore albicocca con una schiuma copiosa bianca, Al naso, una oceanica freschezza citrica di lime,pompelmo rosa e limoni acerbi si sposa con le generose note erbacee. Al palato il gusto predominante è il citrico, al quale si aggiungono le note fruttate. Ai lati della lingua e sul palato monta un piacevolissimo, diabolico, amaro, che, in coppia con l'acido, intraprende un cammino infinito.",
+    "bottle33Price": null,
+    "bottle75Price": 18,
+    "key": 104
+  },
+  {
+    "beerName": "Kriek de Ranke",
+    "breweryName": "Brouwerij de Ranke",
+    "alcoholDegree": 7,
+    "appearence": "red",
+    "beerDescription": "Prelibatezza alla ciliegia che nasce dalla fusione di una Red Flamish Bier (70%) con il vero lambic a fermentazione spontanea caratteristico della zona di Bruxelles (30%), dove durante la fermentazione sono aggiunte le ciliegie e lasciate in macerazione per circa 6 mesi. Di un colore rosso rubino nebuloso con schiuma rosastra compatta, dall’aroma pieno di crostata di ciliegie e legno di quercia. In bocca è morbida e vellutata, agrodolce e acidula, nel retrogusto non eccessivamente lungo, si riconoscono i sentori di ciliegia e della botte dove ha riposato. Molto dissetante e quasi senza zucchero.",
+    "bottle33Price": null,
+    "bottle75Price": 18,
+    "key": 105
+  },
+  {
+    "beerName": "3 Fonteinen Oude \nGeuze",
+    "breweryName": "Brasserie 3 Fonteinen",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "Come tutte le geuze originali, deriva dalla miscelazione di lambic di 1,2 e 3 anni di età. Dal colore aranciastro con una schiuma fine di bassa persistenza, la 3 fonteinen oude geuze presenta aromi robusti, un fruttato che può ricordare l’albicocca, la vaniglia e con un finale legnoso. Vasto bouquet aromatico con un gusto acido e dal profumo delicatamente fruttato.",
+    "bottle33Price": 12,
+    "bottle75Price": 24,
+    "key": 106
+  },
+  {
+    "beerName": "3 Fonteinen Kriek",
+    "breweryName": "Brasserie 3 Fonteinen",
+    "alcoholDegree": 5,
+    "appearence": "red",
+    "beerDescription": "Birra dal colore rosso intenso con bollicine molto fini e schiuma di colore rosa. A naso si presenta con un aroma di ciliegie marcato, note dolciastre e una lieve acidità che le dona freschezza. Il gusto inizialmente acido lascia spazio molto lentamente al gusto fruttato dato dalla grande quantità di ciliegie (kriek) utilizzate durante la maturazione. Corpo medio e finale decisamente secco.",
+    "bottle33Price": 12,
+    "bottle75Price": 24,
+    "key": 107
+  },
+  {
+    "beerName": "Oude Geuze Boon",
+    "breweryName": "Brouwerij Boon",
+    "alcoholDegree": 6.5,
+    "appearence": "blonde",
+    "beerDescription": "Dal colore oro, con una bella schiuma bianca e una spiccata frizzantezza, una geuze che riceve e ha ricevuto continue lodi da tutto il mondo birrario. Corpo con una leggera morbidezza nonostante lo stile, non ha bisogno di altre presentazioni, unico modo per capirla è berla.",
+    "bottle33Price": null,
+    "bottle75Price": 22,
+    "key": 108
+  },
+  {
+    "beerName": "Mariage Parfait",
+    "breweryName": "Brouwerij Boon",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Versa di un colore miele oro velato con un cappello di schiuma bianca che dissipa rapidamente,ha sentori olfattivi di legno,terra,mele e succo di limone. Al palato avvertiamo,note di cantina, quercia, uva bianca e un acidità di tutto rispetto che lascia la bocca pulita e secca.",
+    "bottle33Price": 12,
+    "bottle75Price": null,
+    "key": 109
+  },
+  {
+    "beerName": "Kriek Boon",
+    "breweryName": "Brouwerij Boon",
+    "alcoholDegree": 4,
+    "appearence": "red",
+    "beerDescription": "Birra che si presenta di color rosso intenso dovuto all’aggiunta di ciliegie durante la fermentazione. Schiuma rosata fine e di buoana persistenza; A naso un lungo e profondo profumo di ciliegia che ricorda lo sciroppo più che il frutto, accompagnato al classico profumo di lambic. In bocca spicca il contrasto dolce acidulo che ne caratterizza questa birra e la rende unica con un corpo denso e quasi gommoso. Finale intenso di ciliegia con una lieve nota amarognola.",
+    "bottle33Price": null,
+    "bottle75Price": 20,
+    "key": 110
+  },
+  {
+    "beerName": "Girardin Geuze",
+    "breweryName": "Brewerij Girardin",
+    "alcoholDegree": 5.5,
+    "appearence": "blonde",
+    "beerDescription": "Di colore giallo carico, presenta una gasatura lieve e una schiuma bianca molto cremosa. Al naso si avvertono sentori di miele, limone, legno bagnato e un aroma floreale. In bocca è inizialmente dolce, per poi diventare asciutta e secca, aspra e acida. Birra complessa ed estremamente equilibrata.",
+    "bottle33Price": 12,
+    "bottle75Price": null,
+    "key": 111
+  },
+  {
+    "beerName": "Girardin Kriek",
+    "breweryName": "Brewerij Girardin",
+    "alcoholDegree": 5,
+    "appearence": "red",
+    "beerDescription": "Di colore rosso acceso, schiuma abbondante di colore beige. Profumo di ciliegie, legno, mela e lievito. In bocca è moderatamente acida ed aspra, con un finale secco. Si ritrovano i sentori avvertiti al naso, con la prevalenza della ciliegia.",
+    "bottle33Price": 12,
+    "bottle75Price": null,
+    "key": 112
+  },
+  {
+    "beerName": "Girardin Framboise",
+    "breweryName": "Brewerij Girardin",
+    "alcoholDegree": 5,
+    "appearence": "red",
+    "beerDescription": "Splendida birra a fermentazione spontanea, dal caldo color rosso con un aroma di lamponi predominante e leggere note di luppolo. Gusto dolce efruttato ma non tanto da dominare sulle caratteristiche note acidule di questo prodotto. Ideale per cominciare l’esperienza di questi sapori.",
+    "bottle33Price": 12,
+    "bottle75Price": null,
+    "key": 113
+  },
+  {
+    "beerName": "Oude Geuze Tilquin \na l’Ancienne",
+    "breweryName": "Geuzerie Tilquin",
+    "alcoholDegree": 6,
+    "appearence": "blonde",
+    "beerDescription": "Ottenuta tramite un blend di lambic di Cantillon, Boon, Lindemans e Girardin di tre annate differenti ma consecutive, maturate in botte di Borgogna e Bordeaux con rifermentazione in bottiglia nei successivi 6 mesi. Di color oro antico, densa e cremosa con una schiuma di lunga persistenza, a naso si presenta con un’acidità contenuta e in bocca prosegue facile e veloce, secca con un bel finale asciutto.",
+    "bottle33Price": null,
+    "bottle75Price": 20,
+    "key": 114
+  },
+  {
+    "beerName": "Rodenbach Gran Cru",
+    "breweryName": "Brouwerij Rodenbach",
+    "alcoholDegree": 6,
+    "appearence": "brown",
+    "beerDescription": "Questa birra invecchia per almeno due anni in tini di rovere, dall’aroma aspro, deciso ed intenso, a livello olfattivo si presenta con un ampio bouquet legno, vaniglia che si ritrova anche nel gusto, frutto della passione. Birra per pochi.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 115
+  },
+  {
+    "beerName": "Rodenbach Vintage",
+    "breweryName": "Brouwerij Rodenbach",
+    "alcoholDegree": 7,
+    "appearence": "brown",
+    "beerDescription": "La Rodenbach Vintage è il risultato di un invecchiamento biennale della loro miglior botte, secondo il mastro birraio.Il gusto è complesso, rotondo, intenso e rinfrescante. Il fruttato di mela aspra è combinato alle note di caramello, al miele selvatico e alle sensazioni legnose di quercia. Note di vaniglia, ciliegia e liquirizia. L'aroma presenta sentori di caramello e quercia, mele verdi, che si uniscono a quelle di miele e cioccolata. Il finale è fruttato e leggermente acido, persistente e ben bilanciato.",
+    "bottle33Price": null,
+    "bottle75Price": 20,
+    "key": 116
+  },
+  {
+    "beerName": "Rodenbach Caractere Rouge",
+    "breweryName": "Brouwerij Rodenbach",
+    "alcoholDegree": 7,
+    "appearence": "red",
+    "beerDescription": "E’ un esclusiva a tiratura super limitata prodotta in collaborazione con Viki Geunes, chef del ristorante ‘T Zilte (due stelle Michelin). Si chiama Caractére Rouge ed è una Rodenbach passata per due anni in botti di rovere e quindi maturata per altri sei mesi con l’aggiunta di ciliege fresche, lamponi e mirtilli. Lo chef la descrive in questo modo:Un sottile profumo fruttato di lampone e ciliegia, con note di legno e caramello. C’è anche un profumo di viola, e accenni di cuoio e tabacco: in breve, è una birra con un profumo vinoso. Questa Rodenbach, mi ricorda un Bordeaux fresco.",
+    "bottle33Price": null,
+    "bottle75Price": 30,
+    "key": 117
+  },
+  {
+    "beerName": "Geuze 100% Lambic Bio",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "Birra dorata torbida con una buona consistenza nel bicchiere, si presenta con una schiuma bianca poco abbondante di media persistenza, con grana di bolle grossolana. Al naso è intensa, con un’apertura acetica e lattica, caratteristica della fermentazione spontanea, ed una chiusura quasi agrumata e chimica. In bocca risulta essere spigolosa e acida, con un corpo esaltato dalla frizzantezza, che non è mai invadente. Miscela di Lambic di età diversa a partire da un mosto di frumento crudo e orzo maltato(65%)da agricoltura biologica e luppolo invecchiato.",
+    "bottle33Price": null,
+    "bottle75Price": 22,
+    "key": 118
+  },
+  {
+    "beerName": "Kriek 100% Lambic",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "red",
+    "beerDescription": "Dal colore rosso brillante donato dalle ciliegie lasciate in fermentazione più scuro al centro e più delicato sui lati. Al naso è avvolgente, profonda, morbida grazie all’evidenza del frutto e dritta per la percezione di una certa acidità. In bocca è un colpo di fucile. Dimenticate le dolcezze, qui l’acidità regna incontrastata. Le ciliegie continuano ad essere riconoscibili ma è un aroma che fa da contorno ad un sentore deciso, netto, pulito. Il finale risulta sfumato e leggermente astringente.",
+    "bottle33Price": null,
+    "bottle75Price": 22,
+    "key": 119
+  },
+  {
+    "beerName": "Grand Cru Bruocsella",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "Birra dal colore giallo dorato si presenta al naso con sentori di mele, miele ed un bouquet di pane tostato. Dopo aver maturato 3 anni in botti di quercia ricorda vagamente un vino dal gusto fine quasi a far dimenticare che la Grand Cru Bruocsella è una birra. La fermentazione è spontanea, senza l'aggiunta di lievito, ed il risultato è dato dall'azione di microrganismi.",
+    "bottle33Price": null,
+    "bottle75Price": 28,
+    "key": 120
+  },
+  {
+    "beerName": "Rose De Gambrinus",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "red",
+    "beerDescription": "E’di un colore rubino leggermente rugginoso, dato come per la kriek dai lamponi lasciati in fermentazione. Con un bel cappello di schiuma ricca , risulta una birra rustica, fruttata e allo stesso tempo ruvida. Ovviamente ci senti i lamponi, che non sono però dominanti, né al naso né in bocca. Sono contrastati/accompagnati da tutto il patrimonio acido dovuto alla maturazione nelle botti di rovere. Dal corpo fresco e di acidula astringenza, una corsa mai stucchevole né sciropposa, un carattere definitivamente dissetante. Per la complessita’ dei suoi aromi e il suo gusto intenso molto naturale é considerata la birra al lampone più genuina al mondo.",
+    "bottle33Price": null,
+    "bottle75Price": 28,
+    "key": 121
+  },
+  {
+    "beerName": "St. Lamvinus",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "red",
+    "beerDescription": "La St Lamvinus è fatta mettendo a macerare in una base Lambic uva Merlot e Cabernet Franc. Una volta stappata e versata nel bicchiere si presenta rosa scuro tendente al bruno, leggermente torbida, con una spuma bianchissima quanto evanescente e un perlage finissimo ma vivace. Al naso le note acide dovute alla fermentazione spontanea sono forti e caratteristiche, qui stemperate dall'uva macerata che le dona sfumature fruttate e vinose veramente affascinanti. Anche in bocca l'acidità fa da padrone, ma non disturba, anzi stimola la salivazione ed invita al secondo sorso in men che non si dica.",
+    "bottle33Price": null,
+    "bottle75Price": 30,
+    "key": 122
+  },
+  {
+    "beerName": "Iris",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "Una birra atipica per le fermentazioni spontanee per l’utilizzo di solo malto “pale”, senza nemmeno un grammo di frumento,nata nel 1998, per festeggiare i primi vent’anni di vita del Musée Bruxellois de la Gueuze, con l’aggiunta di 50% di luppolo fresco e di 50% di luppolo vecchio di tre anni. Dal colore oro intenso con una schiuma abbondante e persistente riesce a veicolare perfettamente tutta la complessita e la vivacità degli aromi. Il gusto tipico della fermentazione spontanea c’è tutto e le note vinose spiccano da subito , tutti insieme compongono un quadro olfattivo completo e complesso. In bocca risulta abbastanza spigolosa, acida e decisamente tagliente. Il tutto rende il palato decisamente secco e asciutto.",
+    "bottle33Price": null,
+    "bottle75Price": 30,
+    "key": 123
+  },
+  {
+    "beerName": "Vigneronne",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "Il procedimento prevede l’aggiunta di uva Moscato dopo i primi diciotto mesi di maturazione in botti, dove resta ancora per sei mesi, poi si miscela il tutto con una parte di lambic invecchiato un anno e si imbottiglia. Birra dal colore giallo paglierino, con schiuma fine e non abbondante. L’olfatto complesso va dal lievito agli agrumi, il tutto addolcito dagli aromi del moscato, in bocca è acida, ma ammorbidita dalle note fruttate con un finale lungo e leggermente amaricato. Contraddistinta da note d’uva, spezie e miele, perfettamente amalgamati con il classico sapore citrco di queste produzioni",
+    "bottle33Price": null,
+    "bottle75Price": 30,
+    "key": 124
+  },
+  {
+    "beerName": "Fou Foune",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "Per ottenere questo stupendo risultato vengono utilizzati lambic di due anni dove sono aggiunti tre etti di albicocche denocciolate ogni litro di birra e lasciate a macerare per due mesi, a cui seguono altri due anni di affinamento in botte. Di un giallo dorato leggermente torbido, con una bella schiuma tenacemente persistente, dal gusto leggermente acido, citrico e naturalmente di albicocca per finire con note erbacee e di grano.",
+    "bottle33Price": null,
+    "bottle75Price": 30,
+    "key": 125
+  },
+  {
+    "beerName": "Geuze Loerik",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "E’ una geuze che prende il nome Loerik dal fiammingo “ragazzo pigro”. Questo fa riferimento al rifiuto testardo di questa birra a rifermentare nella bottiglia come le altre gueuze. Nessuno sa perchè questa gueuze non si comporta normalmente, ma col tempo, persino queste bottiglie cominciano a rifermentare. Al mondo ne esistono ormai pochissime. Per questo motivo il suo costo è come un buon champagne o Sassicaia",
+    "bottle33Price": null,
+    "bottle75Price": 3200,
+    "key": 126
+  },
+  {
+    "beerName": "Lou Pepe Kriek",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "red",
+    "beerDescription": "Le lou pepe sono una versione millesimata prodotte esclusivamente con lambic di una sola annata invecchiato 2 anni in botti che precedentemente avevano accolto il vino. Questa kriek si presenta con una schiuma fine e compatta dal colore rosastro, un aroma fruttato con note di vino Bordeaux ed un gusto di frutta acida. La seconda fermentazione avviene con l'aggiunta di liquori dolci e non con l'aggiunta di birre giovani, questo procedimento rende il gusto fruttato più intenso.",
+    "bottle33Price": null,
+    "bottle75Price": 30,
+    "key": 127
+  },
+  {
+    "beerName": "Lou Pepe Framboise",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "red",
+    "beerDescription": "Sorella della kriek praticamente in tutto; dal colore rossastro-viola, con una testa di schiuma rosa che persiste più a lungo del previsto. Meravigliosi aromi di lamponi, fieno e confettura. Classici profumi Cantillon semplicemente meravigliosi. Con una secchezza fantastica che riempie la bocca ogni sorso senza diventare troppo acida.",
+    "bottle33Price": null,
+    "bottle75Price": 30,
+    "key": 128
+  },
+  {
+    "beerName": "Lou Pepe Geuze",
+    "breweryName": "Brasserie Cantillon",
+    "alcoholDegree": 5,
+    "appearence": "blonde",
+    "beerDescription": "Si presenta di colore giallo dorato, con riflessi ambra e un ricco cappello di schiuma che si dissipa in breve tempo. Al naso si presenta complessa, con sentori fruttati, agrumati, che in breve lasciano spazio a evidenti sensazioni acide di mela e balsamiche con leggere note acetiche e vinose e una nota speziata di vaniglia. Al gusto è decisamente ed inequivocabilmente secca ed acida con percezione di agrumi . In finale di bocca si presenta amara, con un leggero retrogusto di legno. Il corpo è leggero con una evidente persistenza.",
+    "bottle33Price": null,
+    "bottle75Price": 30,
+    "key": 129
+  },
+  {
+    "beerName": "Chimay Cinq Cents",
+    "breweryName": "Brasserie de l’Abbaye de Notre-Dame de Scourmont",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Versa di colore biondo con riflessi ambrati, luminoso con schiuma fine e abbondante, l’aroma risulta intenso di frutta sotto spirito,miele e malto. In bocca si percepisce distintamente il tocco caldo e liquoroso dell’alcool con note di malto, spezie e un finale leggermente mielato.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 130
+  },
+  {
+    "beerName": "Chimay Premiere",
+    "breweryName": "Brasserie de l’Abbaye de Notre-Dame de Scourmont",
+    "alcoholDegree": 7,
+    "appearence": "brown",
+    "beerDescription": "Dal colore rosso mogano con un cappello di schiuma compatta e persistente, al naso propone un’intensa profumazione fruttata con precise sensazioni di frutti di bosco e spezie. Al palato avvertiamo note di caramello, chiodi di garofano e buccia d’arancia.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 131
+  },
+  {
+    "beerName": "Chimay Grand Riserve",
+    "breweryName": "Brasserie de l’Abbaye de Notre-Dame de Scourmont",
+    "alcoholDegree": 9,
+    "appearence": "brown",
+    "beerDescription": "Di colore marrone scuro con riflessi rossastri ha una testa di schiuma compatta e cremosa, dall’aroma dolce con note di pera, ciliegia e spezie. Ha un gusto orientato verso la frutta matura, cioccolato e fiori. Molto corposa e complessa mantiene comunque un ottimo equilibrio.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 132
+  },
+  {
+    "beerName": "Westvleteren 12",
+    "breweryName": "Brouwerij Westvleteren",
+    "alcoholDegree": 10.2,
+    "appearence": "brown",
+    "beerDescription": "Birra bruna dal bel colore mogano, schiuma ricca, cremosa e persistente. A naso si apre con delicati sentori maltati con una punta di nota speziata. Nonostante la gradazione alcolica il corpo risulta morbido e snello, al palato si apre con note di malto e frutta matura con piacevolissimi sentori speziati. Finale lungo, equilibrato e ancora morbidissimo.",
+    "bottle33Price": 25,
+    "bottle75Price": null,
+    "key": 133
+  },
+  {
+    "beerName": "Westmalle Triple",
+    "breweryName": "Brouwerij Westvleteren",
+    "alcoholDegree": 9.5,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda rifermentata in bottiglia dalla schiuma fine e persistente. Da un primo impatto olfattivo di alcool si passa verso note floreali e fruttate. In bocca risulta calda, corposa ben equilibrata da una leggera frizzantezza e un finale lievemente luppolato.",
+    "bottle33Price": 6,
+    "bottle75Price": 12,
+    "key": 134
+  },
+  {
+    "beerName": "Westmalle Dubble",
+    "breweryName": "Brouwerij Westvleteren",
+    "alcoholDegree": 7,
+    "appearence": "brown",
+    "beerDescription": "Birra bruna rifermentata in bottiglia dalla schiuma fine e persistente. Sentori olfattivi che richiamano note floreali e fruttate. A livello gustativo, note di malto caramellato e luppolo. Molto corposa, riesce nel complesso a mantenere un buon equilibrio.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 135
+  },
+  {
+    "beerName": "Westmalle Special Blend",
+    "breweryName": "Brouwerij Westvleteren",
+    "alcoholDegree": 8,
+    "appearence": "brown",
+    "beerDescription": "Anni fa(1999),ci recammo in Belgio per le solite e “faticose” gite di aggiornamento e visita delle Brasserie, Trappiste e non. Fu in occasione della Visita alla storica Westmalle Trappist, che un monaco, ci fece vedere un modo allora del tutto insolito,(almeno per noi in Italia in quel periodo dove le birre belghe non erano di moda),di spillare le Westmalle. Un cocktail di Westmalle Triple e Dubble, che va ad esaltare i pregi di entrambe le birre, creando una magia unica nello stesso bicchiere.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 136
+  },
+  {
+    "beerName": "Achel Blonde",
+    "breweryName": "Brouwerij der Trappistenabdij de Achelse Kluis",
+    "alcoholDegree": 8,
+    "appearence": "blonde",
+    "beerDescription": "Birra bionda rifermentata in bottiglia, leggermente speziata con note di luppolo fresco e lievito. Aroma miele, melone giallo e pesca sciroppata. La schiuma non molto abbondante risulta di colore bianco e mediamente persistente.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 137
+  },
+  {
+    "beerName": "Achel Brune",
+    "breweryName": "Brouwerij der Trappistenabdij de Achelse Kluis",
+    "alcoholDegree": 8,
+    "appearence": "brown",
+    "beerDescription": "Birra bruna dalla bella testa di schiuma non molto persistente. Al naso sentori di alcol e frutta matura. Corpo rotondo con note amarognole di liquirizia e finale di malto.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 138
+  },
+  {
+    "beerName": "Achel Extra Brune",
+    "breweryName": "Brouwerij der Trappistenabdij de Achelse Kluis",
+    "alcoholDegree": 9.5,
+    "appearence": "brown",
+    "beerDescription": "Birra color tonaca di frate, leggermente opalescente con una schiuma a bolle grosse di lunga persistenza. Il naso è caramelloso, con note di liquirizia, cioccolato e frutta rossa; Dal corpo robusto, a livello gustativo è avvolgente con un lieve sentore di barrique, vaniglia, zucchero candito e chiodi di garofano. Finale lungo ed equilibrato.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 139
+  },
+  {
+    "beerName": "La Trappe Quadruple",
+    "breweryName": "Brouwerij de Koningshoeven",
+    "alcoholDegree": 10,
+    "appearence": "amber",
+    "beerDescription": "Dal colore noce rossastro con una schiuma densa e spessa di lieve persistenza, questa birra si presenta con un aroma dolce, legnoso quasi vinoso. Al palato sensazioni dolci che lasciano una completa morbidezza. Birra adatta all’invecchiamenta con un gusto che si evolve piacevolmente nel tempo.",
+    "bottle33Price": null,
+    "bottle75Price": 12,
+    "key": 140
+  },
+  {
+    "beerName": "Orval",
+    "breweryName": "Brasserie de l’Abbaye Notre-Dame D’Orval",
+    "alcoholDegree": 6.2,
+    "appearence": "amber",
+    "beerDescription": "Unica birra prodotta dall’abbazia, nella quale vengono utilizzati una miscela di tre tipi di malti e tre tipi di luppoli. Il ceppo di lieviti è di proprietà esclusiva dei monaci. Dalla schiuma fine e persistente, questa birra offre al palato una esplosione di aromi erbacei di luppolo con un finale secco e persistente.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 141
+  },
+  {
+    "beerName": "Rochefort 6",
+    "breweryName": "Brasserie de Rochefort",
+    "alcoholDegree": 7.5,
+    "appearence": "brown",
+    "beerDescription": "Birra dal colore fra un mix di ruggine e tonaca di frate con riflessi ramati; schiuma ricca, compatta e molto persistente. A naso una spiazzante nota citrica iniziale che si evolve subito in sentori maltati. Corpo rotondo con una spiccata frizzantezza, il tutto equilibrato da sentori di frutta tostata, malto torrefatto e polvere di cacao. Finale equilibrato che lascia il palato particolarmente soddisfatto.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 142
+  },
+  {
+    "beerName": "Rochefort 8",
+    "breweryName": "Brasserie de Rochefort",
+    "alcoholDegree": 9.2,
+    "appearence": "brown",
+    "beerDescription": "Il colore di questa birra è marrone, con riflessi aranciati, schiuma fine e compatta a bolle molto fini con lunga persistenza. A livello olfattivo un sentore di agrumi netto, nel complesso una forte caratteristica fruttata con una evoluzione maltata, quasi caramellata. In bocca sentore iniziale di liquirizia con note speziate in secondo piano. Finale morbido e avvolgente che lascia il palato pulito.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 143
+  },
+  {
+    "beerName": "Rochefort 10",
+    "breweryName": "Brasserie de Rochefort",
+    "alcoholDegree": 11.3,
+    "appearence": "brown",
+    "beerDescription": "Birra bruna rifermentata in bottiglia dalla schiuma fine, compatta e persistente. Sentori olfattivi fruttati e molto complessi. Estremamente corposa ed equilibrata, lascia un retrogusto dominante di liquirizia e zucchero candito. Birra apprezzata dagli estimatori del genere e riservata ai momenti di meditazione e piacere.",
+    "bottle33Price": 6,
+    "bottle75Price": null,
+    "key": 144
+  }
+]

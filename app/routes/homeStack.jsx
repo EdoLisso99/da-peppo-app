@@ -2,6 +2,8 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import Home from "../screens/Home";
 import Sort from "../screens/Sort";
+import SideMenu from "../screens/SideMenu";
+import SignIn from "../screens/SignIn";
 
 const screens = {
   HomePage: {
@@ -12,6 +14,18 @@ const screens = {
   },
   SortPage: {
     screen: Sort,
+    navigationOptions: {
+      headerShown: false,
+    },
+  },
+  SideMenu: {
+    screen: SideMenu,
+    navigationOptions: {
+      headerShown: false,
+    },
+  },
+  SignIn: {
+    screen: SignIn,
     navigationOptions: {
       headerShown: false,
     },

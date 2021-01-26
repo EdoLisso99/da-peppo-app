@@ -1,15 +1,10 @@
 import {
   Dimensions,
-  StatusBar,
   SafeAreaView,
   StyleSheet,
-  View,
-  Text,
   Image,
   FlatList,
-  TouchableHighlight,
   TouchableOpacity,
-  TouchableWithoutFeedback,
 } from "react-native";
 import {
   useFonts,
@@ -17,13 +12,20 @@ import {
   GloriaHallelujah_400Regular,
 } from "@expo-google-fonts/dev";
 import React from "react";
-import * as utilities from "../data/utilities";
+import { cream } from "../data/utilities";
 import AppLoading from "expo-app-loading";
 import beerDB from "../data/beerDB.json";
 import BeerList from "./BeerList";
+import Navbar from "./Navbar";
 
 export default function Home({ navigation }) {
+  const beerPressHandler = () => {
+    navigation.pop();
+    navigation.navigate("SideMenu");
+  };
+
   const sortPressHandler = () => {
+    navigation.pop();
     navigation.navigate("SortPage");
   };
 
@@ -39,21 +41,7 @@ export default function Home({ navigation }) {
     return (
       // SafeAreaView avoid the notch on the top
       <SafeAreaView style={styles.parent}>
-        <StatusBar
-          backgroundColor={utilities.lightBrown}
-          barStyle="light-content"
-        />
-        <View style={styles.navbar}>
-          <Image
-            style={styles.beer}
-            source={require("../assets/beerMenu.png")}
-          ></Image>
-          <Text style={styles.navbarTitle}>Birre di Peppo</Text>
-          <Image
-            style={styles.search}
-            source={require("../assets/searchIcon.png")}
-          ></Image>
-        </View>
+        <Navbar beerPressHandler={beerPressHandler} />
         <TouchableOpacity
           onPress={sortPressHandler}
           style={styles.containerSort}
@@ -79,31 +67,7 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   parent: {
     flex: 1,
-    backgroundColor: utilities.cream,
-  },
-  navbar: {
-    display: "flex",
-    flexDirection: "row",
-    height: Dimensions.get("screen").height * 0.1,
-    backgroundColor: utilities.lightBrown,
-    justifyContent: "space-between",
-    paddingLeft: "4%",
-    paddingRight: "4%",
-    alignItems: "center",
-  },
-  beer: {
-    height: Dimensions.get("screen").height * 0.065,
-    width: Dimensions.get("screen").height * 0.065,
-  },
-  search: {
-    height: Dimensions.get("screen").height * 0.035,
-    width: Dimensions.get("screen").height * 0.035,
-  },
-  navbarTitle: {
-    color: utilities.cream,
-    fontSize: Dimensions.get("screen").width * 0.088,
-    fontWeight: "900",
-    fontFamily: "PurplePurse_400Regular",
+    backgroundColor: cream,
   },
   sort: {
     width: Dimensions.get("screen").height * 0.05,

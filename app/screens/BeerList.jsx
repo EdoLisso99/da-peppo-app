@@ -1,11 +1,10 @@
 import React from "react";
 import { Dimensions, StyleSheet, View, Text, Image } from "react-native";
 import * as utilities from "../data/utilities";
-import {
-  useFonts,
-  PurplePurse_400Regular,
-  GloriaHallelujah_400Regular,
-} from "@expo-google-fonts/dev";
+// import {
+//   PurplePurse_400Regular,
+//   GloriaHallelujah_400Regular,
+// } from "@expo-google-fonts/dev";
 
 export default function BeerList({ item }) {
   return (
@@ -115,7 +114,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     marginTop: 7,
     justifyContent: "space-evenly",
-    fontFamily: "GloriaHallelujah_400Regular",
+    // fontFamily: "GloriaHallelujah_400Regular",
   },
   previewInfo: {
     display: "flex",

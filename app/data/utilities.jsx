@@ -2,6 +2,7 @@ import React from "react";
 import { Dimensions, Image, StyleSheet } from "react-native";
 
 export const lightBrown = "#623D07";
+export const darkBrown = "#4B2D00";
 export const cream = "#EDEAA2";
 
 export const showBottle = (appearence, bottle, is33) => {

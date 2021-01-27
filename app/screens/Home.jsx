@@ -24,12 +24,20 @@ export default function Home({ navigation }) {
     navigation.navigate("SideMenu");
   };
 
+  const titlePressHandler = (item) => {
+    navigation.pop();
+    navigation.navigate("BeerDetails", {
+      item: item,
+    });
+  };
+
   const sortPressHandler = () => {
     navigation.pop();
     navigation.navigate("SortPage");
   };
 
   let beer = beerDB;
+
   let [fontsLoaded] = useFonts({
     PurplePurse_400Regular,
     GloriaHallelujah_400Regular,
@@ -55,7 +63,12 @@ export default function Home({ navigation }) {
         {/* Display all beers */}
         <FlatList
           data={beer}
-          renderItem={({ item }) => <BeerList item={item} />}
+          renderItem={({ item }) => (
+            <BeerList
+              item={item}
+              titlePressHandler={() => titlePressHandler(item)}
+            />
+          )}
           // The toString() function is needet to avoid an uncomfortable bug
           keyExtractor={(item) => item.key.toString()}
         ></FlatList>

@@ -15,7 +15,7 @@ import { cream, lightBrown, darkBrown } from "../data/utilities";
 import { TextInput } from "react-native-gesture-handler";
 
 export default function SignIn({ navigation }) {
-  // PROBLEMA CON LA TASTIERA:
+  // PROBLEMA CON LA TASTIERA, DA TENERE CONTO SE FACCIO UN EVENTUALE PASSAGGIO DA EXPO A CODICE NATIVO:
   // https://stackoverflow.com/questions/42840555/how-to-avoid-keyboard-pushing-layout-up-on-android-react-native
   // The problem here is that you have in your AndroidManifest.xml:
   // windowSoftInputMode="adjustResize";
@@ -29,7 +29,7 @@ export default function SignIn({ navigation }) {
   return (
     <View>
       <Navbar beerPressHandler={beerPressHandler} />
-      <View style={styles.list}>
+      <View style={styles.container}>
         <Text style={styles.title}>SignIn</Text>
         <View style={styles.dataContainer}>
           <TextInput
@@ -83,7 +83,7 @@ export default function SignIn({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  list: {
+  container: {
     backgroundColor: cream,
     color: lightBrown,
     height: "88.85%",

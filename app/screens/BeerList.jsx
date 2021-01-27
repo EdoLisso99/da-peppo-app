@@ -6,7 +6,7 @@ import * as utilities from "../data/utilities";
 //   GloriaHallelujah_400Regular,
 // } from "@expo-google-fonts/dev";
 
-export default function BeerList({ item }) {
+export default function BeerList({ item, titlePressHandler }) {
   return (
     <View style={styles.list}>
       {utilities.showBottle(item.appearence, item.bottle33Price, true)}
@@ -16,6 +16,7 @@ export default function BeerList({ item }) {
       <View style={styles.previewInfo}>
         <View style={styles.firstLine}>
           <Text
+            onPress={titlePressHandler}
             style={
               item.beerName.length <= 17
                 ? styles.beerTitle

@@ -14,7 +14,7 @@ import Navbar from "./Navbar";
 import { cream, lightBrown, darkBrown } from "../data/utilities";
 import { TextInput } from "react-native-gesture-handler";
 
-export default function SignIn({ navigation }) {
+export default function Settings({ navigation }) {
   // PROBLEMA CON LA TASTIERA, DA TENERE CONTO SE FACCIO UN EVENTUALE PASSAGGIO DA EXPO A CODICE NATIVO:
   // https://stackoverflow.com/questions/42840555/how-to-avoid-keyboard-pushing-layout-up-on-android-react-native
   // The problem here is that you have in your AndroidManifest.xml:

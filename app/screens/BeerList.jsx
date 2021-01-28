@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
   beerTitleSmall: {
     color: utilities.lightBrown,
-    fontSize: Dimensions.get("screen").width * 0.06,
+    fontSize: Dimensions.get("screen").width * 0.055,
     fontWeight: "700",
     flexShrink: 1,
   },

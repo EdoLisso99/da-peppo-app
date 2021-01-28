@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Navbar({ beerPressHandler }) {
+export default function Navbar({ beerPressHandler, searchPressHandler }) {
   return (
     <View>
       <StatusBar backgroundColor={lightBrown} barStyle="light-content" />
@@ -19,13 +19,15 @@ export default function Navbar({ beerPressHandler }) {
           <Image
             style={styles.beer}
             source={require("../assets/beerMenu.png")}
-          ></Image>
+          />
         </TouchableOpacity>
         <Text style={styles.navbarTitle}>Birre di Peppo</Text>
-        <Image
-          style={styles.search}
-          source={require("../assets/searchIcon.png")}
-        ></Image>
+        <TouchableOpacity onPress={searchPressHandler}>
+          <Image
+            style={styles.search}
+            source={require("../assets/searchIcon.png")}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

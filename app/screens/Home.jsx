@@ -18,7 +18,17 @@ import beerDB from "../data/beerDB.json";
 import BeerList from "./BeerList";
 import Navbar from "./Navbar";
 
-export default function Home({ navigation }) {
+export default function Home({ beers, navigation, keys }) {
+  let beer = navigation.getParam("beers");
+  let key = navigation.getParam("keys");
+
+  if (beer === undefined) {
+    beer = beerDB;
+  }
+  if (key === undefined || key === NaN) {
+    key = Math.random();
+  }
+
   const beerPressHandler = () => {
     navigation.pop();
     navigation.navigate("SideMenu");
@@ -31,12 +41,15 @@ export default function Home({ navigation }) {
     });
   };
 
-  const sortPressHandler = () => {
+  const searchPressHandler = () => {
     navigation.pop();
-    navigation.navigate("SortPage");
+    navigation.navigate("Search");
   };
 
-  let beer = beerDB;
+  const sortPressHandler = () => {
+    navigation.pop();
+    navigation.navigate("SortPage", { beers: beer });
+  };
 
   let [fontsLoaded] = useFonts({
     PurplePurse_400Regular,
@@ -49,7 +62,10 @@ export default function Home({ navigation }) {
     return (
       // SafeAreaView avoid the notch on the top
       <SafeAreaView style={styles.parent}>
-        <Navbar beerPressHandler={beerPressHandler} />
+        <Navbar
+          beerPressHandler={beerPressHandler}
+          searchPressHandler={searchPressHandler}
+        />
         <TouchableOpacity
           onPress={sortPressHandler}
           style={styles.containerSort}
@@ -63,6 +79,11 @@ export default function Home({ navigation }) {
         {/* Display all beers */}
         <FlatList
           data={beer}
+          removeClippedSubviews={false}
+          extraData={key}
+          updateCellsBatchingPeriod={500}
+          initialNumToRender={7}
+          maxToRenderPerBatch={5}
           renderItem={({ item }) => (
             <BeerList
               item={item}

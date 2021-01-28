@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Alert,
   Button,
@@ -13,8 +13,11 @@ import {
 import Navbar from "./Navbar";
 import { cream, lightBrown, darkBrown } from "../data/utilities";
 import { TextInput } from "react-native-gesture-handler";
+import CheckBox from "@react-native-community/checkbox";
 
-export default function SignIn({ navigation }) {
+export default function LogIn({ navigation }) {
+  const [rememberMe, setRememberMe] = useState(false);
+
   // PROBLEMA CON LA TASTIERA, DA TENERE CONTO SE FACCIO UN EVENTUALE PASSAGGIO DA EXPO A CODICE NATIVO:
   // https://stackoverflow.com/questions/42840555/how-to-avoid-keyboard-pushing-layout-up-on-android-react-native
   // The problem here is that you have in your AndroidManifest.xml:
@@ -31,6 +34,12 @@ export default function SignIn({ navigation }) {
     navigation.pop();
     navigation.navigate("Search");
   };
+
+  const signInPressHandler = () => {
+    navigation.pop();
+    navigation.navigate("SignIn");
+  };
+
   return (
     <View>
       <Navbar
@@ -38,7 +47,7 @@ export default function SignIn({ navigation }) {
         searchPressHandler={searchPressHandler}
       />
       <View style={styles.container}>
-        <Text style={styles.title}>SignIn</Text>
+        <Text style={styles.title}>LogIn</Text>
         <View style={styles.dataContainer}>
           <TextInput
             style={styles.text}
@@ -50,14 +59,6 @@ export default function SignIn({ navigation }) {
           ></TextInput>
           <TextInput
             style={styles.text}
-            autoCompleteType="email"
-            blurOnSubmit={true}
-            clearButtonMode="unless-editing"
-            clearTextOnFocus={true}
-            placeholder="Email"
-          ></TextInput>
-          <TextInput
-            style={styles.text}
             autoCompleteType="password"
             blurOnSubmit={true}
             clearButtonMode="unless-editing"
@@ -65,16 +66,27 @@ export default function SignIn({ navigation }) {
             placeholder="Password"
             secureTextEntry={true}
           ></TextInput>
-          <TextInput
-            style={styles.text}
-            autoCompleteType="password"
-            blurOnSubmit={true}
-            clearButtonMode="unless-editing"
-            clearTextOnFocus={true}
-            placeholder="Confirm Password"
-            secureTextEntry={true}
-          ></TextInput>
+          <View style={styles.rememberCheckBox}>
+            <CheckBox
+              disabled={false}
+              value={rememberMe}
+              onValueChange={(newValue) => setRememberMe(newValue)}
+            ></CheckBox>
+            <Text style={styles.normalText}>Ricordami</Text>
+          </View>
         </View>
+        <View style={styles.help}>
+          <Text
+            onPress={() => Alert.alert("Son cazzi tuoi!")}
+            style={styles.normalText}
+          >
+            Hai dimenticato la password?
+          </Text>
+          <Text style={styles.normalText} onPress={signInPressHandler}>
+            Vuoi creare un account?
+          </Text>
+        </View>
+
         <TouchableOpacity
           style={styles.confirmButton}
           onPress={() => Alert.alert("Premuto il pulsante dio merda!")}
@@ -136,5 +148,21 @@ const styles = StyleSheet.create({
   confirmText: {
     fontSize: Dimensions.get("screen").width * 0.05,
     color: "white",
+  },
+  rememberCheckBox: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    width: "100%",
+    justifyContent: "center",
+  },
+  normalText: {
+    fontSize: Dimensions.get("screen").width * 0.045,
+    borderColor: darkBrown,
+  },
+  help: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
   },
 });

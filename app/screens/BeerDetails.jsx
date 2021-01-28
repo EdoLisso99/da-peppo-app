@@ -9,6 +9,16 @@ export default function BeerDetails({ navigation }) {
   let [flag, setFlag] = useState(false);
   let brewery = breweryDB;
   const item = navigation.getParam("item");
+  const degrees = item.alcoholDegree;
+  let secondLine = degrees > 7 ? true : false;
+  let fullFlames = degrees % 7;
+  let halfFlame = Math.round((fullFlames % 1) * 10) / 10 === 0 ? false : true;
+  fullFlames = Math.floor(fullFlames);
+  if (degrees == 14) {
+    secondLine = true;
+    (fullFlames = 7), (halfFlame = false);
+  }
+
   const images = {
     blonde: require("../assets/blondeBig.png"),
     amber: require("../assets/amberBig.png"),
@@ -25,7 +35,6 @@ export default function BeerDetails({ navigation }) {
         x = brew.breweryDescription;
       }
     });
-    console.log("X:", x);
     return x;
   };
 
@@ -33,9 +42,18 @@ export default function BeerDetails({ navigation }) {
     navigation.pop();
     navigation.navigate("SideMenu");
   };
+
+  const searchPressHandler = () => {
+    navigation.pop();
+    navigation.navigate("Search");
+  };
+
   return (
     <View>
-      <Navbar beerPressHandler={beerPressHandler} />
+      <Navbar
+        beerPressHandler={beerPressHandler}
+        searchPressHandler={searchPressHandler}
+      />
       <View style={styles.container}>
         <View style={styles.imageAndText}>
           <Image
@@ -68,17 +86,58 @@ export default function BeerDetails({ navigation }) {
             </Text>
             {/* row 1 flames */}
             <View style={styles.flames}>
-              <Image
-                source={require("../assets/fullFlame.png")}
-                style={styles.fullFlame}
-              />
+              {/* row 1 Full flames */}
+              <View style={styles.flames}>
+                {!secondLine &&
+                  [...Array(fullFlames)].map((elementInArray, index) => (
+                    <Image
+                      source={require("../assets/fullFlame.png")}
+                      style={styles.fullFlame}
+                      key={index}
+                    />
+                  ))}
+                {secondLine &&
+                  [...Array(7)].map((elementInArray, index) => (
+                    <Image
+                      source={require("../assets/fullFlame.png")}
+                      style={styles.fullFlame}
+                      key={index}
+                    />
+                  ))}
+              </View>
+              {/* row 1 half flames */}
+              {!secondLine && halfFlame && (
+                <View style={styles.flames}>
+                  <Image
+                    source={require("../assets/halfFlame.png")}
+                    style={styles.halfFlame}
+                  />
+                </View>
+              )}
             </View>
             {/* row 2 flames */}
             <View style={styles.flames}>
-              <Image
-                source={require("../assets/halfFlame.png")}
-                style={styles.halfFlame}
-              />
+              {/* row 2 Full flames */}
+              {secondLine && (
+                <View style={styles.flames}>
+                  {[...Array(fullFlames)].map((elementInArray, index) => (
+                    <Image
+                      source={require("../assets/fullFlame.png")}
+                      style={styles.fullFlame}
+                      key={index}
+                    />
+                  ))}
+                </View>
+              )}
+              {/* row 2 half flames */}
+              {secondLine && halfFlame && (
+                <View style={styles.flames}>
+                  <Image
+                    source={require("../assets/halfFlame.png")}
+                    style={styles.halfFlame}
+                  />
+                </View>
+              )}
             </View>
           </View>
         </View>

@@ -15,38 +15,28 @@ import {
 import React, { useState } from "react";
 import { cream } from "../data/utilities";
 import AppLoading from "expo-app-loading";
-import beerDB from "../data/beerDB.json";
 import BeerList from "./BeerList";
 import Navbar from "./Navbar";
 
-export default function Home({ navigation }) {
-  let beer =
-    navigation.getParam("beers") === undefined
-      ? beerDB
-      : navigation.getParam("beers");
-
-  // console.log(navigation.getParam("beers"));
+export default function Home({ route, navigation }) {
+  const { beers } = route.params;
 
   const beerPressHandler = () => {
-    navigation.pop();
     navigation.navigate("SideMenu");
   };
 
   const titlePressHandler = (item) => {
-    navigation.pop();
     navigation.navigate("BeerDetails", {
       item: item,
     });
   };
 
   const searchPressHandler = () => {
-    navigation.pop();
     navigation.navigate("Search");
   };
 
   const sortPressHandler = () => {
-    navigation.pop();
-    navigation.navigate("SortPage");
+    navigation.navigate("Sort", { beer: beers });
   };
 
   let [fontsLoaded] = useFonts({
@@ -76,12 +66,12 @@ export default function Home({ navigation }) {
         </TouchableOpacity>
         {/* Display all beers */}
         <FlatList
-          data={beer}
+          data={beers}
           removeClippedSubviews={false}
           extraData={Math.random()}
-          updateCellsBatchingPeriod={3750}
+          updateCellsBatchingPeriod={1500}
           initialNumToRender={1}
-          maxToRenderPerBatch={3}
+          maxToRenderPerBatch={15}
           renderItem={({ item }) => (
             <BeerList
               item={item}

@@ -6,7 +6,8 @@ import Navbar from "./Navbar";
 import beerDB from "../data/beerDB.json";
 
 // import { Oregano_400Regular } from "@expo-google-fonts/dev";
-export default function Sort({ navigation }) {
+export default function Sort({ navigation, route }) {
+  const { beer } = route.params;
   const [isAlcoholPressed, setIsAlcoholPressed] = useState(false);
   const [isCoinPressed, setIsCoinPressed] = useState(false);
   const [isRatingPressed, setIsRatingPressed] = useState(false);
@@ -21,7 +22,6 @@ export default function Sort({ navigation }) {
   };
 
   const sortPerAlcoholAscend = () => {
-    let beer = beerDB;
     for (let i = 0; i < beer.length - 1; i++) {
       for (let j = 0; j < beer.length - 1; j++) {
         if (beer[j].alcoholDegree > beer[j + 1].alcoholDegree) {
@@ -36,7 +36,6 @@ export default function Sort({ navigation }) {
   };
 
   const sortPerAlcoholDesc = () => {
-    let beer = beerDB;
     for (let i = 0; i < beer.length - 1; i++) {
       for (let j = 0; j < beer.length - 1; j++) {
         if (beer[j].alcoholDegree < beer[j + 1].alcoholDegree) {
@@ -51,7 +50,6 @@ export default function Sort({ navigation }) {
   };
 
   const sortPerMoneyAscend = () => {
-    let beer = beerDB;
     for (let i = 0; i < beer.length - 1; i++) {
       for (let j = 0; j < beer.length - 1; j++) {
         if (
@@ -69,7 +67,6 @@ export default function Sort({ navigation }) {
   };
 
   const sortPerMoneyDesc = () => {
-    let beer = beerDB;
     for (let i = 0; i < beer.length - 1; i++) {
       for (let j = 0; j < beer.length - 1; j++) {
         if (

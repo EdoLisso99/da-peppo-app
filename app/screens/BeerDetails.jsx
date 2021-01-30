@@ -5,7 +5,7 @@ import { cream, darkBrown, lightBrown } from "../data/utilities";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import breweryDB from "../data/breweryDB.json";
 
-export default function BeerDetails({ navigation }) {
+export default function BeerDetails({ navigation, route }) {
   let [flag, setFlag] = useState(false);
   let brewery = breweryDB;
   const { item } = route.params;

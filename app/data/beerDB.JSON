@@ -861,7 +861,7 @@
     "key": 86
   },
   {
-    "beerName": "Gouden Carlous Hopsinjoor",
+    "beerName": "Gouden Carlous \nHopsinjoor",
     "breweryName": "Brouwerij Het Anker",
     "alcoholDegree": 8,
     "appearence": "blonde",
@@ -871,7 +871,7 @@
     "key": 87
   },
   {
-    "beerName": "Gouden Carlous Classic",
+    "beerName": "Gouden Carlous \nClassic",
     "breweryName": "Brouwerij Het Anker",
     "alcoholDegree": 8.5,
     "appearence": "brown",
@@ -961,7 +961,7 @@
     "key": 96
   },
   {
-    "beerName": "Het Kapittel Prior",
+    "beerName": "Het Kapittel Abt",
     "breweryName": "Brouwerij Van Eecke",
     "alcoholDegree": 10,
     "appearence": "blonde",
@@ -1161,7 +1161,7 @@
     "key": 116
   },
   {
-    "beerName": "Rodenbach Caractere Rouge",
+    "beerName": "Rodenbach Caractere \nRouge",
     "breweryName": "Brouwerij Rodenbach",
     "alcoholDegree": 7,
     "appearence": "red",
@@ -1171,7 +1171,7 @@
     "key": 117
   },
   {
-    "beerName": "Geuze 100% Lambic Bio",
+    "beerName": "Geuze 100% Lambic \nBio",
     "breweryName": "Brasserie Cantillon",
     "alcoholDegree": 5,
     "appearence": "blonde",
@@ -1351,7 +1351,7 @@
     "key": 135
   },
   {
-    "beerName": "Westmalle Special Blend",
+    "beerName": "Westmalle Special \nBlend",
     "breweryName": "Brouwerij Westvleteren",
     "alcoholDegree": 8,
     "appearence": "brown",

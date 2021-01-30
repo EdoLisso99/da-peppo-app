@@ -8,7 +8,7 @@ import breweryDB from "../data/breweryDB.json";
 export default function BeerDetails({ navigation }) {
   let [flag, setFlag] = useState(false);
   let brewery = breweryDB;
-  const item = navigation.getParam("item");
+  const { item } = route.params;
   const degrees = item.alcoholDegree;
   let secondLine = degrees > 7 ? true : false;
   let fullFlames = degrees % 7;
@@ -16,7 +16,13 @@ export default function BeerDetails({ navigation }) {
   fullFlames = Math.floor(fullFlames);
   if (degrees == 14) {
     secondLine = true;
-    (fullFlames = 7), (halfFlame = false);
+    fullFlames = 7;
+    halfFlame = false;
+  }
+  if (degrees == 7) {
+    secondLine = false;
+    fullFlames = 7;
+    halfFlame = false;
   }
 
   const images = {
@@ -161,7 +167,7 @@ export default function BeerDetails({ navigation }) {
           {!flag && (
             <ScrollView>
               <Text style={styles.beerDescription}>
-                <Text style={styles.brewery}>Birra {item.beerName}: </Text>
+                <Text style={styles.brewery}>Birra: </Text>
                 {item.beerDescription}
                 <TouchableOpacity onPress={() => setFlag(true)}>
                   <Image

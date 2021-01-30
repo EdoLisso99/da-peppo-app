@@ -5,29 +5,27 @@ import {
   Image,
   FlatList,
   TouchableOpacity,
+  VirtualizedList,
 } from "react-native";
 import {
   useFonts,
   PurplePurse_400Regular,
   GloriaHallelujah_400Regular,
 } from "@expo-google-fonts/dev";
-import React from "react";
+import React, { useState } from "react";
 import { cream } from "../data/utilities";
 import AppLoading from "expo-app-loading";
 import beerDB from "../data/beerDB.json";
 import BeerList from "./BeerList";
 import Navbar from "./Navbar";
 
-export default function Home({ beers, navigation, keys }) {
-  let beer = navigation.getParam("beers");
-  let key = navigation.getParam("keys");
+export default function Home({ navigation }) {
+  let beer =
+    navigation.getParam("beers") === undefined
+      ? beerDB
+      : navigation.getParam("beers");
 
-  if (beer === undefined) {
-    beer = beerDB;
-  }
-  if (key === undefined || key === NaN) {
-    key = Math.random();
-  }
+  // console.log(navigation.getParam("beers"));
 
   const beerPressHandler = () => {
     navigation.pop();
@@ -48,7 +46,7 @@ export default function Home({ beers, navigation, keys }) {
 
   const sortPressHandler = () => {
     navigation.pop();
-    navigation.navigate("SortPage", { beers: beer });
+    navigation.navigate("SortPage");
   };
 
   let [fontsLoaded] = useFonts({
@@ -80,10 +78,10 @@ export default function Home({ beers, navigation, keys }) {
         <FlatList
           data={beer}
           removeClippedSubviews={false}
-          extraData={key}
-          updateCellsBatchingPeriod={500}
-          initialNumToRender={7}
-          maxToRenderPerBatch={5}
+          extraData={Math.random()}
+          updateCellsBatchingPeriod={3750}
+          initialNumToRender={1}
+          maxToRenderPerBatch={3}
           renderItem={({ item }) => (
             <BeerList
               item={item}

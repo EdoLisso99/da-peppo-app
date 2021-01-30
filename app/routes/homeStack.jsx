@@ -8,10 +8,12 @@ import BeerDetails from "../screens/BeerDetails";
 import Search from "../screens/Search";
 import LogIn from "../screens/LogIn";
 import Settings from "../screens/Settings";
+import beerDB from "../data/beerDB.json";
 
 const screens = {
   HomePage: {
     screen: Home,
+    initialParams: { beers: beerDB },
     navigationOptions: {
       headerShown: false,
     },

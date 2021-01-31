@@ -83,7 +83,7 @@ export default function BeerDetails({ navigation, route }) {
           <View style={styles.textAndRating}>
             <Text
               style={
-                item.beerName.length <= 17
+                item.beerName.length < 17
                   ? styles.beerTitle
                   : styles.beerTitleSmall
               }
@@ -167,7 +167,9 @@ export default function BeerDetails({ navigation, route }) {
           {!flag && (
             <ScrollView>
               <Text style={styles.beerDescription}>
-                <Text style={styles.brewery}>Birra: </Text>
+                <Text style={styles.brewery}>
+                  Birra {item.beerName.replace("\n", "")}:
+                </Text>
                 {item.beerDescription}
                 <TouchableOpacity onPress={() => setFlag(true)}>
                   <Image
@@ -181,9 +183,7 @@ export default function BeerDetails({ navigation, route }) {
           {flag && (
             <ScrollView>
               <Text style={styles.beerDescription}>
-                <Text style={styles.brewery}>
-                  Birreria {item.breweryName}:{" "}
-                </Text>
+                <Text style={styles.brewery}>Birreria {item.breweryName}:</Text>
                 {getBreweryDescription(item.breweryName)}
                 <TouchableOpacity onPress={() => setFlag(false)}>
                   <Image

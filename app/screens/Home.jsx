@@ -67,11 +67,11 @@ export default function Home({ route, navigation }) {
         {/* Display all beers */}
         <FlatList
           data={beers}
-          removeClippedSubviews={false}
+          // removeClippedSubviews={false}
           extraData={Math.random()}
-          updateCellsBatchingPeriod={1500}
-          initialNumToRender={1}
-          maxToRenderPerBatch={15}
+          // updateCellsBatchingPeriod={1500}
+          // initialNumToRender={10}
+          // maxToRenderPerBatch={15}
           renderItem={({ item }) => (
             <BeerList
               item={item}

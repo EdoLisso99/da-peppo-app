@@ -85,11 +85,9 @@ export default function Sort({ navigation, route }) {
 
   const onAscendPressHandler = () => {
     if (isAlcoholPressed) {
-      navigation.pop();
       let beers = sortPerAlcoholAscend();
       navigation.navigate("Home", { beers: beers });
     } else if (isCoinPressed) {
-      navigation.pop();
       let beers = sortPerMoneyAscend();
       navigation.navigate("Home", { beers: beers });
     }
@@ -97,11 +95,9 @@ export default function Sort({ navigation, route }) {
 
   const onDescendPressHandler = () => {
     if (isAlcoholPressed) {
-      navigation.pop();
       let beers = sortPerAlcoholDesc();
       navigation.navigate("Home", { beers: beers });
     } else if (isCoinPressed) {
-      navigation.pop();
       let beers = sortPerMoneyDesc();
       navigation.navigate("Home", { beers: beers });
     }

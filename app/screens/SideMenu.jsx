@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { darkBrown, cream } from "../data/utilities";
 import Navbar from "./Navbar";
+
 // import { Oregano_400Regular } from "@expo-google-fonts/dev";
 
 export default function SideMenu({ navigation }) {
   const [isLogged, setIsLogged] = useState(false);
   const beerPressHandler = () => {
-    navigation.pop();
-    navigation.navigate("Home");
+    navigation.goBack();
   };
 
   const signInPressHandler = () => {
-    navigation.pop();
+    // navigation.pop();
     navigation.navigate("SignIn");
   };
 
@@ -22,7 +22,7 @@ export default function SideMenu({ navigation }) {
   };
 
   const logInPressHandler = () => {
-    navigation.pop();
+    // navigation.pop();
     navigation.navigate("LogIn");
   };
 
@@ -44,7 +44,6 @@ export default function SideMenu({ navigation }) {
         )}
         {!isLogged && (
           <View style={styles.textContainer}>
-            <Text style={styles.text}>Birre recenti</Text>
             <Text style={styles.text} onPress={signInPressHandler}>
               Sign in
             </Text>

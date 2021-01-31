@@ -8,7 +8,7 @@ import {
   Text,
   View,
 } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
+import { ScrollView, TextInput } from "react-native-gesture-handler";
 import { darkBrown, cream } from "../data/utilities";
 import Navbar from "./Navbar";
 import CheckBox from "@react-native-community/checkbox";
@@ -54,8 +54,7 @@ export default function Search({ navigation }) {
     navigation.navigate("SideMenu");
   };
   const searchPressHandler = () => {
-    navigation.pop();
-    navigation.navigate("Search");
+    navigation.goBack();
   };
 
   const returnCase = () => {
@@ -1681,27 +1680,29 @@ export default function Search({ navigation }) {
   };
 
   const applyHandler = () => {
-    // console.log("beerName:", beerName);
-    // console.log("breweryName:", breweryName);
-    // console.log("minAlcoholDegree:", minAlcoholDegree);
-    // console.log("blonde:", blonde);
-    // console.log("amber:", amber);
-    // console.log("brown:", brown);
-    // console.log("black:", black);
-    // console.log("red:", red);
-    // console.log("green:", green);
-    // console.log("checkBox33:", checkBox33);
-    // console.log("checkBox75:", checkBox75);
+    let flag = true;
+    const alcoholRegexp = /^[0-9]+$/;
+    const nameRegexp = /^[a-zA-z]+$/;
+    let newDB = searchInDB();
     if (minAlcoholDegree === "") {
       setMinAlcoholDegree(0);
-    }
-    let newDB = searchInDB();
-    // console.log("newDB", newDB);
-    // console.log("========================");
-    if (typeof newDB !== undefined && newDB.length === 0) {
-      Alert.alert("ERRORE! \nNon esiste nessuna birra così!");
+    } else if (!alcoholRegexp.test(minAlcoholDegree)) {
+      Alert.alert("ERRORE! \nGradi inseriti non sono numerici!");
+      flag = false;
       setDefaultValues();
-    } else {
+    } else if (beerName !== "" && !nameRegexp.test(beerName)) {
+      Alert.alert("ERRORE! \nIl nome della birra contiene simboli");
+      flag = false;
+      setDefaultValues();
+    } else if (breweryName !== "" && !nameRegexp.test(breweryName)) {
+      Alert.alert("ERRORE! \nIl nome della birreria contiene simboli");
+      flag = false;
+      setDefaultValues();
+    } else if (flag && typeof newDB !== undefined && newDB.length === 0) {
+      Alert.alert("ERRORE! \nNon esiste nessuna birra così!");
+      flag = false;
+      setDefaultValues();
+    } else if (flag) {
       navigation.pop();
       navigation.navigate("Home", { beers: newDB });
     }
@@ -1714,98 +1715,125 @@ export default function Search({ navigation }) {
         searchPressHandler={searchPressHandler}
       />
       <View style={styles.sort}>
-        <View style={styles.dataContainer}>
-          <TextInput
-            style={styles.text}
-            autoCompleteType="off"
-            blurOnSubmit={true}
-            clearButtonMode="unless-editing"
-            clearTextOnFocus={true}
-            placeholder="Nome Birra"
-            maxLength={40}
-            onChangeText={(newBeer) => setBeerName(newBeer)}
-            ref={beerNameRef}
-          ></TextInput>
-          <TextInput
-            style={styles.text}
-            autoCompleteType="off"
-            blurOnSubmit={true}
-            clearButtonMode="unless-editing"
-            clearTextOnFocus={true}
-            maxLength={50}
-            ref={breweryNameRef}
-            onChangeText={(newBrewery) => setBreweryName(newBrewery)}
-            placeholder="Nome Birrificio"
-          ></TextInput>
-          <TextInput
-            style={styles.text}
-            autoCompleteType="off"
-            blurOnSubmit={true}
-            clearButtonMode="unless-editing"
-            clearTextOnFocus={true}
-            ref={minAlcoholDegreeRef}
-            onChangeText={(newAlcohol) => setMinAlcoholDegree(newAlcohol)}
-            placeholder="Gradazione Alcolica"
-          ></TextInput>
-          <Text style={styles.text}>(Bl, A, Bw, Bk, Rd, Gn)</Text>
-          <View style={styles.colorCheckBox}>
-            <CheckBox
-              disabled={false}
-              value={blonde}
-              onValueChange={(newValue) => setBlonde(newValue)}
-            />
-            <CheckBox
-              disabled={false}
-              value={amber}
-              onValueChange={(newValue) => setAmber(newValue)}
-            />
-            <CheckBox
-              disabled={false}
-              value={brown}
-              onValueChange={(newValue) => setBrown(newValue)}
-            />
-            <CheckBox
-              disabled={false}
-              value={black}
-              onValueChange={(newValue) => setBlack(newValue)}
-            />
-            <CheckBox
-              disabled={false}
-              value={red}
-              onValueChange={(newValue) => setRed(newValue)}
-            />
-            <CheckBox
-              disabled={false}
-              value={green}
-              onValueChange={(newValue) => setGreen(newValue)}
-            />
+        <ScrollView>
+          <View style={styles.dataContainer}>
+            <TextInput
+              style={styles.text}
+              autoCompleteType="off"
+              blurOnSubmit={true}
+              clearButtonMode="unless-editing"
+              clearTextOnFocus={true}
+              placeholder="Nome Birra"
+              maxLength={40}
+              onChangeText={(newBeer) => setBeerName(newBeer)}
+              ref={beerNameRef}
+            ></TextInput>
+
+            <TextInput
+              style={styles.text}
+              autoCompleteType="off"
+              blurOnSubmit={true}
+              clearButtonMode="unless-editing"
+              clearTextOnFocus={true}
+              maxLength={50}
+              ref={breweryNameRef}
+              onChangeText={(newBrewery) => setBreweryName(newBrewery)}
+              placeholder="Nome Birrificio"
+            ></TextInput>
+            <TextInput
+              style={styles.text}
+              autoCompleteType="off"
+              blurOnSubmit={true}
+              clearButtonMode="unless-editing"
+              clearTextOnFocus={true}
+              ref={minAlcoholDegreeRef}
+              onChangeText={(newAlcohol) => setMinAlcoholDegree(newAlcohol)}
+              placeholder="Gradazione Alcolica"
+            ></TextInput>
+            {/* <Text style={styles.suggestion}>(Bl, A, Bw, Bk, Rd, Gn)</Text> */}
+
+            <View style={styles.colorCheckBox}>
+              <View style={styles.textAndCheckBox}>
+                <Text style={styles.suggestion}>Bl</Text>
+                <CheckBox
+                  disabled={false}
+                  value={blonde}
+                  onValueChange={(newValue) => setBlonde(newValue)}
+                />
+              </View>
+              <View style={styles.textAndCheckBox}>
+                <Text style={styles.suggestion}>A</Text>
+                <CheckBox
+                  disabled={false}
+                  value={amber}
+                  onValueChange={(newValue) => setAmber(newValue)}
+                />
+              </View>
+              <View style={styles.textAndCheckBox}>
+                <Text style={styles.suggestion}>Bw</Text>
+                <CheckBox
+                  disabled={false}
+                  value={brown}
+                  onValueChange={(newValue) => setBrown(newValue)}
+                />
+              </View>
+              <View style={styles.textAndCheckBox}>
+                <Text style={styles.suggestion}>Bk</Text>
+                <CheckBox
+                  disabled={false}
+                  value={black}
+                  onValueChange={(newValue) => setBlack(newValue)}
+                />
+              </View>
+              <View style={styles.textAndCheckBox}>
+                <Text style={styles.suggestion}>R</Text>
+                <CheckBox
+                  disabled={false}
+                  value={red}
+                  onValueChange={(newValue) => setRed(newValue)}
+                />
+              </View>
+              <View style={styles.textAndCheckBox}>
+                <Text style={styles.suggestion}>G</Text>
+                <CheckBox
+                  disabled={false}
+                  value={green}
+                  onValueChange={(newValue) => setGreen(newValue)}
+                />
+              </View>
+            </View>
+            <View style={styles.bottleCheckBox}>
+              <View style={styles.textAndCheckBox}>
+                <Text style={styles.suggestion}>33Cl</Text>
+                <CheckBox
+                  disabled={false}
+                  value={checkBox33}
+                  onValueChange={(newValue) => setCheckBox33(newValue)}
+                />
+              </View>
+              <View style={styles.textAndCheckBox}>
+                <Text style={styles.suggestion}>75Cl</Text>
+                <CheckBox
+                  disabled={false}
+                  value={checkBox75}
+                  onValueChange={(newValue) => setCheckBox75(newValue)}
+                />
+              </View>
+            </View>
           </View>
-          <Text style={styles.text}>Bottiglia 33Cl 75Cl</Text>
-          <View style={styles.bottleCheckBox}>
-            <CheckBox
-              disabled={false}
-              value={checkBox33}
-              onValueChange={(newValue) => setCheckBox33(newValue)}
-            />
-            <CheckBox
-              disabled={false}
-              value={checkBox75}
-              onValueChange={(newValue) => setCheckBox75(newValue)}
-            />
+          <View style={styles.confirmOrDeny}>
+            <Button title="Applica" onPress={applyHandler}></Button>
+            <Button
+              title="Reset Filtri"
+              color="red"
+              onPress={setDefaultValues}
+            ></Button>
           </View>
-        </View>
-        <View style={styles.confirmOrDeny}>
-          <Button title="Applica" onPress={applyHandler}></Button>
-          <Button
-            title="Reset Filtri"
-            color="red"
-            onPress={setDefaultValues}
-          ></Button>
-        </View>
-        <Image
-          source={require("../assets/daPeppoBlack.png")}
-          style={styles.peppoLogo}
-        />
+          <Image
+            source={require("../assets/daPeppoBlack.png")}
+            style={styles.peppoLogo}
+          />
+        </ScrollView>
       </View>
     </View>
   );
@@ -1817,44 +1845,67 @@ const styles = StyleSheet.create({
     height: "88.85%",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
     justifyContent: "space-evenly",
   },
   dataContainer: {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "flex-start",
-    width: "60%",
+    alignItems: "center",
+    width: "100%",
+    paddingTop: "5%",
   },
   text: {
     color: darkBrown,
     fontSize: Dimensions.get("screen").width * 0.05,
-    width: "100%",
+    width: "60%",
     height: Dimensions.get("screen").width * 0.12,
     padding: 10,
     borderWidth: 1.3,
     borderColor: darkBrown,
     marginBottom: 10,
   },
+  suggestion: {
+    color: darkBrown,
+    fontSize: Dimensions.get("screen").width * 0.05,
+    height: Dimensions.get("screen").width * 0.12,
+    padding: 10,
+    marginBottom: 10,
+  },
+  textAndCheckBox: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   confirmOrDeny: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
+    padding: "3%",
     width: "100%",
   },
   colorCheckBox: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 1.3,
+    borderColor: darkBrown,
   },
   bottleCheckBox: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 1.3,
+    borderColor: darkBrown,
+    width: "60%",
+    margin: 10,
   },
   peppoLogo: {
     height: Dimensions.get("screen").height * 0.2,
     width: Dimensions.get("screen").height * 0.2,
     borderRadius: 30,
+    alignSelf: "center",
+    marginTop: "3%",
   },
 });

@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import {
-  Alert,
-  Button,
-  Dimensions,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Keyboard,
-} from "react-native";
+import { Alert, Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import Navbar from "./Navbar";
 import { cream, lightBrown, darkBrown } from "../data/utilities";
-import { ScrollView, TextInput } from "react-native-gesture-handler";
+import {
+  ScrollView,
+  TextInput,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+} from "react-native-gesture-handler";
 import CheckBox from "@react-native-community/checkbox";
+import { database, auth } from "./firebase";
 
 export default function LogIn({ navigation }) {
   const [rememberMe, setRememberMe] = useState(false);
@@ -48,7 +44,7 @@ export default function LogIn({ navigation }) {
   const confirmHandler = () => {
     let flag = true;
     const usernameRegexp = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+$/;
-    const passwordRegexp = /^[!-~]+[!-~]+[!-~]+$/;
+    const passwordRegexp = /^[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+$/;
     if (username !== "" && !usernameRegexp.test(username)) {
       Alert.alert("ERRORE! \nUsername non valido!");
       flag = false;
@@ -62,10 +58,41 @@ export default function LogIn({ navigation }) {
       flag = false;
       setDefaultValues();
     } else if (flag) {
-      Alert.alert("COMPLIMENTI, SAI DIGGITARE!!!");
-      setDefaultValues();
-      // navigation.pop();
-      // navigation.navigate("Home", { beers: newDB });
+      let usernamesInDB = database.ref("users/");
+      usernamesInDB.once("value", (snapshot) => {
+        const x = Object.entries(snapshot.val());
+        let exist = false;
+        x.map((item) => {
+          if (item[0] === username) {
+            exist = true;
+            auth
+              .signInWithEmailAndPassword(item[1].email, password)
+              .then(() => {
+                alert("Login effettuato con successo!");
+                setDefaultValues();
+                navigation.pop();
+                navigation.navigate("Home");
+              })
+              .catch((error) => {
+                if (error.code === "auth/wrong-password") {
+                  //Do something
+                  alert("Errore! La password immessa è sbagliata!");
+                  setDefaultValues();
+                  console.log(error);
+                } else {
+                  //Do something else
+                  console.log("Entrato nell'else!");
+                  console.log(error);
+                  alert("Errore generico");
+                }
+              });
+          }
+        });
+        if (!exist) {
+          alert("Errore! L'username e/o la password inserite sono errati!");
+          setDefaultValues();
+        }
+      });
     }
   };
 
@@ -124,12 +151,12 @@ export default function LogIn({ navigation }) {
               </Text>
             </View>
 
-            <TouchableOpacity
+            <TouchableWithoutFeedback
               style={styles.confirmButton}
               onPress={confirmHandler}
             >
               <Text style={styles.confirmText}>Conferma</Text>
-            </TouchableOpacity>
+            </TouchableWithoutFeedback>
             <Image
               source={require("../assets/daPeppoBlack.png")}
               style={styles.peppoLogo}

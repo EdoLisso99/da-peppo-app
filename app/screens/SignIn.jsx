@@ -12,7 +12,12 @@ import {
 } from "react-native";
 import Navbar from "./Navbar";
 import { cream, lightBrown, darkBrown } from "../data/utilities";
-import { ScrollView, TextInput } from "react-native-gesture-handler";
+import {
+  ScrollView,
+  TextInput,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+} from "react-native-gesture-handler";
 import { database, auth } from "./firebase";
 
 export default function SignIn({ navigation }) {
@@ -48,22 +53,21 @@ export default function SignIn({ navigation }) {
 
   //Firebase Functions
   const writeUserData = (username, email, password) => {
-    database
-      .ref("users/" + username)
-      .set({ username: username, email: email, password: password });
+    database.ref("users/" + username).set({ email: email, password: password });
   };
 
-  const isUsernameAlreadyUsed = (flag) => {
+  const isUsernameAlreadyUsed = () => {
+    let y = true;
     let usernamesInDB = database.ref("users/");
     usernamesInDB.once("value", (snapshot) => {
       const x = Object.entries(snapshot.val());
       x.map((item) => {
         if (item[0] === username) {
-          flag = false;
+          y = false;
         }
       });
     });
-    return flag;
+    return y;
   };
 
   const confirmHandler = () => {
@@ -87,13 +91,11 @@ export default function SignIn({ navigation }) {
       alert("ERRORE! \nPassword di conferma non valida!");
       flag = false;
       setDefaultValues();
-    } else if (!isUsernameAlreadyUsed(flag)) {
+    } else if (!isUsernameAlreadyUsed()) {
       alert("Errore! \nL'username esiste già!");
       setUsername("");
       usernameRef.current.clear();
-    }
-    /// else if (flag && ESISTE GIA' UN UTENTE CON QUESTO NOME/EMAIL){....}
-    else if (
+    } else if (
       username === "" ||
       email === "" ||
       password === "" ||
@@ -104,33 +106,26 @@ export default function SignIn({ navigation }) {
       setDefaultValues();
     } else if (flag) {
       //CONTROLLO CHE EFFETTIVAMENTE LE EMAIL ESISTANO
-      try {
-        auth
-          .createUserWithEmailAndPassword(email, password)
-          .then(() => this.props.navigation.navigate("Home"))
-          .catch((error) => {
-            if (error.code === "auth/email-already-in-use") {
-              alert("Errore! L'email selezionata è già in uso");
-              setEmail("");
-              emailRef.current.clear();
-            } else {
-              console.log("Entrato nell'else!");
-              console.log(error);
-              // alert(error.message);
-            }
-          });
-      } catch (err) {
-        console.log("Entrato nel secondo Catch");
-        console.log(err);
-        alert(err);
-      }
-
-      //CONTROLLO  CRIPTAZIONE PASSWORD
-      writeUserData(username, email, password);
-      alert("Registrazione effettuata con successo!");
-      setDefaultValues();
-      navigation.pop();
-      navigation.navigate("LogIn");
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          writeUserData(username, email, password);
+          alert("Registrazione effettuata con successo!");
+          setDefaultValues();
+          navigation.pop();
+          navigation.navigate("LogIn");
+        })
+        .catch((error) => {
+          if (error.code === "auth/email-already-in-use") {
+            alert("Errore! L'email selezionata è già in uso");
+            setEmail("");
+            emailRef.current.clear();
+          } else {
+            console.log("Entrato nell'else!");
+            console.log(error);
+            // alert(error.message);
+          }
+        });
     }
   };
 
@@ -194,12 +189,12 @@ export default function SignIn({ navigation }) {
                 secureTextEntry={true}
               ></TextInput>
             </View>
-            <TouchableOpacity
+            <TouchableWithoutFeedback
               style={styles.confirmButton}
               onPress={confirmHandler}
             >
               <Text style={styles.confirmText}>Conferma</Text>
-            </TouchableOpacity>
+            </TouchableWithoutFeedback>
             <Image
               source={require("../assets/daPeppoBlack.png")}
               style={styles.peppoLogo}

@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { darkBrown, cream } from "../data/utilities";
 import Navbar from "./Navbar";
+import { auth } from "./firebase";
 
 // import { Oregano_400Regular } from "@expo-google-fonts/dev";
 
 export default function SideMenu({ navigation }) {
-  const [isLogged, setIsLogged] = useState(false);
-  const beerPressHandler = () => {
-    navigation.goBack();
-  };
+  // const [isLogged, setIsLogged] = useState(false);
 
   const signInPressHandler = () => {
     // navigation.pop();
     navigation.navigate("SignIn");
+  };
+
+  const beerPressHandler = () => {
+    navigation.goBack();
   };
 
   const searchPressHandler = () => {
@@ -26,6 +28,26 @@ export default function SideMenu({ navigation }) {
     navigation.navigate("LogIn");
   };
 
+  const signOutPress = () => {
+    auth
+      .signOut()
+      .then(() => {
+        // Sign-out successful.
+        navigation.pop();
+        navigation.navigate("Home");
+        alert("Logout effettuato con successo!");
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error);
+        alert(error);
+      });
+  };
+
+  const accountPress = () => {
+    navigation.navigate("Account");
+  };
+
   return (
     <View>
       <Navbar
@@ -33,16 +55,20 @@ export default function SideMenu({ navigation }) {
         searchPressHandler={searchPressHandler}
       />
       <View style={styles.sort}>
-        {isLogged && (
+        {auth.currentUser && (
           <View style={styles.textContainer}>
             <Text style={styles.text}>Preferiti</Text>
             <Text style={styles.text}>Già Valutate</Text>
             <Text style={styles.text}>Recenti</Text>
-            <Text style={styles.text}>Account</Text>
-            <Text style={styles.text}>Sign Out</Text>
+            <Text style={styles.text} onPress={accountPress}>
+              Account
+            </Text>
+            <Text style={styles.text} onPress={signOutPress}>
+              Sign Out
+            </Text>
           </View>
         )}
-        {!isLogged && (
+        {!auth.currentUser && (
           <View style={styles.textContainer}>
             <Text style={styles.text} onPress={signInPressHandler}>
               Sign in

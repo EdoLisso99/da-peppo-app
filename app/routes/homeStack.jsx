@@ -8,6 +8,7 @@ import BeerDetails from "../screens/BeerDetails";
 import Search from "../screens/Search";
 import LogIn from "../screens/LogIn";
 import Settings from "../screens/Settings";
+import Account from "../screens/Account";
 import beerDB from "../data/beerDB.json";
 
 const screens = {
@@ -56,6 +57,12 @@ const screens = {
   },
   Settings: {
     screen: Settings,
+    navigationOptions: {
+      headerShown: false,
+    },
+  },
+  Account: {
+    screen: Account,
     navigationOptions: {
       headerShown: false,
     },

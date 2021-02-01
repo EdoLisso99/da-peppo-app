@@ -11,6 +11,7 @@ import Search from "./app/screens/Search";
 import LogIn from "./app/screens/LogIn";
 import Settings from "./app/screens/Settings";
 import beerDB from "./app/data/beerDB.json";
+import Account from "./app/screens/Account";
 
 const Stack = createStackNavigator();
 
@@ -58,6 +59,11 @@ export default function App() {
           <Stack.Screen
             name="Settings"
             component={Settings}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Account"
+            component={Account}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

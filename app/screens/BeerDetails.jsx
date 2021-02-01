@@ -3,6 +3,7 @@ import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import Navbar from "./Navbar";
 import { cream, darkBrown, lightBrown } from "../data/utilities";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
+import { auth } from "./firebase";
 import breweryDB from "../data/breweryDB.json";
 
 export default function BeerDetails({ navigation, route }) {
@@ -32,6 +33,13 @@ export default function BeerDetails({ navigation, route }) {
     black: require("../assets/blackBig.png"),
     red: require("../assets/redBig.png"),
     green: require("../assets/greenBig.png"),
+    starGray: require("../assets/starGray.png"),
+    star: require("../assets/star.png"),
+    heartGray: require("../assets/heartGray.png"),
+    heart: require("../assets/heart.png"),
+    checkGray: require("../assets/checkGray.png"),
+    check: require("../assets/check.png"),
+    remove: require("../assets/remove.png"),
   };
 
   const getBreweryDescription = (breweryRef) => {
@@ -168,7 +176,7 @@ export default function BeerDetails({ navigation, route }) {
             <ScrollView>
               <Text style={styles.beerDescription}>
                 <Text style={styles.brewery}>
-                  Birra {item.beerName.replace("\n", "")}:
+                  Birra {item.beerName.replace("\n", "")}:{" "}
                 </Text>
                 {item.beerDescription}
                 <TouchableOpacity onPress={() => setFlag(true)}>
@@ -183,7 +191,9 @@ export default function BeerDetails({ navigation, route }) {
           {flag && (
             <ScrollView>
               <Text style={styles.beerDescription}>
-                <Text style={styles.brewery}>Birreria {item.breweryName}:</Text>
+                <Text style={styles.brewery}>
+                  Birreria {item.breweryName}:{" "}
+                </Text>
                 {getBreweryDescription(item.breweryName)}
                 <TouchableOpacity onPress={() => setFlag(false)}>
                   <Image
@@ -197,39 +207,36 @@ export default function BeerDetails({ navigation, route }) {
         </View>
         <View style={styles.ratings}>
           <Image
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
             style={styles.star}
           />
           <Image
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
             style={styles.star}
           />
           <Image
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
             style={styles.star}
           />
           <Image
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
             style={styles.star}
           />
           <Image
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
             style={styles.star}
           />
           <Image
-            source={require("../assets/heartGray.png")}
+            source={auth.currentUser !== null ? images.heart : images.heartGray}
             style={styles.heart}
           />
         </View>
         <View style={styles.ratings}>
           <Image
-            source={require("../assets/checkGray.png")}
+            source={auth.currentUser !== null ? images.check : images.checkGray}
             style={styles.confirmAndRefuse}
           />
-          <Image
-            source={require("../assets/removeGray.png")}
-            style={styles.confirmAndRefuse}
-          />
+          <Image source={images.remove} style={styles.confirmAndRefuse} />
         </View>
       </View>
     </View>

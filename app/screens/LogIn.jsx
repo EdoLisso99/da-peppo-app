@@ -46,15 +46,15 @@ export default function LogIn({ navigation }) {
     const usernameRegexp = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+$/;
     const passwordRegexp = /^[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+$/;
     if (username !== "" && !usernameRegexp.test(username)) {
-      Alert.alert("ERRORE! \nUsername non valido!");
+      alert("ERRORE! \nUsername non valido!");
       flag = false;
       setDefaultValues();
     } else if (password !== "" && !passwordRegexp.test(password)) {
-      Alert.alert("ERRORE! \nPassword non valida!");
+      alert("ERRORE! \nPassword non valida!");
       flag = false;
       setDefaultValues();
     } else if (username === "" || password === "") {
-      Alert.alert("ERRORE! \nUno o più campi non sono stati compilati!");
+      alert("ERRORE! \nUno o più campi non sono stati compilati!");
       flag = false;
       setDefaultValues();
     } else if (flag) {
@@ -77,7 +77,8 @@ export default function LogIn({ navigation }) {
                 if (error.code === "auth/wrong-password") {
                   //Do something
                   alert("Errore! La password immessa è sbagliata!");
-                  setDefaultValues();
+                  setPassword("");
+                  passwordRef.current.clear();
                   console.log(error);
                 } else {
                   //Do something else
@@ -141,7 +142,7 @@ export default function LogIn({ navigation }) {
             </View>
             <View style={styles.help}>
               <Text
-                onPress={() => Alert.alert("Son cazzi tuoi!")}
+                onPress={() => alert("Son cazzi tuoi!")}
                 style={styles.normalText}
               >
                 Hai dimenticato la password?
@@ -151,12 +152,12 @@ export default function LogIn({ navigation }) {
               </Text>
             </View>
 
-            <TouchableWithoutFeedback
+            <TouchableHighlight
               style={styles.confirmButton}
               onPress={confirmHandler}
             >
               <Text style={styles.confirmText}>Conferma</Text>
-            </TouchableWithoutFeedback>
+            </TouchableHighlight>
             <Image
               source={require("../assets/daPeppoBlack.png")}
               style={styles.peppoLogo}

@@ -1,12 +1,20 @@
 import React from "react";
 import { Dimensions, StyleSheet, View, Text, Image } from "react-native";
 import * as utilities from "../data/utilities";
+import { auth } from "./firebase";
 // import {
 //   PurplePurse_400Regular,
 //   GloriaHallelujah_400Regular,
 // } from "@expo-google-fonts/dev";
 
 export default function BeerList({ item, titlePressHandler }) {
+  const images = {
+    starGray: require("../assets/starGray.png"),
+    star: require("../assets/star.png"),
+    heartGray: require("../assets/heartGray.png"),
+    heart: require("../assets/heart.png"),
+  };
+
   return (
     <View style={styles.list}>
       {utilities.showBottle(item.appearence, item.bottle33Price, true)}
@@ -38,27 +46,27 @@ export default function BeerList({ item, titlePressHandler }) {
           </Text>
           <Image
             style={styles.heart}
-            source={require("../assets/heartGray.png")}
+            source={auth.currentUser !== null ? images.heart : images.heartGray}
           ></Image>
           <Image
             style={styles.star}
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
           ></Image>
           <Image
             style={styles.star}
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
           ></Image>
           <Image
             style={styles.star}
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
           ></Image>
           <Image
             style={styles.star}
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
           ></Image>
           <Image
             style={styles.star}
-            source={require("../assets/starGray.png")}
+            source={auth.currentUser !== null ? images.star : images.starGray}
           ></Image>
         </View>
       </View>

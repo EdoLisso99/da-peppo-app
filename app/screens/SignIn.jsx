@@ -13,6 +13,7 @@ import {
 import Navbar from "./Navbar";
 import { cream, lightBrown, darkBrown } from "../data/utilities";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
+import { database, auth } from "./firebase";
 
 export default function SignIn({ navigation }) {
   const [username, setUsername] = useState("");
@@ -45,43 +46,91 @@ export default function SignIn({ navigation }) {
     confirmPasswordRef.current.clear();
   };
 
+  //Firebase Functions
+  const writeUserData = (username, email, password) => {
+    database
+      .ref("users/" + username)
+      .set({ username: username, email: email, password: password });
+  };
+
+  const isUsernameAlreadyUsed = (flag) => {
+    let usernamesInDB = database.ref("users/");
+    usernamesInDB.once("value", (snapshot) => {
+      const x = Object.entries(snapshot.val());
+      x.map((item) => {
+        if (item[0] === username) {
+          flag = false;
+        }
+      });
+    });
+    return flag;
+  };
+
   const confirmHandler = () => {
     let flag = true;
     const usernameRegexp = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+$/;
-    const passwordRegexp = /^[!-~]+[!-~]+[!-~]+$/;
+    const passwordRegexp = /^[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+$/;
     const emailRegexp = /^[!-?A-~]+[!-?A-~]+[!-?A-~]+[!-?A-~]+[!-?A-~]+[!-?A-~]+@[!-?A-~]+[!-?A-~]+[!-?A-~]+[!-?A-~]+.(it|com)$/;
     if (username !== "" && !usernameRegexp.test(username)) {
-      Alert.alert("ERRORE! \nUsername non valido!");
+      alert("ERRORE! \nUsername non valido!");
       flag = false;
       setDefaultValues();
     } else if (email !== "" && !emailRegexp.test(email)) {
-      Alert.alert("ERRORE! \nEmail non valida!");
+      alert("ERRORE! \nEmail non valida!");
       flag = false;
       setDefaultValues();
     } else if (password !== "" && !passwordRegexp.test(password)) {
-      Alert.alert("ERRORE! \nPassword non valida!");
+      alert("ERRORE! \nPassword non valida!");
       flag = false;
       setDefaultValues();
     } else if (confirmPassword !== password) {
-      Alert.alert("ERRORE! \nPassword di conferma non valida!");
+      alert("ERRORE! \nPassword di conferma non valida!");
       flag = false;
       setDefaultValues();
+    } else if (!isUsernameAlreadyUsed(flag)) {
+      alert("Errore! \nL'username esiste già!");
+      setUsername("");
+      usernameRef.current.clear();
     }
-    // else if (flag && ESISTE GIA' UN UTENTE CON QUESTO NOME/EMAIL){....}
+    /// else if (flag && ESISTE GIA' UN UTENTE CON QUESTO NOME/EMAIL){....}
     else if (
       username === "" ||
       email === "" ||
       password === "" ||
       confirmPasswordRef === ""
     ) {
-      Alert.alert("ERRORE! \nUno o più campi non sono stati compilati!");
+      alert("ERRORE! \nUno o più campi non sono stati compilati!");
       flag = false;
       setDefaultValues();
     } else if (flag) {
-      Alert.alert("COMPLIMENTI, SAI DIGGITARE!!!");
+      //CONTROLLO CHE EFFETTIVAMENTE LE EMAIL ESISTANO
+      try {
+        auth
+          .createUserWithEmailAndPassword(email, password)
+          .then(() => this.props.navigation.navigate("Home"))
+          .catch((error) => {
+            if (error.code === "auth/email-already-in-use") {
+              alert("Errore! L'email selezionata è già in uso");
+              setEmail("");
+              emailRef.current.clear();
+            } else {
+              console.log("Entrato nell'else!");
+              console.log(error);
+              // alert(error.message);
+            }
+          });
+      } catch (err) {
+        console.log("Entrato nel secondo Catch");
+        console.log(err);
+        alert(err);
+      }
+
+      //CONTROLLO  CRIPTAZIONE PASSWORD
+      writeUserData(username, email, password);
+      alert("Registrazione effettuata con successo!");
       setDefaultValues();
-      // navigation.pop();
-      // navigation.navigate("Home", { beers: newDB });
+      navigation.pop();
+      navigation.navigate("LogIn");
     }
   };
 

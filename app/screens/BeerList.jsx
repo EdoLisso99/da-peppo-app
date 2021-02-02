@@ -9,7 +9,6 @@ import { auth, database } from "./firebase";
 // } from "@expo-google-fonts/dev";
 
 export default function BeerList({ item, titlePressHandler }) {
-  const [isReviewed, setIsReviewed] = useState(false);
   const [star1, setStar1] = useState(false);
   const [star2, setStar2] = useState(false);
   const [star3, setStar3] = useState(false);
@@ -39,8 +38,6 @@ export default function BeerList({ item, titlePressHandler }) {
             setStar4(utilities.returnRating(x, item.key, 4));
             setStar5(utilities.returnRating(x, item.key, 5));
           }
-        } else {
-          console.log("X è nullo mannaggia il wall maria");
         }
       });
     } else {

@@ -239,7 +239,8 @@ export default function BeerDetails({ navigation, route }) {
   };
 
   const confirmPressHandler = () => {
-    if (auth.currentUser !== null) {
+    if (auth.currentUser !== null && (heart || getTotalRating() !== 0)) {
+      //Controllo di aver effettivamente selezionato qualcosa
       let dbRef = database.ref("users/" + auth.currentUser.displayName);
       dbRef.once("value", (snapshot) => {
         let x = snapshot.child("reviewed").val();
@@ -308,45 +309,12 @@ export default function BeerDetails({ navigation, route }) {
             setStarDB4(returnRating(x, item.key, 4));
             setStarDB5(returnRating(x, item.key, 5));
           }
-        } else {
-          console.log("X è nullo mannaggia il wall maria");
         }
       });
     }
   };
 
   showAll();
-
-  const priority = (num) => {
-    switch (num) {
-      case 1:
-        if (!star1 && starDB1) {
-          return starDB1;
-        } else return star1;
-      case 2:
-        if (!star2 && starDB2) {
-          return starDB2;
-        } else return star2;
-      case 3:
-        if (!star3 && starDB3) {
-          return starDB3;
-        } else return star3;
-      case 4:
-        if (!star4 && starDB4) {
-          return starDB4;
-        } else return star4;
-      case 5:
-        if (!star5 && starDB5) {
-          return starDB5;
-        } else return star5;
-      case 6:
-        if (!heart && heartDB) {
-          return heartDB;
-        } else return heart;
-      default:
-        break;
-    }
-  };
 
   return (
     <View>

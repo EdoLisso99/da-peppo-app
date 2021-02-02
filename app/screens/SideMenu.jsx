@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { darkBrown, cream } from "../data/utilities";
 import Navbar from "./Navbar";
-import { auth } from "./firebase";
+import { auth, database } from "./firebase";
+import beerDB from "../data/beerDB.json";
 
 // import { Oregano_400Regular } from "@expo-google-fonts/dev";
 
@@ -48,6 +49,60 @@ export default function SideMenu({ navigation }) {
     navigation.navigate("Account");
   };
 
+  const recentPressHandler = () => {
+    let tmp = [];
+
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref(
+        "users/" + auth.currentUser.displayName + "/recent"
+      );
+      dbRef.once("value", (snapshot) => {
+        let x = snapshot.val();
+        x.map((num) => {
+          tmp = [...tmp, beerDB[num - 1]];
+        });
+        navigation.pop();
+        navigation.navigate("Home", { beers: tmp });
+      });
+    }
+  };
+
+  const alreadyEvaluatedHandler = () => {
+    let tmp = [];
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref(
+        "users/" + auth.currentUser.displayName + "/reviewed"
+      );
+      dbRef.once("value", (snapshot) => {
+        let x = snapshot.val();
+        x.map((num) => {
+          tmp = [...tmp, beerDB[num.key - 1]];
+        });
+        navigation.pop();
+        navigation.navigate("Home", { beers: tmp });
+      });
+    }
+  };
+
+  const favouritesHandler = () => {
+    let tmp = [];
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref(
+        "users/" + auth.currentUser.displayName + "/reviewed"
+      );
+      dbRef.once("value", (snapshot) => {
+        let x = snapshot.val();
+        x.map((num) => {
+          if (num.favourite) {
+            tmp = [...tmp, beerDB[num.key - 1]];
+          }
+        });
+        navigation.pop();
+        navigation.navigate("Home", { beers: tmp });
+      });
+    }
+  };
+
   return (
     <View>
       <Navbar
@@ -57,9 +112,15 @@ export default function SideMenu({ navigation }) {
       <View style={styles.sort}>
         {auth.currentUser && (
           <View style={styles.textContainer}>
-            <Text style={styles.text}>Preferiti</Text>
-            <Text style={styles.text}>Già Valutate</Text>
-            <Text style={styles.text}>Recenti</Text>
+            <Text style={styles.text} onPress={favouritesHandler}>
+              Preferiti
+            </Text>
+            <Text style={styles.text} onPress={alreadyEvaluatedHandler}>
+              Già Valutate
+            </Text>
+            <Text style={styles.text} onPress={recentPressHandler}>
+              Recenti
+            </Text>
             <Text style={styles.text} onPress={accountPress}>
               Account
             </Text>

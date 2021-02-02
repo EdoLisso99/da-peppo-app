@@ -1,12 +1,39 @@
 import React, { useState } from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import Navbar from "./Navbar";
-import { cream, darkBrown, lightBrown } from "../data/utilities";
-import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
-import { auth } from "./firebase";
+import {
+  cream,
+  darkBrown,
+  lightBrown,
+  returnFavourite,
+  returnRating,
+  isJustReviewed,
+} from "../data/utilities";
+import {
+  ScrollView,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from "react-native-gesture-handler";
+import { auth, database } from "./firebase";
 import breweryDB from "../data/breweryDB.json";
 
 export default function BeerDetails({ navigation, route }) {
+  const [star1, setStar1] = useState(false);
+  const [star2, setStar2] = useState(false);
+  const [star3, setStar3] = useState(false);
+  const [star4, setStar4] = useState(false);
+  const [star5, setStar5] = useState(false);
+  const [heart, setHeart] = useState(false);
+  const [starPressedOnce, setStarPressedOnce] = useState(false);
+  const [heartPressedOnce, setHeartPressedOnce] = useState(false);
+
+  const [starDB1, setStarDB1] = useState(false);
+  const [starDB2, setStarDB2] = useState(false);
+  const [starDB3, setStarDB3] = useState(false);
+  const [starDB4, setStarDB4] = useState(false);
+  const [starDB5, setStarDB5] = useState(false);
+  const [heartDB, setHeartDB] = useState(false);
+
   let [flag, setFlag] = useState(false);
   let brewery = breweryDB;
   const { item } = route.params;
@@ -14,7 +41,9 @@ export default function BeerDetails({ navigation, route }) {
   let secondLine = degrees > 7 ? true : false;
   let fullFlames = degrees % 7;
   let halfFlame = Math.round((fullFlames % 1) * 10) / 10 === 0 ? false : true;
+
   fullFlames = Math.floor(fullFlames);
+
   if (degrees == 14) {
     secondLine = true;
     fullFlames = 7;
@@ -60,6 +89,263 @@ export default function BeerDetails({ navigation, route }) {
   const searchPressHandler = () => {
     navigation.pop();
     navigation.navigate("Search");
+  };
+
+  const checkRecentDuplicates = (array, element) => {
+    let duplicate = false;
+    array.map((genericElement) => {
+      if (genericElement === element) {
+        duplicate = true;
+      }
+    });
+    return duplicate;
+  };
+
+  const addRecent = () => {
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref("users/" + auth.currentUser.displayName);
+      dbRef.once("value", (snapshot) => {
+        let x = snapshot.child("recent").val();
+        //X non è vuoto
+        if (x !== null) {
+          //Controllo di non star aggiungendo un duplicato
+          if (!checkRecentDuplicates(x, item.key)) {
+            //X è composto da un solo elemento
+            if (typeof x === "number") {
+              dbRef.update({ recent: [x, item.key] });
+            } //X è composto da più elementi
+            else {
+              //Lunghezza di x sfora il limite
+              if (x.length >= 30) {
+                x.shift();
+                let y = [...x, item.key];
+                dbRef.update({ recent: y });
+              }
+              //Lunghezza di x non sfora il limite
+              else {
+                let y = [...x, item.key];
+                dbRef.update({ recent: y });
+              }
+            }
+          }
+        }
+        //X è vuoto
+        else {
+          dbRef.update({ recent: { 0: item.key } });
+        }
+      });
+    }
+  };
+
+  addRecent();
+
+  const starPressHandler = (starNum) => {
+    setStarPressedOnce(true);
+    switch (starNum) {
+      case 1:
+        setStar1(true);
+        setStar2(false);
+        setStar3(false);
+        setStar4(false);
+        setStar5(false);
+        break;
+      case 2:
+        setStar1(true);
+        setStar2(true);
+        setStar3(false);
+        setStar4(false);
+        setStar5(false);
+        break;
+      case 3:
+        setStar1(true);
+        setStar2(true);
+        setStar3(true);
+        setStar4(false);
+        setStar5(false);
+        break;
+      case 4:
+        setStar1(true);
+        setStar2(true);
+        setStar3(true);
+        setStar4(true);
+        setStar5(false);
+        break;
+      case 5:
+        setStar1(true);
+        setStar2(true);
+        setStar3(true);
+        setStar4(true);
+        setStar5(true);
+        break;
+      case 6:
+        setStar1(false);
+        setStar2(false);
+        setStar3(false);
+        setStar4(false);
+        setStar5(false);
+        setHeart(false);
+        break;
+      default:
+        setStar1(false);
+        setStar2(false);
+        setStar3(false);
+        setStar4(false);
+        setStar5(false);
+        break;
+    }
+  };
+
+  const heartPressHandler = () => {
+    setHeartPressedOnce(true);
+    setHeart(!heart);
+  };
+
+  const getTotalRating = () => {
+    if (star5) {
+      return 5;
+    } else if (star4) {
+      return 4;
+    } else if (star3) {
+      return 3;
+    } else if (star2) {
+      return 2;
+    } else if (star1) {
+      return 1;
+    } else {
+      return 0;
+    }
+  };
+
+  const checkReviewedDuplicates = (array, element) => {
+    let duplicate = false;
+    array.map((genericElement) => {
+      if (genericElement.key === element) {
+        duplicate = true;
+      }
+    });
+    return duplicate;
+  };
+
+  const getReviewedDuplicateIndex = (array, element) => {
+    let duplicate = -1;
+    let i = 0;
+    array.map((genericElement) => {
+      if (genericElement.key === element) {
+        duplicate = i;
+      }
+      i++;
+    });
+    return duplicate;
+  };
+
+  const confirmPressHandler = () => {
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref("users/" + auth.currentUser.displayName);
+      dbRef.once("value", (snapshot) => {
+        let x = snapshot.child("reviewed").val();
+        //X non è vuoto
+        if (x !== null) {
+          //Controllo di non star aggiungendo un duplicato
+          if (!checkReviewedDuplicates(x, item.key)) {
+            //X è composto da più elementi
+            //Lunghezza di x sfora il limite
+            if (x.length >= 30) {
+              x.shift();
+              let y = [
+                ...x,
+                { favourite: heart, rating: getTotalRating(), key: item.key },
+              ];
+              dbRef.update({ reviewed: y });
+            }
+            //Lunghezza di x non sfora il limite
+            else {
+              let y = [
+                ...x,
+                { favourite: heart, rating: getTotalRating(), key: item.key },
+              ];
+              dbRef.update({ reviewed: y });
+            }
+          } else {
+            let tmp = database.ref(
+              "users/" +
+                auth.currentUser.displayName +
+                "/reviewed/" +
+                getReviewedDuplicateIndex(x, item.key)
+            );
+            tmp.update({
+              favourite: heart,
+              rating: getTotalRating(),
+              key: item.key,
+            });
+          }
+        }
+        //X è vuoto
+        else {
+          dbRef.update({
+            reviewed: {
+              0: { favourite: heart, rating: getTotalRating(), key: item.key },
+            },
+          });
+        }
+      });
+    }
+    navigation.goBack();
+  };
+
+  const showAll = () => {
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref(
+        "users/" + auth.currentUser.displayName + "/reviewed"
+      );
+      dbRef.once("value", (snapshot) => {
+        let x = snapshot.val();
+        if (x !== null) {
+          if (isJustReviewed(x, item.key)) {
+            setHeartDB(returnFavourite(x, item.key));
+            setStarDB1(returnRating(x, item.key, 1));
+            setStarDB2(returnRating(x, item.key, 2));
+            setStarDB3(returnRating(x, item.key, 3));
+            setStarDB4(returnRating(x, item.key, 4));
+            setStarDB5(returnRating(x, item.key, 5));
+          }
+        } else {
+          console.log("X è nullo mannaggia il wall maria");
+        }
+      });
+    }
+  };
+
+  showAll();
+
+  const priority = (num) => {
+    switch (num) {
+      case 1:
+        if (!star1 && starDB1) {
+          return starDB1;
+        } else return star1;
+      case 2:
+        if (!star2 && starDB2) {
+          return starDB2;
+        } else return star2;
+      case 3:
+        if (!star3 && starDB3) {
+          return starDB3;
+        } else return star3;
+      case 4:
+        if (!star4 && starDB4) {
+          return starDB4;
+        } else return star4;
+      case 5:
+        if (!star5 && starDB5) {
+          return starDB5;
+        } else return star5;
+      case 6:
+        if (!heart && heartDB) {
+          return heartDB;
+        } else return heart;
+      default:
+        break;
+    }
   };
 
   return (
@@ -205,38 +491,129 @@ export default function BeerDetails({ navigation, route }) {
             </ScrollView>
           )}
         </View>
+        {auth.currentUser && (
+          <View style={styles.ratings}>
+            <TouchableWithoutFeedback onPress={() => starPressHandler(1)}>
+              <Image
+                source={
+                  !starPressedOnce && starDB1
+                    ? images.star
+                    : !starPressedOnce && !starDB1
+                    ? images.starGray
+                    : starPressedOnce && star1
+                    ? images.star
+                    : starPressedOnce && star1
+                    ? images.starGray
+                    : images.starGray
+                }
+                style={styles.star}
+              />
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={() => starPressHandler(2)}>
+              <Image
+                source={
+                  !starPressedOnce && starDB2
+                    ? images.star
+                    : !starPressedOnce && !starDB2
+                    ? images.starGray
+                    : starPressedOnce && star2
+                    ? images.star
+                    : starPressedOnce && star2
+                    ? images.starGray
+                    : images.starGray
+                }
+                style={styles.star}
+              />
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={() => starPressHandler(3)}>
+              <Image
+                source={
+                  !starPressedOnce && starDB3
+                    ? images.star
+                    : !starPressedOnce && !starDB3
+                    ? images.starGray
+                    : starPressedOnce && star3
+                    ? images.star
+                    : starPressedOnce && star3
+                    ? images.starGray
+                    : images.starGray
+                }
+                style={styles.star}
+              />
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={() => starPressHandler(4)}>
+              <Image
+                source={
+                  !starPressedOnce && starDB4
+                    ? images.star
+                    : !starPressedOnce && !starDB4
+                    ? images.starGray
+                    : starPressedOnce && star4
+                    ? images.star
+                    : starPressedOnce && star4
+                    ? images.starGray
+                    : images.starGray
+                }
+                style={styles.star}
+              />
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={() => starPressHandler(5)}>
+              <Image
+                source={
+                  !starPressedOnce && starDB5
+                    ? images.star
+                    : !starPressedOnce && !starDB5
+                    ? images.starGray
+                    : starPressedOnce && star5
+                    ? images.star
+                    : starPressedOnce && star5
+                    ? images.starGray
+                    : images.starGray
+                }
+                style={styles.star}
+              />
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={heartPressHandler}>
+              <Image
+                source={
+                  !heartPressedOnce && heartDB
+                    ? images.heart
+                    : !heartPressedOnce && !heartDB
+                    ? images.heartGray
+                    : heartPressedOnce && heart
+                    ? images.heart
+                    : heartPressedOnce && heart
+                    ? images.heartGray
+                    : images.heartGray
+                }
+                style={styles.heart}
+              />
+            </TouchableWithoutFeedback>
+          </View>
+        )}
+
+        {!auth.currentUser && (
+          <View style={styles.ratings}>
+            <Image source={images.starGray} style={styles.star} />
+            <Image source={images.starGray} style={styles.star} />
+            <Image source={images.starGray} style={styles.star} />
+            <Image source={images.starGray} style={styles.star} />
+            <Image source={images.starGray} style={styles.star} />
+            <Image source={images.heartGray} style={styles.heart} />
+          </View>
+        )}
         <View style={styles.ratings}>
-          <Image
-            source={auth.currentUser !== null ? images.star : images.starGray}
-            style={styles.star}
-          />
-          <Image
-            source={auth.currentUser !== null ? images.star : images.starGray}
-            style={styles.star}
-          />
-          <Image
-            source={auth.currentUser !== null ? images.star : images.starGray}
-            style={styles.star}
-          />
-          <Image
-            source={auth.currentUser !== null ? images.star : images.starGray}
-            style={styles.star}
-          />
-          <Image
-            source={auth.currentUser !== null ? images.star : images.starGray}
-            style={styles.star}
-          />
-          <Image
-            source={auth.currentUser !== null ? images.heart : images.heartGray}
-            style={styles.heart}
-          />
-        </View>
-        <View style={styles.ratings}>
-          <Image
-            source={auth.currentUser !== null ? images.check : images.checkGray}
-            style={styles.confirmAndRefuse}
-          />
-          <Image source={images.remove} style={styles.confirmAndRefuse} />
+          <TouchableWithoutFeedback onPress={confirmPressHandler}>
+            <Image
+              source={
+                auth.currentUser !== null ? images.check : images.checkGray
+              }
+              style={styles.confirmAndRefuse}
+            />
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback onPress={() => starPressHandler(6)}>
+            <Image source={images.remove} style={styles.confirmAndRefuse} />
+          </TouchableWithoutFeedback>
         </View>
       </View>
     </View>
@@ -327,7 +704,7 @@ const styles = StyleSheet.create({
   },
   heart: {
     width: Dimensions.get("screen").width * 0.1,
-    height: Dimensions.get("screen").width * 0.1 * 0.89,
+    height: Dimensions.get("screen").width * 0.1 * 0.9,
   },
   confirmAndRefuse: {
     width: Dimensions.get("screen").width * 0.15,

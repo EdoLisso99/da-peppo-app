@@ -5,6 +5,40 @@ export const lightBrown = "#623D07";
 export const darkBrown = "#4B2D00";
 export const cream = "#EDEAA2";
 
+export const returnFavourite = (array, num) => {
+  let isFavourite = false;
+  array.map((element) => {
+    if (element.key === num) {
+      if (element.favourite) {
+        isFavourite = true;
+      }
+    }
+  });
+  return isFavourite;
+};
+
+export const returnRating = (array, num, rate) => {
+  let rating = false;
+  array.map((element) => {
+    if (element.key === num) {
+      if (element.rating >= rate) {
+        rating = true;
+      }
+    }
+  });
+  return rating;
+};
+
+export const isJustReviewed = (array, num) => {
+  let isAlreadyReviewed = false;
+  array.map((element) => {
+    if (element.key === num) {
+      isAlreadyReviewed = true;
+    }
+  });
+  return isAlreadyReviewed;
+};
+
 export const showBottle = (appearence, bottle, is33) => {
   const images = {
     blonde33: require("../assets/blonde33.png"),

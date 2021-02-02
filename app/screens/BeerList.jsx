@@ -1,19 +1,53 @@
 import React from "react";
 import { Dimensions, StyleSheet, View, Text, Image } from "react-native";
+import { useState } from "react/cjs/react.development";
 import * as utilities from "../data/utilities";
-import { auth } from "./firebase";
+import { auth, database } from "./firebase";
 // import {
 //   PurplePurse_400Regular,
 //   GloriaHallelujah_400Regular,
 // } from "@expo-google-fonts/dev";
 
 export default function BeerList({ item, titlePressHandler }) {
+  const [isReviewed, setIsReviewed] = useState(false);
+  const [star1, setStar1] = useState(false);
+  const [star2, setStar2] = useState(false);
+  const [star3, setStar3] = useState(false);
+  const [star4, setStar4] = useState(false);
+  const [star5, setStar5] = useState(false);
+  const [heart, setHeart] = useState(false);
   const images = {
     starGray: require("../assets/starGray.png"),
     star: require("../assets/star.png"),
     heartGray: require("../assets/heartGray.png"),
     heart: require("../assets/heart.png"),
   };
+
+  const showAll = () => {
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref(
+        "users/" + auth.currentUser.displayName + "/reviewed"
+      );
+      dbRef.once("value", (snapshot) => {
+        let x = snapshot.val();
+        if (x !== null) {
+          if (utilities.isJustReviewed(x, item.key)) {
+            setHeart(utilities.returnFavourite(x, item.key));
+            setStar1(utilities.returnRating(x, item.key, 1));
+            setStar2(utilities.returnRating(x, item.key, 2));
+            setStar3(utilities.returnRating(x, item.key, 3));
+            setStar4(utilities.returnRating(x, item.key, 4));
+            setStar5(utilities.returnRating(x, item.key, 5));
+          }
+        } else {
+          console.log("X è nullo mannaggia il wall maria");
+        }
+      });
+    } else {
+    }
+  };
+
+  showAll();
 
   return (
     <View style={styles.list}>
@@ -44,30 +78,35 @@ export default function BeerList({ item, titlePressHandler }) {
               : ""}
             {item.bottle75Price !== null ? `${item.bottle75Price}€` : ""}
           </Text>
-          <Image
-            style={styles.heart}
-            source={auth.currentUser !== null ? images.heart : images.heartGray}
-          ></Image>
-          <Image
-            style={styles.star}
-            source={auth.currentUser !== null ? images.star : images.starGray}
-          ></Image>
-          <Image
-            style={styles.star}
-            source={auth.currentUser !== null ? images.star : images.starGray}
-          ></Image>
-          <Image
-            style={styles.star}
-            source={auth.currentUser !== null ? images.star : images.starGray}
-          ></Image>
-          <Image
-            style={styles.star}
-            source={auth.currentUser !== null ? images.star : images.starGray}
-          ></Image>
-          <Image
-            style={styles.star}
-            source={auth.currentUser !== null ? images.star : images.starGray}
-          ></Image>
+
+          {auth.currentUser && (
+            <View style={styles.ratingsContainer}>
+              <Image
+                style={styles.heart}
+                source={heart ? images.heart : images.heartGray}
+              ></Image>
+              <Image
+                style={styles.star}
+                source={star1 ? images.star : images.starGray}
+              ></Image>
+              <Image
+                style={styles.star}
+                source={star2 ? images.star : images.starGray}
+              ></Image>
+              <Image
+                style={styles.star}
+                source={star3 ? images.star : images.starGray}
+              ></Image>
+              <Image
+                style={styles.star}
+                source={star4 ? images.star : images.starGray}
+              ></Image>
+              <Image
+                style={styles.star}
+                source={star5 ? images.star : images.starGray}
+              ></Image>
+            </View>
+          )}
         </View>
       </View>
     </View>
@@ -97,7 +136,7 @@ const styles = StyleSheet.create({
   secondLine: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "flex-start",
     alignItems: "center",
     textAlign: "justify",
     flexGrow: 1,
@@ -128,5 +167,11 @@ const styles = StyleSheet.create({
   previewInfo: {
     display: "flex",
     flexGrow: 1,
+  },
+  ratingsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexGrow: 1,
+    justifyContent: "space-evenly",
   },
 });

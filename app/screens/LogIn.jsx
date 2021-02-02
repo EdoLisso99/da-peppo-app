@@ -68,6 +68,7 @@ export default function LogIn({ navigation }) {
             auth
               .signInWithEmailAndPassword(item[1].email, password)
               .then(() => {
+                auth.currentUser.updateProfile({ displayName: username });
                 alert("Login effettuato con successo!");
                 setDefaultValues();
                 navigation.pop();

@@ -3,6 +3,7 @@ import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import { darkBrown, cream, lightBrown } from "../data/utilities";
 import Navbar from "./Navbar";
+import { auth, database } from "./firebase";
 import beerDB from "../data/beerDB.json";
 
 // import { Oregano_400Regular } from "@expo-google-fonts/dev";
@@ -83,12 +84,67 @@ export default function Sort({ navigation, route }) {
     return beer;
   };
 
+  const sortPerRatingAscend = () => {
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref("users/" + auth.currentUser.displayName);
+      dbRef.once("value", (snapshot) => {
+        let beers = snapshot.child("reviewed").val();
+        if (beers !== undefined && beers !== null) {
+          for (let i = 0; i < beers.length - 1; i++) {
+            for (let j = 0; j < beers.length - 1; j++) {
+              if (beers[j].rating > beers[j + 1].rating) {
+                let tmp = beers[j];
+                beers[j] = beers[j + 1];
+                beers[j + 1] = tmp;
+              }
+            }
+          }
+          for (let i = 0; i < beers.length; i++) {
+            beers[i] = beerDB[beers[i].key - 1];
+          }
+        } else {
+          beers = null;
+        }
+        navigation.navigate("Home", { beers: beers });
+      });
+    }
+  };
+
+  const sortPerRatingDescend = () => {
+    if (auth.currentUser !== null) {
+      let dbRef = database.ref("users/" + auth.currentUser.displayName);
+      dbRef.once("value", (snapshot) => {
+        let beers = snapshot.child("reviewed").val();
+        if (beers !== undefined && beers !== null) {
+          for (let i = 0; i < beers.length - 1; i++) {
+            for (let j = 0; j < beers.length - 1; j++) {
+              if (beers[j].rating < beers[j + 1].rating) {
+                let tmp = beers[j];
+                beers[j] = beers[j + 1];
+                beers[j + 1] = tmp;
+              }
+            }
+          }
+          for (let i = 0; i < beers.length; i++) {
+            beers[i] = beerDB[beers[i].key - 1];
+          }
+        } else {
+          beers = null;
+        }
+        navigation.navigate("Home", { beers: beers });
+      });
+    }
+  };
+
   const onAscendPressHandler = () => {
     if (isAlcoholPressed) {
       let beers = sortPerAlcoholAscend();
       navigation.navigate("Home", { beers: beers });
     } else if (isCoinPressed) {
       let beers = sortPerMoneyAscend();
+      navigation.navigate("Home", { beers: beers });
+    } else if (isRatingPressed) {
+      let beers = sortPerRatingAscend();
       navigation.navigate("Home", { beers: beers });
     }
   };
@@ -100,6 +156,27 @@ export default function Sort({ navigation, route }) {
     } else if (isCoinPressed) {
       let beers = sortPerMoneyDesc();
       navigation.navigate("Home", { beers: beers });
+    } else if (isRatingPressed) {
+      let beers = sortPerRatingDescend();
+      navigation.navigate("Home", { beers: beers });
+    }
+  };
+
+  const logoHandler = () => {
+    navigation.pop();
+    navigation.navigate("Home", { beers: beerDB });
+  };
+
+  const images = {
+    ratingGrey: require("../assets/ratingGrey.png"),
+    rating: require("../assets/rating.png"),
+  };
+
+  const ratingHandler = () => {
+    if (auth.currentUser !== null) {
+      setIsCoinPressed(false);
+      setIsRatingPressed(true);
+      setIsAlcoholPressed(false);
     }
   };
 
@@ -108,6 +185,7 @@ export default function Sort({ navigation, route }) {
       <Navbar
         beerPressHandler={beerPressHandler}
         searchPressHandler={searchPressHandler}
+        logoHandler={logoHandler}
       />
       <View style={styles.sort}>
         <Text style={styles.text}>Ordina per:</Text>
@@ -126,15 +204,11 @@ export default function Sort({ navigation, route }) {
               }
             />
           </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback
-            onPress={() => {
-              setIsCoinPressed(false);
-              setIsRatingPressed(true);
-              setIsAlcoholPressed(false);
-            }}
-          >
+          <TouchableWithoutFeedback onPress={ratingHandler}>
             <Image
-              source={require("../assets/ratingGrey.png")}
+              source={
+                auth.currentUser !== null ? images.rating : images.ratingGrey
+              }
               style={
                 !isRatingPressed ? styles.squareIcon : styles.pressedItemSquare
               }
@@ -175,10 +249,12 @@ export default function Sort({ navigation, route }) {
             </View>
           )}
         </View>
-        <Image
-          source={require("../assets/daPeppoWhite.png")}
-          style={styles.peppoLogo}
-        />
+        <TouchableWithoutFeedback onPress={logoHandler}>
+          <Image
+            source={require("../assets/daPeppoWhite.png")}
+            style={styles.peppoLogo}
+          />
+        </TouchableWithoutFeedback>
       </View>
     </View>
   );

@@ -9,7 +9,6 @@ import SignIn from "./app/screens/SignIn";
 import BeerDetails from "./app/screens/BeerDetails";
 import Search from "./app/screens/Search";
 import LogIn from "./app/screens/LogIn";
-import Settings from "./app/screens/Settings";
 import beerDB from "./app/data/beerDB.json";
 import Account from "./app/screens/Account";
 
@@ -24,7 +23,7 @@ export default function App() {
             name="Home"
             component={Home}
             options={{ headerShown: false }}
-            initialParams={{ beers: beerDB }}
+            initialParams={{ beers: beerDB, homeFlag: true }}
           />
           <Stack.Screen
             name="Sort"
@@ -56,11 +55,7 @@ export default function App() {
             component={Search}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
-            name="Settings"
-            component={Settings}
-            options={{ headerShown: false }}
-          />
+
           <Stack.Screen
             name="Account"
             component={Account}

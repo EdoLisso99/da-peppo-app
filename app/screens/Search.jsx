@@ -8,7 +8,11 @@ import {
   Text,
   View,
 } from "react-native";
-import { ScrollView, TextInput } from "react-native-gesture-handler";
+import {
+  ScrollView,
+  TextInput,
+  TouchableWithoutFeedback,
+} from "react-native-gesture-handler";
 import { darkBrown, cream } from "../data/utilities";
 import Navbar from "./Navbar";
 import CheckBox from "@react-native-community/checkbox";
@@ -1708,11 +1712,17 @@ export default function Search({ navigation }) {
     }
   };
 
+  const logoHandler = () => {
+    navigation.pop();
+    navigation.navigate("Home", { beers: beersDB });
+  };
+
   return (
     <View style={styles.container}>
       <Navbar
         beerPressHandler={beerPressHandler}
         searchPressHandler={searchPressHandler}
+        logoHandler={logoHandler}
       />
       <View style={styles.sort}>
         <ScrollView>
@@ -1829,10 +1839,12 @@ export default function Search({ navigation }) {
               onPress={setDefaultValues}
             ></Button>
           </View>
-          <Image
-            source={require("../assets/daPeppoBlack.png")}
-            style={styles.peppoLogo}
-          />
+          <TouchableWithoutFeedback onPress={logoHandler}>
+            <Image
+              source={require("../assets/daPeppoBlack.png")}
+              style={styles.peppoLogo}
+            />
+          </TouchableWithoutFeedback>
         </ScrollView>
       </View>
     </View>

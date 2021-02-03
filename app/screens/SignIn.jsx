@@ -8,6 +8,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  KeyboardAvoidingView,
   Keyboard,
 } from "react-native";
 import Navbar from "./Navbar";
@@ -19,6 +20,7 @@ import {
   TouchableWithoutFeedback,
 } from "react-native-gesture-handler";
 import { database, auth } from "./firebase";
+import beerDB from "../data/beerDB.json";
 
 export default function SignIn({ navigation }) {
   const [username, setUsername] = useState("");
@@ -71,6 +73,7 @@ export default function SignIn({ navigation }) {
   };
 
   const confirmHandler = () => {
+    Keyboard.dismiss();
     let flag = true;
     const usernameRegexp = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+$/;
     const passwordRegexp = /^[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+$/;
@@ -129,14 +132,20 @@ export default function SignIn({ navigation }) {
     }
   };
 
+  const logoHandler = () => {
+    navigation.pop();
+    navigation.navigate("Home", { beers: beerDB });
+  };
+
   return (
     <View>
       <Navbar
         beerPressHandler={beerPressHandler}
         searchPressHandler={searchPressHandler}
+        logoHandler={logoHandler}
       />
       <View style={styles.sort}>
-        <ScrollView>
+        <ScrollView keyboardShouldPersistTaps="handled">
           <View style={styles.dataContainer}>
             <Text style={styles.title}>SignIn</Text>
             <View style={styles.textContainer}>
@@ -189,16 +198,18 @@ export default function SignIn({ navigation }) {
                 secureTextEntry={true}
               ></TextInput>
             </View>
-            <TouchableWithoutFeedback
+            <TouchableOpacity
               style={styles.confirmButton}
               onPress={confirmHandler}
             >
               <Text style={styles.confirmText}>Conferma</Text>
+            </TouchableOpacity>
+            <TouchableWithoutFeedback onPress={logoHandler}>
+              <Image
+                source={require("../assets/daPeppoBlack.png")}
+                style={styles.peppoLogo}
+              />
             </TouchableWithoutFeedback>
-            <Image
-              source={require("../assets/daPeppoBlack.png")}
-              style={styles.peppoLogo}
-            />
           </View>
         </ScrollView>
       </View>

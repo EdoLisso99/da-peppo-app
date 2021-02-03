@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { darkBrown, cream } from "../data/utilities";
 import Navbar from "./Navbar";
 import { auth, database } from "./firebase";
 import beerDB from "../data/beerDB.json";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 // import { Oregano_400Regular } from "@expo-google-fonts/dev";
 
 export default function SideMenu({ navigation }) {
-  // const [isLogged, setIsLogged] = useState(false);
-
   const signInPressHandler = () => {
     // navigation.pop();
     navigation.navigate("SignIn");
@@ -34,8 +33,7 @@ export default function SideMenu({ navigation }) {
       .signOut()
       .then(() => {
         // Sign-out successful.
-        navigation.pop();
-        navigation.navigate("Home");
+        navigation.navigate("Home", { beers: beerDB });
         alert("Logout effettuato con successo!");
       })
       .catch((error) => {
@@ -51,16 +49,17 @@ export default function SideMenu({ navigation }) {
 
   const recentPressHandler = () => {
     let tmp = [];
-
     if (auth.currentUser !== null) {
       let dbRef = database.ref(
         "users/" + auth.currentUser.displayName + "/recent"
       );
       dbRef.once("value", (snapshot) => {
         let x = snapshot.val();
-        x.map((num) => {
-          tmp = [...tmp, beerDB[num - 1]];
-        });
+        if (x !== null) {
+          x.map((num) => {
+            tmp = [...tmp, beerDB[num - 1]];
+          });
+        }
         navigation.pop();
         navigation.navigate("Home", { beers: tmp });
       });
@@ -75,9 +74,12 @@ export default function SideMenu({ navigation }) {
       );
       dbRef.once("value", (snapshot) => {
         let x = snapshot.val();
-        x.map((num) => {
-          tmp = [...tmp, beerDB[num.key - 1]];
-        });
+        if (x !== null) {
+          x.map((num) => {
+            tmp = [...tmp, beerDB[num.key - 1]];
+          });
+        }
+
         navigation.pop();
         navigation.navigate("Home", { beers: tmp });
       });
@@ -92,15 +94,21 @@ export default function SideMenu({ navigation }) {
       );
       dbRef.once("value", (snapshot) => {
         let x = snapshot.val();
-        x.map((num) => {
-          if (num.favourite) {
-            tmp = [...tmp, beerDB[num.key - 1]];
-          }
-        });
-        navigation.pop();
+        if (x !== null) {
+          x.map((num) => {
+            if (num.favourite) {
+              tmp = [...tmp, beerDB[num.key - 1]];
+            }
+          });
+        }
         navigation.navigate("Home", { beers: tmp });
       });
     }
+  };
+
+  const logoHandler = () => {
+    navigation.pop();
+    navigation.navigate("Home", { beers: beerDB });
   };
 
   return (
@@ -108,6 +116,7 @@ export default function SideMenu({ navigation }) {
       <Navbar
         beerPressHandler={beerPressHandler}
         searchPressHandler={searchPressHandler}
+        logoHandler={logoHandler}
       />
       <View style={styles.sort}>
         {auth.currentUser && (
@@ -139,10 +148,12 @@ export default function SideMenu({ navigation }) {
             </Text>
           </View>
         )}
-        <Image
-          source={require("../assets/daPeppoWhite.png")}
-          style={styles.peppoLogo}
-        />
+        <TouchableWithoutFeedback onPress={logoHandler}>
+          <Image
+            source={require("../assets/daPeppoWhite.png")}
+            style={styles.peppoLogo}
+          />
+        </TouchableWithoutFeedback>
       </View>
     </View>
   );

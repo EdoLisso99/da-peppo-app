@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Alert, Dimensions, Image, StyleSheet, Text, View } from "react-native";
+import {
+  Alert,
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  Keyboard,
+} from "react-native";
 import Navbar from "./Navbar";
 import { cream, lightBrown, darkBrown } from "../data/utilities";
 import {
@@ -10,6 +18,7 @@ import {
 } from "react-native-gesture-handler";
 import CheckBox from "@react-native-community/checkbox";
 import { database, auth } from "./firebase";
+import beerDB from "../data/beerDB.json";
 
 export default function LogIn({ navigation }) {
   const [rememberMe, setRememberMe] = useState(false);
@@ -42,6 +51,7 @@ export default function LogIn({ navigation }) {
   };
 
   const confirmHandler = () => {
+    Keyboard.dismiss();
     let flag = true;
     const usernameRegexp = /^[a-zA-Z0-9]+[a-zA-Z0-9]+[a-zA-Z0-9]+$/;
     const passwordRegexp = /^[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+[!-~]+$/;
@@ -71,7 +81,6 @@ export default function LogIn({ navigation }) {
                 auth.currentUser.updateProfile({ displayName: username });
                 alert("Login effettuato con successo!");
                 setDefaultValues();
-                navigation.pop();
                 navigation.navigate("Home");
               })
               .catch((error) => {
@@ -98,14 +107,20 @@ export default function LogIn({ navigation }) {
     }
   };
 
+  const logoHandler = () => {
+    navigation.pop();
+    navigation.navigate("Home", { beers: beerDB });
+  };
+
   return (
     <View>
       <Navbar
         beerPressHandler={beerPressHandler}
         searchPressHandler={searchPressHandler}
+        logoHandler={logoHandler}
       />
       <View style={styles.sort}>
-        <ScrollView>
+        <ScrollView keyboardShouldPersistTaps="handled">
           <View style={styles.dataContainer}>
             <Text style={styles.title}>LogIn</Text>
             <View style={styles.textContainer}>
@@ -153,16 +168,18 @@ export default function LogIn({ navigation }) {
               </Text>
             </View>
 
-            <TouchableHighlight
+            <TouchableOpacity
               style={styles.confirmButton}
               onPress={confirmHandler}
             >
               <Text style={styles.confirmText}>Conferma</Text>
-            </TouchableHighlight>
-            <Image
-              source={require("../assets/daPeppoBlack.png")}
-              style={styles.peppoLogo}
-            />
+            </TouchableOpacity>
+            <TouchableWithoutFeedback onPress={logoHandler}>
+              <Image
+                source={require("../assets/daPeppoBlack.png")}
+                style={styles.peppoLogo}
+              />
+            </TouchableWithoutFeedback>
           </View>
         </ScrollView>
       </View>

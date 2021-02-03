@@ -16,6 +16,7 @@ import {
 } from "react-native-gesture-handler";
 import { auth, database } from "./firebase";
 import breweryDB from "../data/breweryDB.json";
+import beersDB from "../data/beerDB.json";
 
 export default function BeerDetails({ navigation, route }) {
   const [star1, setStar1] = useState(false);
@@ -290,6 +291,7 @@ export default function BeerDetails({ navigation, route }) {
         }
       });
     }
+
     navigation.goBack();
   };
 
@@ -316,11 +318,22 @@ export default function BeerDetails({ navigation, route }) {
 
   showAll();
 
+  const logoHandler = () => {
+    navigation.pop();
+    navigation.navigate("Home", { beers: beersDB });
+  };
+
+  const longRemovePressHandler = () => {
+    navigation.pop();
+    navigation.navigate("Home", { beers: beersDB });
+  };
+
   return (
     <View>
       <Navbar
         beerPressHandler={beerPressHandler}
         searchPressHandler={searchPressHandler}
+        logoHandler={logoHandler}
       />
       <View style={styles.container}>
         <View style={styles.imageAndText}>
@@ -579,7 +592,10 @@ export default function BeerDetails({ navigation, route }) {
               style={styles.confirmAndRefuse}
             />
           </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={() => starPressHandler(6)}>
+          <TouchableWithoutFeedback
+            onPress={() => starPressHandler(6)}
+            onLongPress={longRemovePressHandler}
+          >
             <Image source={images.remove} style={styles.confirmAndRefuse} />
           </TouchableWithoutFeedback>
         </View>

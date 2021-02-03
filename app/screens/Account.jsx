@@ -7,6 +7,7 @@ import {
   TouchableWithoutFeedback,
 } from "react-native-gesture-handler";
 import { cream, lightBrown, darkBrown } from "../data/utilities";
+import beerDB from "../data/beerDB.json";
 import Navbar from "./Navbar";
 
 export default function Account({ navigation }) {
@@ -42,11 +43,17 @@ export default function Account({ navigation }) {
 
   const confirmHandler = () => {};
 
+  const logoHandler = () => {
+    navigation.pop();
+    navigation.navigate("Home", { beers: beerDB });
+  };
+
   return (
     <View>
       <Navbar
         beerPressHandler={beerPressHandler}
         searchPressHandler={searchPressHandler}
+        logoHandler={logoHandler}
       />
       <View style={styles.sort}>
         <ScrollView>
@@ -131,10 +138,12 @@ export default function Account({ navigation }) {
                 <Text style={styles.confirmText}>Conferma</Text>
               </TouchableHighlight>
             </View>
-            <Image
-              source={require("../assets/daPeppoBlack.png")}
-              style={styles.peppoLogo}
-            />
+            <TouchableWithoutFeedback onPress={logoHandler}>
+              <Image
+                source={require("../assets/daPeppoBlack.png")}
+                style={styles.peppoLogo}
+              />
+            </TouchableWithoutFeedback>
           </View>
         </ScrollView>
       </View>

@@ -39,6 +39,10 @@ export default function Home({ route, navigation }) {
     navigation.navigate("Sort", { beer: beers });
   };
 
+  const logoHandler = () => {
+    navigation.navigate("Home");
+  };
+
   let [fontsLoaded] = useFonts({
     PurplePurse_400Regular,
     GloriaHallelujah_400Regular,
@@ -53,6 +57,7 @@ export default function Home({ route, navigation }) {
         <Navbar
           beerPressHandler={beerPressHandler}
           searchPressHandler={searchPressHandler}
+          logoHandler={logoHandler}
         />
         <TouchableOpacity
           onPress={sortPressHandler}
@@ -67,11 +72,11 @@ export default function Home({ route, navigation }) {
         {/* Display all beers */}
         <FlatList
           data={beers}
-          // removeClippedSubviews={false}
+          removeClippedSubviews={false}
           extraData={Math.random()}
-          // updateCellsBatchingPeriod={1500}
-          // initialNumToRender={10}
-          // maxToRenderPerBatch={15}
+          updateCellsBatchingPeriod={1750}
+          initialNumToRender={7}
+          maxToRenderPerBatch={15}
           renderItem={({ item }) => (
             <BeerList
               item={item}

@@ -154,12 +154,14 @@ export default function LogIn({ navigation }) {
                   value={rememberMe}
                   onValueChange={(newValue) => setRememberMe(newValue)}
                 ></CheckBox>
-                <Text style={styles.normalText}>Ricordami</Text>
+                <Text style={styles.normalText}>Work in progress....</Text>
               </View>
             </View>
             <View style={styles.help}>
               <Text
-                onPress={() => alert("Son cazzi tuoi!")}
+                onPress={() => {
+                  navigation.navigate("Account");
+                }}
                 style={styles.normalText}
               >
                 Hai dimenticato la password?
@@ -221,7 +223,7 @@ const styles = StyleSheet.create({
     height: Dimensions.get("screen").height * 0.2,
     width: Dimensions.get("screen").height * 0.2,
     borderRadius: 30,
-    marginTop: "15%",
+    marginTop: "20%",
   },
   textContainer: {
     display: "flex",
@@ -254,6 +256,7 @@ const styles = StyleSheet.create({
   normalText: {
     fontSize: Dimensions.get("screen").width * 0.045,
     borderColor: darkBrown,
+    marginTop: "5%",
   },
   help: {
     display: "flex",

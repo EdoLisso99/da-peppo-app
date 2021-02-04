@@ -614,15 +614,18 @@ const styles = StyleSheet.create({
   beer: {
     width: Dimensions.get("screen").width * 0.3,
     height: Dimensions.get("screen").width * 0.3,
+    // alignSelf: "flex-end",
   },
   imageAndText: {
     display: "flex",
     flexDirection: "row",
     marginTop: "5%",
+    alignItems: "center",
   },
   flames: {
     display: "flex",
     flexDirection: "row",
+    marginTop: "1%",
   },
   textAndRating: {
     display: "flex",

@@ -123,10 +123,50 @@ export default function SignIn({ navigation }) {
             .createUserWithEmailAndPassword(email, password)
             .then(() => {
               writeUserData(username, email);
-              alert("Registrazione effettuata con successo!");
-              setDefaultValues();
-              navigation.pop();
-              navigation.navigate("LogIn");
+              let usernamesInDB = database.ref("users/");
+              usernamesInDB.once("value", (snapshot) => {
+                const x = Object.entries(snapshot.val());
+                let exist = false;
+                x.map((item) => {
+                  if (item[0] === username) {
+                    exist = true;
+                    auth
+                      .signInWithEmailAndPassword(item[1].email, password)
+                      .then(() => {
+                        auth.currentUser.updateProfile({
+                          displayName: username,
+                        });
+                        alert("Registrazione effettuata con successo!");
+                        setDefaultValues();
+                        navigation.pop();
+                        navigation.navigate("Home");
+                      })
+                      .catch((error) => {
+                        if (error.code === "auth/wrong-password") {
+                          //Do something
+                          alert("Errore! La password immessa è sbagliata!");
+                          setPassword("");
+                          passwordRef.current.clear();
+                          console.log(error);
+                        } else {
+                          //Do something else
+                          console.log("Entrato nell'else!");
+                          console.log(error);
+                          alert("Errore generico");
+                        }
+                      });
+                  }
+                });
+                if (!exist) {
+                  alert(
+                    "Errore! L'username e/o la password inserite sono errati!"
+                  );
+                  setDefaultValues();
+                }
+              });
+              // setDefaultValues();
+              // navigation.pop();
+              // navigation.navigate("Login");
             })
             .catch((error) => {
               if (error.code === "auth/email-already-in-use") {

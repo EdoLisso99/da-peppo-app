@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "daPeppo",
-    "slug": "daPeppo",
+    "name": "DaPeppo",
+    "slug": "dapeppo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/daPeppoLogo.png",
@@ -13,7 +13,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -25,6 +27,8 @@
     },
     "web": {
       "favicon": "./app/assets/daPeppoLogo.png"
-    }
+    },
+    "description": "L' app della birreria \"Da Peppo\" (località Colle di Brianza).",
+    "githubUrl": "https://github.com/EdoLisso99/da-peppo-app.git"
   }
 }

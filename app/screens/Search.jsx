@@ -1763,48 +1763,66 @@ export default function Search({ navigation }) {
             {/* <Text style={styles.suggestion}>(Bl, A, Bw, Bk, Rd, Gn)</Text> */}
 
             <View style={styles.colorCheckBox}>
-              <View style={styles.textAndCheckBox}>
-                <Text style={styles.suggestion}>Bl</Text>
+              <View style={styles.squareAndCheckBox}>
+                <Image
+                  source={require("../assets/blondeSquare.png")}
+                  style={styles.squareColor}
+                />
                 <CheckBox
                   disabled={false}
                   value={blonde}
                   onValueChange={(newValue) => setBlonde(newValue)}
                 />
               </View>
-              <View style={styles.textAndCheckBox}>
-                <Text style={styles.suggestion}>A</Text>
+              <View style={styles.squareAndCheckBox}>
+                <Image
+                  source={require("../assets/amberSquare.png")}
+                  style={styles.squareColor}
+                />
                 <CheckBox
                   disabled={false}
                   value={amber}
                   onValueChange={(newValue) => setAmber(newValue)}
                 />
               </View>
-              <View style={styles.textAndCheckBox}>
-                <Text style={styles.suggestion}>Bw</Text>
+              <View style={styles.squareAndCheckBox}>
+                <Image
+                  source={require("../assets/brownSquare.png")}
+                  style={styles.squareColor}
+                />
                 <CheckBox
                   disabled={false}
                   value={brown}
                   onValueChange={(newValue) => setBrown(newValue)}
                 />
               </View>
-              <View style={styles.textAndCheckBox}>
-                <Text style={styles.suggestion}>Bk</Text>
+              <View style={styles.squareAndCheckBox}>
+                <Image
+                  source={require("../assets/blackSquare.png")}
+                  style={styles.squareColor}
+                />
                 <CheckBox
                   disabled={false}
                   value={black}
                   onValueChange={(newValue) => setBlack(newValue)}
                 />
               </View>
-              <View style={styles.textAndCheckBox}>
-                <Text style={styles.suggestion}>R</Text>
+              <View style={styles.squareAndCheckBox}>
+                <Image
+                  source={require("../assets/redSquare.png")}
+                  style={styles.squareColor}
+                />
                 <CheckBox
                   disabled={false}
                   value={red}
                   onValueChange={(newValue) => setRed(newValue)}
                 />
               </View>
-              <View style={styles.textAndCheckBox}>
-                <Text style={styles.suggestion}>G</Text>
+              <View style={styles.squareAndCheckBox}>
+                <Image
+                  source={require("../assets/greenSquare.png")}
+                  style={styles.squareColor}
+                />
                 <CheckBox
                   disabled={false}
                   value={green}
@@ -1887,6 +1905,15 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    paddingVertical: 5,
+  },
+  squareAndCheckBox: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 5,
+    width: "10%",
   },
   confirmOrDeny: {
     display: "flex",
@@ -1919,5 +1946,9 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     alignSelf: "center",
     marginTop: "3%",
+  },
+  squareColor: {
+    height: Dimensions.get("screen").width * 0.055,
+    width: Dimensions.get("screen").width * 0.055,
   },
 });

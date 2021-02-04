@@ -143,6 +143,9 @@ export default function SideMenu({ navigation }) {
             <Text style={styles.text} onPress={signInPressHandler}>
               Sign in
             </Text>
+            <Text style={styles.text} onPress={accountPress}>
+              Account
+            </Text>
             <Text style={styles.text} onPress={logInPressHandler}>
               Log in
             </Text>

@@ -54,8 +54,8 @@ export default function SignIn({ navigation }) {
   };
 
   //Firebase Functions
-  const writeUserData = (username, email, password) => {
-    database.ref("users/" + username).set({ email: email, password: password });
+  const writeUserData = (username, email) => {
+    database.ref("users/" + username).set({ email: email });
   };
 
   const isUsernameAlreadyUsed = () => {
@@ -106,29 +106,45 @@ export default function SignIn({ navigation }) {
     ) {
       alert("ERRORE! \nUno o più campi non sono stati compilati!");
       flag = false;
+
       setDefaultValues();
     } else if (flag) {
-      //CONTROLLO CHE EFFETTIVAMENTE LE EMAIL ESISTANO
-      auth
-        .createUserWithEmailAndPassword(email, password)
-        .then(() => {
-          writeUserData(username, email, password);
-          alert("Registrazione effettuata con successo!");
-          setDefaultValues();
-          navigation.pop();
-          navigation.navigate("LogIn");
-        })
-        .catch((error) => {
-          if (error.code === "auth/email-already-in-use") {
-            alert("Errore! L'email selezionata è già in uso");
-            setEmail("");
-            emailRef.current.clear();
-          } else {
-            console.log("Entrato nell'else!");
-            console.log(error);
-            // alert(error.message);
+      let sameUsername = false;
+      let usernamesInDB = database.ref("users/");
+      usernamesInDB.once("value", (snapshot) => {
+        const x = Object.entries(snapshot.val());
+        x.map((item) => {
+          if (item[0] === username) {
+            sameUsername = true;
           }
         });
+        if (!sameUsername) {
+          auth
+            .createUserWithEmailAndPassword(email, password)
+            .then(() => {
+              writeUserData(username, email);
+              alert("Registrazione effettuata con successo!");
+              setDefaultValues();
+              navigation.pop();
+              navigation.navigate("LogIn");
+            })
+            .catch((error) => {
+              if (error.code === "auth/email-already-in-use") {
+                alert("Errore! L'email selezionata è già in uso");
+                setEmail("");
+                emailRef.current.clear();
+              } else {
+                console.log("Entrato nell'else!");
+                console.log(error);
+                // alert(error.message);
+              }
+            });
+        } else {
+          alert("Errore! Esiste già un utente con lo stesso username!");
+          setUsername("");
+          usernameRef.current.clear();
+        }
+      });
     }
   };
 

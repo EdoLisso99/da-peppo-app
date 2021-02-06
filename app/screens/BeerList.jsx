@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { Dimensions, StyleSheet, View, Text, Image } from "react-native";
-import { useState } from "react/cjs/react.development";
 import * as utilities from "../data/utilities";
 import { auth, database } from "./firebase";
 // import {

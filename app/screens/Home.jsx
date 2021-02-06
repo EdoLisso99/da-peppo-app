@@ -12,7 +12,7 @@ import {
   PurplePurse_400Regular,
   GloriaHallelujah_400Regular,
 } from "@expo-google-fonts/dev";
-import React, { useState } from "react";
+import React from "react";
 import { cream } from "../data/utilities";
 import AppLoading from "expo-app-loading";
 import BeerList from "./BeerList";

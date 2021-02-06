@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/daPeppoLogo.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.edolisso99.dapeppo"
     },
     "web": {
       "favicon": "./app/assets/daPeppoLogo.png"

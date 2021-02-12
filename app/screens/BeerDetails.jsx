@@ -16,7 +16,7 @@ import {
 } from "react-native-gesture-handler";
 import { auth, database } from "./firebase";
 import breweryDB from "../data/breweryDB.json";
-import beersDB from "../data/beerDB.json";
+import beerDB from "../data/beerDB.json";
 
 export default function BeerDetails({ navigation, route }) {
   const [star1, setStar1] = useState(false);
@@ -320,16 +320,15 @@ export default function BeerDetails({ navigation, route }) {
 
   const logoHandler = () => {
     navigation.pop();
-    navigation.navigate("Home", { beers: beersDB });
+    navigation.navigate("Home", { beers: beerDB });
   };
 
   const longRemovePressHandler = () => {
-    navigation.pop();
-    navigation.navigate("Home", { beers: beersDB });
+    navigation.goBack();
   };
 
   return (
-    <View>
+    <View style={styles.all}>
       <Navbar
         beerPressHandler={beerPressHandler}
         searchPressHandler={searchPressHandler}
@@ -609,7 +608,7 @@ const styles = StyleSheet.create({
     backgroundColor: cream,
     color: lightBrown,
     height: "88.85%",
-    paddingBottom: "10%",
+    paddingBottom: "14%",
   },
   beer: {
     width: Dimensions.get("screen").width * 0.3,

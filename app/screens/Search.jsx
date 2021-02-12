@@ -1685,12 +1685,13 @@ export default function Search({ navigation }) {
 
   const applyHandler = () => {
     let flag = true;
-    const alcoholRegexp = /^[0-9]+$/;
+    const alcoholRegexp = /^[0-9.]+$/;
     const nameRegexp = /^[a-zA-z]+$/;
     let newDB = searchInDB();
     if (minAlcoholDegree === "") {
       setMinAlcoholDegree(0);
     } else if (!alcoholRegexp.test(minAlcoholDegree)) {
+      console.log("9.8:", alcoholRegexp.test(9.8));
       Alert.alert("ERRORE! \nGradi inseriti non sono numerici!");
       flag = false;
       setDefaultValues();
@@ -1714,7 +1715,7 @@ export default function Search({ navigation }) {
 
   const logoHandler = () => {
     navigation.pop();
-    navigation.navigate("Home", { beers: beersDB });
+    navigation.navigate("Home", { beers: beerDB });
   };
 
   return (
@@ -1756,6 +1757,7 @@ export default function Search({ navigation }) {
               blurOnSubmit={true}
               clearButtonMode="unless-editing"
               clearTextOnFocus={true}
+              keyboardType="numeric"
               ref={minAlcoholDegreeRef}
               onChangeText={(newAlcohol) => setMinAlcoholDegree(newAlcohol)}
               placeholder="Gradazione Alcolica"

@@ -7,7 +7,7 @@ import { auth, database } from "./firebase";
 //   GloriaHallelujah_400Regular,
 // } from "@expo-google-fonts/dev";
 
-export default function BeerList({ item, titlePressHandler }) {
+export default function BeerList({ item }) {
   const [star1, setStar1] = useState(false);
   const [star2, setStar2] = useState(false);
   const [star3, setStar3] = useState(false);
@@ -54,7 +54,6 @@ export default function BeerList({ item, titlePressHandler }) {
       <View style={styles.previewInfo}>
         <View style={styles.firstLine}>
           <Text
-            onPress={titlePressHandler}
             style={
               item.beerName.length <= 17
                 ? styles.beerTitle
@@ -64,6 +63,10 @@ export default function BeerList({ item, titlePressHandler }) {
             {item.beerName}
           </Text>
           <Text style={styles.priceAndDegree}>{item.alcoholDegree}°</Text>
+          <Image
+            source={require("../assets/fullFlame.png")}
+            style={styles.fullFlame}
+          />
         </View>
         {/* Second Line */}
         <View style={styles.secondLine}>
@@ -169,5 +172,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexGrow: 1,
     justifyContent: "space-evenly",
+  },
+  fullFlame: {
+    width: Dimensions.get("screen").width * 0.05,
+    height: Dimensions.get("screen").width * 0.05,
+    marginTop: "3%",
   },
 });

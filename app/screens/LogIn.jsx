@@ -148,14 +148,14 @@ export default function LogIn({ navigation }) {
                 placeholder="Password"
                 secureTextEntry={true}
               ></TextInput>
-              <View style={styles.rememberCheckBox}>
+              {/* <View style={styles.rememberCheckBox}>
                 <CheckBox
                   disabled={false}
                   value={rememberMe}
                   onValueChange={(newValue) => setRememberMe(newValue)}
                 ></CheckBox>
                 <Text style={styles.normalText}>Work in progress....</Text>
-              </View>
+              </View> */}
             </View>
             <View style={styles.help}>
               <Text

@@ -37,7 +37,8 @@ export default function Account({ navigation }) {
   };
 
   const beerPressHandler = () => {
-    navigation.goBack();
+    navigation.pop();
+    navigation.navigate("SideMenu");
   };
 
   const searchPressHandler = () => {

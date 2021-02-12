@@ -6,6 +6,7 @@ import {
   FlatList,
   TouchableOpacity,
   VirtualizedList,
+  View,
 } from "react-native";
 import {
   useFonts,
@@ -17,6 +18,8 @@ import { cream } from "../data/utilities";
 import AppLoading from "expo-app-loading";
 import BeerList from "./BeerList";
 import Navbar from "./Navbar";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import beerDB from "../data/beerDB.json";
 
 export default function Home({ route, navigation }) {
   const { beers } = route.params;
@@ -37,6 +40,10 @@ export default function Home({ route, navigation }) {
 
   const sortPressHandler = () => {
     navigation.navigate("Sort", { beer: beers });
+  };
+
+  const restorePressHandler = () => {
+    navigation.navigate("Home", { beers: beerDB });
   };
 
   const logoHandler = () => {
@@ -69,6 +76,20 @@ export default function Home({ route, navigation }) {
             // onPress={sortPressHandler}
           ></Image>
         </TouchableOpacity>
+        <View>
+          {beers.length !== 144 && (
+            <TouchableOpacity
+              onPress={restorePressHandler}
+              style={styles.containerSort}
+            >
+              <Image
+                source={require("../assets/restore.png")}
+                style={styles.restore}
+                // onPress={sortPressHandler}
+              ></Image>
+            </TouchableOpacity>
+          )}
+        </View>
         {/* Display all beers */}
         <FlatList
           data={beers}
@@ -78,10 +99,9 @@ export default function Home({ route, navigation }) {
           initialNumToRender={7}
           maxToRenderPerBatch={15}
           renderItem={({ item }) => (
-            <BeerList
-              item={item}
-              titlePressHandler={() => titlePressHandler(item)}
-            />
+            <TouchableWithoutFeedback onPress={() => titlePressHandler(item)}>
+              <BeerList item={item} />
+            </TouchableWithoutFeedback>
           )}
           // The toString() function is needet to avoid an uncomfortable bug
           keyExtractor={(item) => item.key.toString()}
@@ -97,6 +117,11 @@ const styles = StyleSheet.create({
     backgroundColor: cream,
   },
   sort: {
+    width: Dimensions.get("screen").height * 0.05,
+    height: Dimensions.get("screen").height * 0.05,
+  },
+  restore: {
+    marginTop: -25,
     width: Dimensions.get("screen").height * 0.05,
     height: Dimensions.get("screen").height * 0.05,
   },

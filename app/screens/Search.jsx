@@ -86,1597 +86,1596 @@ export default function Search({ navigation }) {
       case 0:
         return beerDB;
       case 1:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
-            (checkBox33 === true && beer[i].bottle33Price !== null) ||
-            (checkBox75 === true && beer[i].bottle75Price !== null)
+            (checkBox33 === true && birra.bottle33Price !== null) ||
+            (checkBox75 === true && birra.bottle75Price !== null)
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 2:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
-            (blonde === true && beer[i].appearence === "blonde") ||
-            (amber === true && beer[i].appearence === "amber") ||
-            (brown === true && beer[i].appearence === "brown") ||
-            (black === true && beer[i].appearence === "black") ||
-            (red === true && beer[i].appearence === "red") ||
-            (green === true && beer[i].appearence === "green")
+            (blonde === true && birra.appearence === "blonde") ||
+            (amber === true && birra.appearence === "amber") ||
+            (brown === true && birra.appearence === "brown") ||
+            (black === true && birra.appearence === "black") ||
+            (red === true && birra.appearence === "red") ||
+            (green === true && birra.appearence === "green")
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 3:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null) ||
+              birra.bottle33Price !== null) ||
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null) ||
+              birra.bottle75Price !== null) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null) ||
+              birra.bottle33Price !== null) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null) ||
+              birra.bottle75Price !== null) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null) ||
+              birra.bottle33Price !== null) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null) ||
+              birra.bottle75Price !== null) ||
             (black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null) ||
+              birra.bottle33Price !== null) ||
             (black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null) ||
+              birra.bottle75Price !== null) ||
             (red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null) ||
+              birra.bottle33Price !== null) ||
             (red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null) ||
+              birra.bottle75Price !== null) ||
             (green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null) ||
+              birra.bottle33Price !== null) ||
             (green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null)
+              birra.bottle75Price !== null)
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 4:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             minAlcoholDegree !== 0 &&
-            beer[i].alcoholDegree >= minAlcoholDegree
+            birra.alcoholDegree >= minAlcoholDegree
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 5:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree)
+              birra.alcoholDegree >= minAlcoholDegree)
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 6:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree)
+              birra.alcoholDegree >= minAlcoholDegree)
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 7:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree) ||
+              birra.alcoholDegree >= minAlcoholDegree) ||
             (green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree)
+              birra.alcoholDegree >= minAlcoholDegree)
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 8:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
-            beer[i].breweryName
+            birra.breweryName
               .toLowerCase()
               .replace("\n", "")
               .includes(breweryName.toLowerCase())
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 9:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
-              beer[i].breweryName
+              birra.bottle33Price !== null &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
-              beer[i].breweryName
+              birra.bottle75Price !== null &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 10:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].breweryName
+              birra.appearence === "blonde" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].breweryName
+              birra.appearence === "amber" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].breweryName
+              birra.appearence === "brown" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].breweryName
+              birra.appearence === "black" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].breweryName
+              birra.appearence === "red" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].breweryName
+              birra.appearence === "green" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 11:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].breweryName
+              birra.appearence === "blonde" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].breweryName
+              birra.appearence === "blonde" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].breweryName
+              birra.appearence === "amber" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].breweryName
+              birra.appearence === "amber" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].breweryName
+              birra.appearence === "brown" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].breweryName
+              birra.appearence === "brown" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].breweryName
+              birra.appearence === "black" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].breweryName
+              birra.appearence === "black" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].breweryName
+              birra.appearence === "red" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].breweryName
+              birra.appearence === "red" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].breweryName
+              birra.appearence === "green" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].breweryName
+              birra.appearence === "green" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 12:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             minAlcoholDegree !== 0 &&
-            beer[i].alcoholDegree >= minAlcoholDegree &&
-            beer[i].breweryName
+            birra.alcoholDegree >= minAlcoholDegree &&
+            birra.breweryName
               .toLowerCase()
               .replace("\n", "")
               .includes(breweryName.toLowerCase())
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 13:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 14:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 15:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 16:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
-            beer[i].beerName
+            birra.beerName
               .toLowerCase()
               .replace("\n", "")
               .includes(beerName.toLowerCase())
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 17:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
-              beer[i].beerName
+              birra.bottle33Price !== null &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
-              beer[i].beerName
+              birra.bottle75Price !== null &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 18:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].beerName
+              birra.appearence === "blonde" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].beerName
+              birra.appearence === "amber" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].beerName
+              birra.appearence === "brown" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].beerName
+              birra.appearence === "black" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].beerName
+              birra.appearence === "red" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].beerName
+              birra.appearence === "green" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 19:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].beerName
+              birra.appearence === "blonde" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].beerName
+              birra.appearence === "blonde" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].beerName
+              birra.appearence === "amber" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].beerName
+              birra.appearence === "amber" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].beerName
+              birra.appearence === "brown" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].beerName
+              birra.appearence === "brown" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].beerName
+              birra.appearence === "black" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].beerName
+              birra.appearence === "black" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].beerName
+              birra.appearence === "red" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].beerName
+              birra.appearence === "red" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].beerName
+              birra.appearence === "green" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].beerName
+              birra.appearence === "green" &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 20:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             minAlcoholDegree !== 0 &&
-            beer[i].alcoholDegree >= minAlcoholDegree &&
-            beer[i].beerName
+            birra.alcoholDegree >= minAlcoholDegree &&
+            birra.beerName
               .toLowerCase()
               .replace("\n", "")
               .includes(beerName.toLowerCase())
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 21:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 22:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 23:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].beerName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 24:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
-            beer[i].breweryName
+            birra.breweryName
               .toLowerCase()
               .replace("\n", "")
               .includes(breweryName.toLowerCase()) &&
-            beer[i].beerName
+            birra.beerName
               .toLowerCase()
               .replace("\n", "")
               .includes(beerName.toLowerCase())
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 25:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
-              beer[i].breweryName
+              birra.bottle33Price !== null &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
-              beer[i].breweryName
+              birra.bottle75Price !== null &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 26:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].breweryName
+              birra.appearence === "blonde" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].breweryName
+              birra.appearence === "amber" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].breweryName
+              birra.appearence === "brown" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].breweryName
+              birra.appearence === "black" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].breweryName
+              birra.appearence === "red" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].breweryName
+              birra.appearence === "green" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 27:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].breweryName
+              birra.appearence === "blonde" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
-              beer[i].breweryName
+              birra.appearence === "blonde" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].breweryName
+              birra.appearence === "amber" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
-              beer[i].breweryName
+              birra.appearence === "amber" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].breweryName
+              birra.appearence === "brown" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
-              beer[i].breweryName
+              birra.appearence === "brown" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].breweryName
+              birra.appearence === "black" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
-              beer[i].breweryName
+              birra.appearence === "black" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].breweryName
+              birra.appearence === "red" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
-              beer[i].breweryName
+              birra.appearence === "red" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].breweryName
+              birra.appearence === "green" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
-              beer[i].breweryName
+              birra.appearence === "green" &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
-
+        });
         return storeArray;
       case 28:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             minAlcoholDegree !== 0 &&
-            beer[i].alcoholDegree >= minAlcoholDegree &&
-            beer[i].breweryName
+            birra.alcoholDegree >= minAlcoholDegree &&
+            birra.breweryName
               .toLowerCase()
               .replace("\n", "")
               .includes(breweryName.toLowerCase()) &&
-            beer[i].beerName
+            birra.beerName
               .toLowerCase()
               .replace("\n", "")
               .includes(beerName.toLowerCase())
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 29:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 30:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       case 31:
-        for (let i = 0; i < beer.length; i++) {
+        beer.map((birra) => {
           if (
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               blonde === true &&
-              beer[i].appearence === "blonde" &&
+              birra.appearence === "blonde" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               amber === true &&
-              beer[i].appearence === "amber" &&
+              birra.appearence === "amber" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               brown === true &&
-              beer[i].appearence === "brown" &&
+              birra.appearence === "brown" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               black === true &&
-              beer[i].appearence === "black" &&
+              birra.appearence === "black" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               red === true &&
-              beer[i].appearence === "red" &&
+              birra.appearence === "red" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox33 === true &&
-              beer[i].bottle33Price !== null &&
+              birra.bottle33Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase())) ||
             (checkBox75 === true &&
-              beer[i].bottle75Price !== null &&
+              birra.bottle75Price !== null &&
               green === true &&
-              beer[i].appearence === "green" &&
+              birra.appearence === "green" &&
               minAlcoholDegree !== 0 &&
-              beer[i].alcoholDegree >= minAlcoholDegree &&
-              beer[i].breweryName
+              birra.alcoholDegree >= minAlcoholDegree &&
+              birra.breweryName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(breweryName.toLowerCase()) &&
-              beer[i].beerName
+              birra.beerName
                 .toLowerCase()
                 .replace("\n", "")
                 .includes(beerName.toLowerCase()))
           ) {
-            storeArray = [...storeArray, beer[i]];
+            storeArray = [...storeArray, birra];
           }
-        }
+        });
         return storeArray;
       default:
         return beerDB;

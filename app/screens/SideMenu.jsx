@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { darkBrown, cream } from "../data/utilities";
 import Navbar from "./Navbar";
@@ -76,7 +76,9 @@ export default function SideMenu({ navigation }) {
         let x = snapshot.val();
         if (x !== null) {
           x.map((num) => {
-            tmp = [...tmp, beerDB[num.key - 1]];
+            if (num.rating !== 0 && !heart) {
+              tmp = [...tmp, beerDB[num.key - 1]];
+            }
           });
         }
 

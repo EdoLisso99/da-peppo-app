@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+import {
+  DevSettings,
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import {
   ScrollView,
   TextInput,
@@ -227,7 +234,7 @@ export default function Account({ navigation }) {
         .ref("users/" + auth.currentUser.displayName + "/reviewed")
         .remove();
       alert("Dati rimossi correttamente!");
-      navigation.navigate("Home", { beers: beerDB });
+      DevSettings.reload();
     }
   };
 

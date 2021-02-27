@@ -240,7 +240,8 @@ export default function BeerDetails({ navigation, route }) {
   };
 
   const confirmPressHandler = () => {
-    if (auth.currentUser !== null && (heart || getTotalRating() !== 0)) {
+    if (auth.currentUser !== null) {
+      // && (heart || getTotalRating() !== 0)) {
       //Controllo di aver effettivamente selezionato qualcosa
       let dbRef = database.ref("users/" + auth.currentUser.displayName);
       dbRef.once("value", (snapshot) => {

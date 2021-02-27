@@ -1,22 +1,18 @@
 import React, { useState } from "react";
 import {
-  Alert,
-  Button,
   Dimensions,
   Image,
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
-  KeyboardAvoidingView,
   Keyboard,
 } from "react-native";
 import Navbar from "./Navbar";
-import { cream, lightBrown, darkBrown } from "../data/utilities";
+import { cream, darkBrown } from "../data/utilities";
 import {
   ScrollView,
   TextInput,
-  TouchableHighlight,
   TouchableWithoutFeedback,
 } from "react-native-gesture-handler";
 import { database, auth } from "./firebase";
@@ -250,7 +246,7 @@ export default function SignIn({ navigation }) {
                   setConfirmPassword(newConfirmPassword)
                 }
                 ref={confirmPasswordRef}
-                placeholder="Confirm Password"
+                placeholder="Conferma Password"
                 secureTextEntry={true}
               ></TextInput>
             </View>

@@ -9,11 +9,10 @@ import {
   Keyboard,
 } from "react-native";
 import Navbar from "./Navbar";
-import { cream, lightBrown, darkBrown } from "../data/utilities";
+import { cream, darkBrown } from "../data/utilities";
 import {
   ScrollView,
   TextInput,
-  TouchableHighlight,
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from "react-native-gesture-handler";

@@ -144,8 +144,7 @@ export default function Sort({ navigation, route }) {
       let beers = sortPerMoneyAscend();
       navigation.navigate("Home", { beers: beers });
     } else if (isRatingPressed) {
-      let beers = sortPerRatingAscend();
-      navigation.navigate("Home", { beers: beers });
+      sortPerRatingAscend();
     }
   };
 
@@ -157,8 +156,7 @@ export default function Sort({ navigation, route }) {
       let beers = sortPerMoneyDesc();
       navigation.navigate("Home", { beers: beers });
     } else if (isRatingPressed) {
-      let beers = sortPerRatingDescend();
-      navigation.navigate("Home", { beers: beers });
+      sortPerRatingDescend();
     }
   };
 

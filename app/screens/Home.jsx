@@ -5,7 +5,6 @@ import {
   Image,
   FlatList,
   TouchableOpacity,
-  VirtualizedList,
   View,
 } from "react-native";
 import {
@@ -77,7 +76,7 @@ export default function Home({ route, navigation }) {
           ></Image>
         </TouchableOpacity>
         <View>
-          {beers.length !== 144 && (
+          {beers?.length !== 144 && (
             <TouchableOpacity
               onPress={restorePressHandler}
               style={styles.containerSort}

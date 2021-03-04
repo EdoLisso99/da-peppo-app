@@ -76,7 +76,7 @@ export default function SideMenu({ navigation }) {
         let x = snapshot.val();
         if (x !== null) {
           x.map((num) => {
-            if (num.rating !== 0 && !heart) {
+            if (num.rating !== 0 && !num.heart) {
               tmp = [...tmp, beerDB[num.key - 1]];
             }
           });
